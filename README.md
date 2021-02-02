@@ -37,14 +37,16 @@ Here is what you should download via the browser:
 
 ## Command-Line Downloads
 
-Here is what you should download via homebrew: 
+First install Homebrew with the following command (confirm with [this](https://brew.sh/) page here): 
 
 ```sh
-brew install git          # download git
-brew install coreutils    # get the core utils; our .zshrc uses these commands
-brew install node         # download nodejs
-brew install youtube-dl   # download youtube-dl
-xcode-select --install    # use this to get x tools, don't know if better than app store
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+There is a `Brewfile` in this project directory. After downloading homebrew run the following command: 
+
+```sh
+brew bundle
 ```
 
 ## Other Notes
