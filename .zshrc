@@ -60,7 +60,7 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
 # my aliases
 # use gnu ls command
 alias ls='gls -Ga --color=auto --group-directories-first'
-alias lsd='gls -Ga --color=auto --group-directories-first --directory */'
+alias lsd='gls -Ga --color=auto --group-directories-first --directory *(D/)'
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
