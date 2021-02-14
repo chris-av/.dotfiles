@@ -27,6 +27,8 @@ brew "postgresql"
 brew "telnet"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Vi 'workalike' with many additional features
+brew "vim"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # Fish shell like syntax highlighting for zsh
