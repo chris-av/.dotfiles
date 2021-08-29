@@ -53,6 +53,6 @@ brew bundle
 
 * Review whether to download the [dotfiles repo](https://github.com/mathiasbynens/dotfiles), which is where I got the code for my bash profiles. I think all of the bash files and the alias files are not necessary because all of the important stuff is included in the `.zshrc` file but I am not sure.
 
-Not sure what the best way to download X-Code is. Might be better to do it via the Apple Store.
-
 Consider downloading database software like MongoDB Compass and PostgresSQL.
+
+Don't forget to download the [Hack Nerd Fonts Complete](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack/Regular/complete) so that your terminal can display your custom icons!
