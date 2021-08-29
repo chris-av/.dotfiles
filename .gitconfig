@@ -1,5 +1,9 @@
 [user]
 	name = Christian Valenzuela
-	email = chrisandre95@gmail.com
+	email = 41182258+im2wddrf@users.noreply.github.com
 [pager]
   branch = false
+[init]
+	defaultBranch = main
+[credential]
+	helper = osxkeychain
