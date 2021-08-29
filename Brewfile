@@ -1,39 +1,40 @@
 tap "heroku/brew"
 tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
-# Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
-# GNU File, Shell, and Text utilities
+brew "python@3.9", link: false
 brew "coreutils"
-# Secure runtime for JavaScript and TypeScript
+brew "curl"
 brew "deno"
-# GNU Transport Layer Security (TLS) Library
+brew "unbound", link: false
 brew "gnutls"
-# Play, record, convert, and stream audio and video
+brew "gobject-introspection"
+brew "harfbuzz"
+brew "libass"
+brew "srt"
 brew "ffmpeg"
-# GNU compiler collection
-brew "gcc"
-# Distributed revision control system
+brew "gcc", link: false
+brew "ghostscript", link: false
 brew "git"
-# GNU grep, egrep and fgrep
 brew "grep"
-# Platform built on V8 to build network applications
+brew "krb5"
+brew "libcroco"
+brew "pango"
+brew "librsvg"
 brew "node", link: false
-# Object-relational database system
+brew "perl"
 brew "postgresql"
-# User interface to the TELNET protocol
+brew "python@3.8"
+brew "ruby"
 brew "telnet"
-# Display directories as trees (with optional color/HTML output)
+brew "tmux"
 brew "tree"
-# Vi 'workalike' with many additional features
 brew "vim"
-# Download YouTube videos from the command-line
 brew "youtube-dl"
-# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
-# High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
