@@ -60,3 +60,13 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 echo "installing hack nerdfont using brew ... "
 brew install font-hack
 
+
+# install the powerline fonts for vim-airline
+echo "making a temporary directory for cloning the powerline fonts installation"
+mkdir ~/Downloads/powerline-fonts
+echo "cloning the repository to : ~/Downloads/powerline-fonts ... "
+git clone https://github.com/powerline/fonts.git ~/Downloads/powerline-fonts --depth=1 
+~/Downloads/powerline-fonts/install.sh
+echo "cleaning up, removing the directory now ... "
+rm -rf ~/Downloads/powerline-fonts/
+
