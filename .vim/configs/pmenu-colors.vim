@@ -1,12 +1,13 @@
 
-hi Pmenu ctermbg=green ctermfg=black guibg=green
-hi PmenuSel ctermbg=green ctermfg=white
+hi Pmenu ctermfg=black ctermbg=DarkGreen 
+hi PmenuSel ctermfg=white ctermbg=DarkGreen 
 
-hi CocErrorSign ctermfg=red  guibg=red
+hi CocErrorSign ctermfg=red
 hi CocErrorFloat ctermfg=white ctermbg=red
 
-hi CocInfoSign ctermfg=blue guibg=blue
+hi CocInfoSign ctermfg=blue 
 hi CocInfoFloat ctermfg=white ctermbg=blue
 
-hi CocWarningSign ctermfg=white ctermbg=yellow guibg=yellow
+hi CocWarningSign ctermfg=yellow
+hi CocWarningFloat ctermfg=black ctermbg=yellow
 
