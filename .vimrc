@@ -43,9 +43,6 @@ source ~/.vim/configs/nerdtree-bindings.vim
 " modfiy pmenu colors
 source ~/.vim/configs/pmenu-colors.vim
 
-" custom status line
-" source ~/.vim/configs/statusline.vim
-
 " plugin settings
 source ~/.vim/configs/neoclide-coc.vim
 source ~/.vim/configs/alan-vim-closetag.vim
