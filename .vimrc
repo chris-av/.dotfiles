@@ -7,6 +7,8 @@ set number
 set autoindent
 set backspace=indent,eol,start
 set encoding=UTF-8
+set nowrap
+set sidescroll=1
 
 " map F1 to escape
 nmap <F1> <Esc>
@@ -49,4 +51,10 @@ source ~/.vim/configs/neoclide-coc.vim
 source ~/.vim/configs/alan-vim-closetag.vim
 
 let g:airline_powerline_fonts=1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_symbols.branch = ''
 
