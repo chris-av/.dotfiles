@@ -45,6 +45,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
+echo "download packer for nvim ... "
+echo ""
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+
 # run the brew file to download all your apps and utilites ... 
 echo "running the 'brew bundle' command ... "
 echo ""
