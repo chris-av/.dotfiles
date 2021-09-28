@@ -14,20 +14,17 @@ Here is what you should download via the browser:
   * also make sure to modify any paths as necessary
 * [R](https://www.r-project.org/)
 * [Rstudio](https://rstudio.com/)
-* [Python](https://www.python.org/downloads/)
 * [MacTex](https://tug.org/mactex/)
 * [TexStudio](https://www.texstudio.org/)
 * [JabRef](https://www.jabref.org/)
 * [Dropbox](https://www.dropbox.com/downloading)
 * [Insomnia](https://insomnia.rest/)
-* [Postman](https://www.postman.com/)
 * [Slack](https://slack.com/)
 * [Discord](https://discord.com/download)
 * [iTerm2](https://iterm2.com/)
 * [Snazzy Profile for terminal](https://github.com/sindresorhus/iterm2-snazzy)
 * [Dashlane](https://www.dashlane.com/)
 * [Visual Studio Code](https://code.visualstudio.com/)
-* [Atom](https://atom.io/)
 * [Brave](https://brave.com/)
 * [Chrome](https://www.google.com/chrome/)
 * [WhatsApp](https://www.whatsapp.com/download)
@@ -49,10 +46,8 @@ There is a `Brewfile` in this project directory. After downloading homebrew run 
 brew bundle
 ```
 
-## Other Notes
+## Todos
 
-* Review whether to download the [dotfiles repo](https://github.com/mathiasbynens/dotfiles), which is where I got the code for my bash profiles. I think all of the bash files and the alias files are not necessary because all of the important stuff is included in the `.zshrc` file but I am not sure.
+Make the installation agnostic whether it is run in darwin or linux
 
-Consider downloading database software like MongoDB Compass and PostgresSQL.
 
-Don't forget to download the [Hack Nerd Fonts Complete](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack/Regular/complete) so that your terminal can display your custom icons!
