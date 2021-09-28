@@ -33,7 +33,7 @@ vim.cmd([[ highlight FloatBorder guifg=black guibg=black ]])
 -- vim.cmd([[ highlight NormalFloat ctermbg=black ]])
 -- vim.cmd([[ highlight NormalFloat ctermbg=black ]])
 vim.cmd([[ highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE ]])
-vim.cmd([[ highlight LineNr ctermbg=black ]])
+vim.cmd([[ highlight LineNr ctermbg=NONE ]])
 vim.cmd([[ highlight CursorLineNR cterm=bold ]])
 
 vim.api.nvim_set_keymap('i', '<F1>', '<Esc>', { noremap = true, silent = true })
