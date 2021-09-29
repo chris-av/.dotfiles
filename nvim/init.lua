@@ -35,6 +35,7 @@ vim.cmd([[ highlight FloatBorder guifg=black guibg=black ]])
 vim.cmd([[ highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE ]])
 vim.cmd([[ highlight LineNr ctermbg=NONE ]])
 vim.cmd([[ highlight CursorLineNR cterm=bold ]])
+vim.cmd([[ highlight VertSplit ctermbg=DarkGreen ctermfg=black guibg=black guifg=black ]])
 
 vim.api.nvim_set_keymap('i', '<F1>', '<Esc>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('', '<F1>', '<nop>', { noremap = true, silent = true })
