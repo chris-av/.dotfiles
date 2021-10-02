@@ -35,7 +35,7 @@ vim.cmd([[ highlight FloatBorder guifg=black guibg=black ]])
 vim.cmd([[ highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE ]])
 vim.cmd([[ highlight LineNr ctermbg=NONE ]])
 vim.cmd([[ highlight CursorLineNR cterm=bold ]])
-vim.cmd([[ highlight VertSplit ctermbg=DarkGreen ctermfg=black guibg=black guifg=black ]])
+vim.cmd([[ highlight VertSplit ctermbg=DarkGreen ctermfg=black guifg=black guibg=black ]])
 
 vim.api.nvim_set_keymap('i', '<F1>', '<Esc>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('', '<F1>', '<nop>', { noremap = true, silent = true })
@@ -62,9 +62,10 @@ vim.cmd('packadd packer.nvim')
 
 
 
-
+-- requires plugins in lua/plugins
 require 'plugins'
-require 'main'
 
+-- requires entry lua/main
+require 'main'
 
 
