@@ -47,5 +47,6 @@ echo "cleaning up, removing the directory now ... "
 rm -rf ~/Downloads/powerline-fonts/
 
 
-
+# use this for nvim lsp
+npm i -g vscode-langservers-extracted
 
