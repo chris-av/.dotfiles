@@ -14,14 +14,16 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' })
+    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' })
   },
 
   sources = {
     { name = 'buffer' },
     { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+    { name = 'path' },
     -- { name = 'nvim_lua' },
-    -- { name = 'path' },
     -- { name = 'vsnip' },
   },
 
@@ -32,6 +34,7 @@ cmp.setup({
                 nvim_lsp = "[LSP]",
                 vsnip = "[vsnip]",
                 nvim_lua = "[Lua]",
+                luasnip = "[luasnip]",
                 latex_symbols = "[Latex]",
             })[entry.source.name]
             vim_item.kind = ({
