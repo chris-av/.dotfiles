@@ -27,6 +27,13 @@ return function(client, bufnr)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
+
+  -- telescope
+  buf_set_keymap('n', 'ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+  buf_set_keymap('n', 'fg', "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
+  buf_set_keymap('n', 'fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
+  buf_set_keymap('n', 'fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
+
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single", color = "red" })
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" })
 

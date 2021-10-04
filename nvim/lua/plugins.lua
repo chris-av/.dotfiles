@@ -20,4 +20,12 @@ packer.startup(function()
   use 'windwp/nvim-autopairs'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'BurntSushi/ripgrep' },
+      { 'sharkdp/fd' }
+    }
+  }
 end)

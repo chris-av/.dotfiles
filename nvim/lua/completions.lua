@@ -89,3 +89,6 @@ require("nvim-autopairs.completion.cmp").setup({
     tex = '{'
   }
 })
+
+require('telescope').setup {}
+
