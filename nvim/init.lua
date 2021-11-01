@@ -21,6 +21,8 @@ vim.o.shortmess= vim.o.shortmess .. 'c'
 vim.o.guicursor = 'i:block,a:blinkon100'
 vim.bo.swapfile = true
 vim.o.cursorline = true
+vim.o.splitbelow = true
+vim.o.splitright = true
 
 
 -- try out some colors
