@@ -4,7 +4,7 @@
 . ./utilites/mac-installation.sh
 
 
-, ./utilites/omz.sh
+. ./utilites/omz.sh
 . ./utilites/symlink-files.sh
 
 
@@ -18,8 +18,7 @@
 . ./utilites/language-servers/tsserver.sh
 . ./utilites/language-servers/vscode-extract.sh
 . ./utilites/language-servers/lua-lang-server.sh
-
-
+. ./utilites/language-servers/pyright-lang-server.sh
 
 
 
