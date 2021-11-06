@@ -35,7 +35,6 @@ brew "mpv"
 brew "tree-sitter"
 brew "neovim"
 brew "ninja"
-brew "node", link: false
 brew "perl"
 brew "postgresql"
 brew "python@3.8"
