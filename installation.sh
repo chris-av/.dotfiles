@@ -12,6 +12,11 @@
 . ./utilites/nvim.sh
 
 
+# install nvm for managing node
+# this will only work if a .bashrc or .zshrc already exists
+cur -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+nvm install node
 
 
 # install language servers
@@ -19,6 +24,5 @@
 . ./utilites/language-servers/vscode-extract.sh
 . ./utilites/language-servers/lua-lang-server.sh
 . ./utilites/language-servers/pyright-lang-server.sh
-
 
 
