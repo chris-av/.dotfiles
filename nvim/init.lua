@@ -38,6 +38,10 @@ vim.cmd([[ highlight LineNr ctermbg=NONE ]])
 vim.cmd([[ highlight CursorLineNR cterm=bold ]])
 vim.cmd([[ highlight VertSplit ctermbg=DarkGreen ctermfg=black guifg=black guibg=black ]])
 
+vim.cmd([[ highlight SignifySignAdd ctermfg=green guifg=#00ff00 cterm=NONE gui=NONE ]])
+vim.cmd([[ highlight SignifySignDelete ctermfg=red guifg=#00ff00 cterm=NONE gui=NONE ]])
+vim.cmd([[ highlight SignifySignChange ctermfg=yellow guifg=#00ff00 cterm=NONE gui=NONE ]])
+
 vim.api.nvim_set_keymap('i', '<F1>', '<Esc>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('', '<F1>', '<nop>', { noremap = true, silent = true })
 
