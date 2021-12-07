@@ -66,11 +66,10 @@ end
 vim.cmd('packadd packer.nvim')
 
 
+require 'completions'
+require 'diagnostics'
+require 'packages'
+require 'lsp'
 
--- requires plugins in lua/plugins
-require 'plugins'
-
--- requires entry lua/main
-require 'main'
 
 
