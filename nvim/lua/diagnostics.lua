@@ -8,17 +8,15 @@ end
 -- icon
 -- check to see if vim.lsp.diagnostic.on_publish_diagnostics() is stil valid
 -- might have to change to vim.diagnostic.on_publish_diagnostics()
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = false,
-    signs = true,
-    virtual_text = {
-      spacing = 4,
-      prefix = ''
-    },
-    update_in_insert = true
-  }
-)
+vim.diagnostic.config ({
+  underline = false,
+  signs = true,
+  virtual_text = {
+    spacing = 4,
+    prefix = ''
+  },
+  update_in_insert = true
+})
 
 
 
