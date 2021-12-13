@@ -25,10 +25,10 @@ cmp.setup({
   },
 
   sources = {
-    { name = 'buffer' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'path' },
+    { name = 'buffer' },
     -- { name = 'nvim_lua' },
     -- { name = 'vsnip' },
   },
