@@ -24,6 +24,7 @@ packer.startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'windwp/nvim-autopairs'
   use 'L3MON4D3/LuaSnip'
+  use 'numToStr/Comment.nvim'
 
 
 

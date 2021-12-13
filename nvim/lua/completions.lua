@@ -86,6 +86,7 @@ cmp.event:on(
   cmp_autopairs.on_confirm_done()
 )
 
+require('Comment').setup()
 
 
 
