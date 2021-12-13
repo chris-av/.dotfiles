@@ -5,22 +5,22 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
--- icon
--- check to see if vim.lsp.diagnostic.on_publish_diagnostics() is stil valid
--- might have to change to vim.diagnostic.on_publish_diagnostics()
+-- diagnostics setup
 vim.diagnostic.config ({
   underline = false,
   signs = true,
-  virtual_text = {
-    spacing = 4,
-    prefix = ''
-  },
+  virtual_text = false,
+  -- virtual_text = {
+  --   spacing = 4,
+  --   prefix = ''
+  -- },
   update_in_insert = true
 })
 
 
 
-vim.cmd([[hi LspDiagnosticsDefaultError ctermfg=red]])
-vim.cmd([[hi LspDiagnosticsDefaultHint ctermfg=blue]])
-vim.cmd([[hi LspDiagnosticsDefaultWarning ctermfg=yellow]])
-vim.cmd([[hi LspDiagnosticsDefaultInformation ctermfg=yellow]])
+vim.cmd([[hi DiagnosticsError ctermfg=red]])
+vim.cmd([[hi DiagnosticHint ctermfg=blue]])
+vim.cmd([[hi DiagnosticsWarning ctermfg=yellow]])
+vim.cmd([[hi DiagnosticsInformation ctermfg=yellow]])
+
