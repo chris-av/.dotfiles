@@ -26,6 +26,9 @@ packer.startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'numToStr/Comment.nvim'
 
+  -- colorschemes
+  use 'marko-cerovac/material.nvim'
+
 
 
   -- telescope
