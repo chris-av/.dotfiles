@@ -77,7 +77,7 @@ if vim.api.nvim_eval("exists('g:neovide')") == 1 then
   -- vim.cmd [[ echo "running neovide!" ]]
   vim.g.material_style = 'deep ocean'
   vim.cmd[[ colorscheme material ]]
-  vim.cmd[[ set guifont=Hack\ Nerd\ Font:h11 ]]
+  vim.cmd[[ set guifont=Hack\ Nerd\ Font:h12 ]]
 end
 
 
