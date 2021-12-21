@@ -73,11 +73,27 @@ require 'lsp'
 
 
 if vim.api.nvim_eval("exists('g:neovide')") == 1 then
-  -- -- for debugging purposes
-  -- vim.cmd [[ echo "running neovide!" ]]
+  -- print('running setup!')
+  -- print('running setup!')
   vim.g.material_style = 'deep ocean'
+
   vim.cmd[[ colorscheme material ]]
   vim.cmd[[ set guifont=Hack\ Nerd\ Font:h12 ]]
+
+  require('material').setup{
+    custom_highlights = {
+      NvimTreeFolderIcon = 'blue',
+      NvimTreeGitNew = 'blue',
+      NvimTreeGitDirty = 'red',
+      NvimTreeGitStaged = 'LightGreen'
+    }
+  }
+
+  vim.cmd[[ set termguicolors ]] -- this variable must be enabled for colors to be applied properly
+  -- vim.cmd[[ highlight NvimTreeFolderIcon ctermfg=blue guifg=blue ]]
+  -- vim.cmd[[ highlight NvimTreeGitNew ctermfg=blue guifg=blue ]]
+  -- vim.cmd[[ highlight NvimTreeGitDirty ctermfg=red guifg=red ]]
+  -- vim.cmd[[ highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=DarkGreen ]]
 end
 
 
