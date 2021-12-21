@@ -93,7 +93,7 @@ if vim.api.nvim_eval("exists('g:neovide')") == 1 then
   vim.cmd[[ highlight NvimTreeFolderIcon ctermfg=blue guifg=blue ]]
   vim.cmd[[ highlight NvimTreeGitNew ctermfg=blue guifg=blue ]]
   vim.cmd[[ highlight NvimTreeGitDirty ctermfg=red guifg=red ]]
-  vim.cmd[[ highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=DarkGreen ]]
+  vim.cmd[[ highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=LightGreen ]]
 
 
 end
