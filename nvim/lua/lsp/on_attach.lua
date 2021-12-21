@@ -27,6 +27,12 @@ return function(client, bufnr)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
+  -- nvim tree key bindings
+  buf_set_keymap('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', opts)
+  buf_set_keymap('n', '<leader>r', '<cmd>NvimTreeRefresh<CR>', opts)
+  buf_set_keymap('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>', opts)
+  buf_set_keymap('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>', opts)
+
 
   -- telescope
   buf_set_keymap('n', 'ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
