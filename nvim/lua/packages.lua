@@ -41,11 +41,19 @@ packer.startup(function()
     }
   }
 
+  -- nvim tree
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons'
+    }
+  }
+
   -- non neovim plugins
   use 'maxmellon/vim-jsx-pretty'
   use 'alvan/vim-closetag'
-  use 'preservim/nerdtree'
-  use 'tiagofumo/vim-nerdtree-syntax-highlight'
+  -- use 'preservim/nerdtree'
+  -- use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use 'ryanoasis/vim-devicons'
 
 end)
