@@ -69,13 +69,12 @@ local vim = vim
 --
 
 
--- vim.cmd [[ set termguicolors ]] -- this variable must be enabled for colors to be applied properly
 
 -- a list of groups can be found at `:help nvim_tree_highlight`
-vim.cmd [[ highlight NvimTreeFolderIcon guifg=blue ctermfg=blue ]]
-vim.cmd [[ highlight NvimTreeGitNew guifg=blue ctermfg=blue ]]
-vim.cmd [[ highlight NvimTreeGitDirty guifg=red ctermfg=red ]]
-vim.cmd [[ highlight NvimTreeGitStaged guifg=DarkGreen ctermfg=DarkGreen ]]
+vim.cmd[[ highlight NvimTreeFolderIcon ctermfg=blue guifg=blue ]]
+vim.cmd[[ highlight NvimTreeGitNew ctermfg=blue guifg=blue ]]
+vim.cmd[[ highlight NvimTreeGitDirty ctermfg=red guifg=red ]]
+vim.cmd[[ highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=LightGreen ]]
 
 
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
