@@ -71,6 +71,7 @@ local vim = vim
 
 
 -- a list of groups can be found at `:help nvim_tree_highlight`
+-- vim.cmd[[ set termguicolors ]]
 vim.cmd[[ highlight NvimTreeFolderIcon ctermfg=blue guifg=blue ]]
 vim.cmd[[ highlight NvimTreeGitNew ctermfg=blue guifg=blue ]]
 vim.cmd[[ highlight NvimTreeGitDirty ctermfg=red guifg=red ]]
