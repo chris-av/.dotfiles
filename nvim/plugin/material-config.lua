@@ -5,9 +5,9 @@ vim.g.material_style = 'deep ocean'
 require('material').setup({
   custom_highlights = {
     NvimTreeFolderIcon = { fg = 'LightBlue' },
-    NvimTreeGitNew = { fg = 'cyan' },
-    NvimTreeGitDirty = { fg = 'red' },
-    NvimTreeGitStaged = { guifg = 'LightGreen' } 
+    NvimTreeGitNew = { fg = 'red' },
+    NvimTreeGitDirty = { fg = 'LightGreen' },
+    NvimTreeGitStaged = { fg = 'LightGreen' } 
   }
 })
 
