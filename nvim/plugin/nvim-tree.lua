@@ -29,10 +29,10 @@ local vim = vim
 -- -- selectable.
 --
 -- vim.g.nvim_tree_special_files = { README.md = 1, Makefile = 1, MAKEFILE = 1 } -- List of filenames that gets highlighted with NvimTreeSpecialFile
--- vim.g.nvim_tree_special_files = {}
--- vim.g.nvim_tree_special_files['README.md'] = 1
--- vim.g.nvim_tree_special_files['Makefile'] = 1
--- vim.g.nvim_tree_special_files['MAKEFILE'] = 1
+vim.g.nvim_tree_special_files = {}
+vim.g.nvim_tree_special_files['README.md'] = 1
+vim.g.nvim_tree_special_files['Makefile'] = 1
+vim.g.nvim_tree_special_files['MAKEFILE'] = 1
 
 -- vim.g.nvim_tree_show_icons = {
 --     git = 1,
@@ -165,7 +165,7 @@ require'nvim-tree'.setup {
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     timeout = 500,
   },
   view = {
