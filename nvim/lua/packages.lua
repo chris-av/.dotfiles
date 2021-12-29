@@ -30,6 +30,20 @@ packer.startup(function()
   use 'marko-cerovac/material.nvim'
 
 
+  -- debugger
+  use 'mfussenegger/nvim-dap'
+  use 'nvim-telescope/telescope-dap.nvim'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'mfussenegger/nvim-dap-python'
+  use 'rcarriga/nvim-dap-ui'
+  use 'Pocco81/DAPInstall.nvim'
+  use {
+    'rcarriga/nvim-dap-ui',
+    requires = {
+      'mfussenegger/nvim-dap'
+    }
+  }
+
 
   -- telescope
   use {
