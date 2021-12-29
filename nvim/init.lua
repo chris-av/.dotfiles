@@ -23,6 +23,7 @@ vim.bo.swapfile = true
 vim.o.cursorline = true
 vim.o.splitbelow = true
 vim.o.splitright = true
+vim.g.mapleader = " "
 
 
 -- try out some colors
@@ -70,6 +71,7 @@ require 'completions'
 require 'diagnostics'
 require 'packages'
 require 'lsp'
+require 'dbg'
 
 
 
