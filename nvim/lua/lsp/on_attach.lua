@@ -40,6 +40,47 @@ return function(client, bufnr)
   buf_set_keymap('n', 'fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
   buf_set_keymap('n', 'fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
 
+
+  -- for debugger
+  buf_set_keymap('n', '<F12>', '<cmd>lua require"dap".step_out()<CR>', opts)
+  buf_set_keymap('n', '<F11>', '<cmd>lua require"dap".step_into()<CR>', opts)
+  buf_set_keymap('n', '<F10>', '<cmd>lua require"dap".step_over()<CR>', opts)
+  buf_set_keymap('n', '<F5>', '<cmd>lua require"dap".continue()<CR>', opts)
+  buf_set_keymap('n', '<F1>', '<cmd>lua require"dap".toggle_breakpoint()<CR>', opts)
+  buf_set_keymap('n', '<leader>da', '<cmd>lua require("node_adapter").attach()<CR>', opts)
+  buf_set_keymap('n', '<leader>dA', '<cmd>lua require("node_adapter").attachToRemote()<CR>', opts)
+  buf_set_keymap('n', '<F3>', '<cmd>lua require("node_adapter").attachClose()<CR>', opts)
+  buf_set_keymap('n', '<F4>', '<cmd>lua require("node_adapter").attachToRemoteClose()<CR>', opts)
+
+  buf_set_keymap('n', '<leader>dsc', '<cmd>lua require"dap.ui.variables".scopes()<CR>', opts)
+  buf_set_keymap('n', '<leader>dhh', '<cmd>lua require"dap.ui.variables".hover()<CR>', opts)
+  buf_set_keymap('v', '<leader>dhv',
+            '<cmd>lua require"dap.ui.variables".visual_hover()<CR>', opts)
+
+  buf_set_keymap('n', '<leader>duh', '<cmd>lua reuire"dap.ui.widgets".hover()<CR>', opts)
+  buf_set_keymap('n', '<leader>duf',
+            "<cmd>lua local widgets=require'dap.ui.widgets';widgets.centered_float(widgets.scopes)<CR>", opts)
+
+  buf_set_keymap('n', '<leader>dsbr',
+            '<cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', opts)
+  buf_set_keymap('n', '<leader>dsbm',
+            '<cmd>lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>', opts)
+  buf_set_keymap('n', '<leader>dro', '<cmd>lua require"dap".repl.open()<CR>', opts)
+  buf_set_keymap('n', '<leader>drl', '<cmd>lua require"dap".repl.run_last()<CR>', opts)
+
+
+  -- telescope-dap
+  buf_set_keymap('n', '<leader>dcc',
+            '<cmd>lua require"telescope".extensions.dap.commands{}<CR>', opts)
+  buf_set_keymap('n', '<leader>dco',
+            '<cmd>lua require"telescope".extensions.dap.configurations{}<CR>', opts)
+  buf_set_keymap('n', '<leader>dlb',
+            '<cmd>lua require"telescope".extensions.dap.list_breakpoints{}<CR>', opts)
+  buf_set_keymap('n', '<leader>dv',
+            '<cmd>lua require"telescope".extensions.dap.variables{}<CR>', opts)
+  buf_set_keymap('n', '<leader>df',
+            '<cmd>lua require"telescope".extensions.dap.frames{}<CR>', opts)
+
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single", color = "red" })
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" })
 
