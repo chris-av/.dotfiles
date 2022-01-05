@@ -26,6 +26,7 @@ return function(client, bufnr)
   buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next({ float = { border = "single" }})<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  buf_set_keymap('n', '<esc><esc>', '<cmd>nohlsearch<CR>', opts)
 
   -- nvim tree key bindings
   buf_set_keymap('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', opts)
@@ -39,6 +40,13 @@ return function(client, bufnr)
   buf_set_keymap('n', 'fg', "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
   buf_set_keymap('n', 'fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
   buf_set_keymap('n', 'fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
+
+
+  -- bufferline
+  buf_set_keymap('n', '<S-l>', ':bnext<CR>', opts)
+  buf_set_keymap('n', '<S-h>', ':bnext<CR>', opts)
+  buf_set_keymap('n', '<S-h>', ':bnext<CR>', opts)
+  buf_set_keymap('n', 'Q', '<cmd>Bdelete!<CR>', opts)
 
 
   -- for debugger

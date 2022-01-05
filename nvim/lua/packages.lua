@@ -14,6 +14,13 @@ packer.startup(function()
   use 'vim-airline/vim-airline-themes'
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
+  use {
+    'akinsho/bufferline.nvim',
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+      'moll/vim-bbye'
+    }
+  }
 
   -- completion
   use 'hrsh7th/nvim-cmp'
@@ -66,8 +73,6 @@ packer.startup(function()
   -- non neovim plugins
   use 'maxmellon/vim-jsx-pretty'
   use 'alvan/vim-closetag'
-  -- use 'preservim/nerdtree'
-  -- use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use 'ryanoasis/vim-devicons'
 
 end)
