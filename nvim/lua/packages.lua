@@ -10,8 +10,12 @@ packer.startup(function()
   use 'nvim-treesitter/nvim-treesitter'
 
   -- interface
-  use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes'
+  -- use 'vim-airline/vim-airline'
+  -- use 'vim-airline/vim-airline-themes'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
   use {
@@ -42,7 +46,6 @@ packer.startup(function()
   use 'nvim-telescope/telescope-dap.nvim'
   use 'theHamsta/nvim-dap-virtual-text'
   use 'mfussenegger/nvim-dap-python'
-  use 'rcarriga/nvim-dap-ui'
   use 'Pocco81/DAPInstall.nvim'
   use {
     'rcarriga/nvim-dap-ui',
