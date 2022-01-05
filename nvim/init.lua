@@ -24,6 +24,9 @@ vim.o.cursorline = true
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.g.mapleader = " "
+vim.o.showmode = false
+vim.o.scrolloff = 8
+vim.o.sidescrolloff = 8
 
 
 -- try out some colors
