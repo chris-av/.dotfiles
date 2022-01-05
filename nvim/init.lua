@@ -1,6 +1,8 @@
 local vim = vim
 local fn = vim.fn
 
+-- make sure iTerm2 has "report mouse wheel events" turned off
+vim.o.mouse = 'a'
 vim.o.syntax = 'on'
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
@@ -11,7 +13,6 @@ vim.bo.autoindent = true
 vim.bo.smartindent = true
 vim.o.backspace = 'indent,eol,start'
 vim.o.encoding = 'UTF-8'
--- do option for sign column
 vim.cmd('highlight clear SignColumn')
 vim.o.showmatch = true
 vim.o.completeopt = 'menuone,noinsert,noselect'
