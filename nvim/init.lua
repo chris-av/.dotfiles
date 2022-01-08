@@ -1,6 +1,3 @@
-local vim = vim
-local fn = vim.fn
-
 -- highlight groups, options, etc
 require('configs')
 
@@ -22,7 +19,7 @@ require 'completions'
 require 'diagnostics'
 require 'packages'
 require 'lsp'
-require 'debugger'
+require 'debuggers'
 
 
 
