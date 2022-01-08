@@ -17,8 +17,6 @@ packer.startup(function()
   use 'nvim-treesitter/nvim-treesitter'
 
   -- interface
-  -- use 'vim-airline/vim-airline'
-  -- use 'vim-airline/vim-airline-themes'
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
