@@ -1,4 +1,11 @@
+local fn = vim.fn
 local packer = require 'packer'
+
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+  -- vim.cmd 'packadd packer.nvim'
+end
 
 packer.startup(function()
   local use = packer.use
@@ -77,5 +84,9 @@ packer.startup(function()
   use 'maxmellon/vim-jsx-pretty'
   use 'alvan/vim-closetag'
   use 'ryanoasis/vim-devicons'
+
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 
 end)
