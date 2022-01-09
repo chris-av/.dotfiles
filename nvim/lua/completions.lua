@@ -87,8 +87,21 @@ cmp.event:on(
 )
 
 require('Comment').setup()
-
-
-
 require('telescope').setup {}
+
+
+-- -- does not appear to work with jsx which is a deal breaker
+-- -- does work for vanilla html for some reason
+-- require('nvim-ts-autotag').setup({
+--
+--   filetypes = {
+--     'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue'
+--   },
+--
+--   skip_tags = {
+--     'area', 'base', 'br', 'col', 'command', 'embed', 'hr', 'img', 'slot',
+--     'input', 'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr','menuitem'
+--   }
+--
+-- })
 
