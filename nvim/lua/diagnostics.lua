@@ -25,8 +25,4 @@ vim.diagnostic.config ({
 
 
 
-vim.cmd([[hi DiagnosticsError ctermfg=red]])
-vim.cmd([[hi DiagnosticHint ctermfg=blue]])
-vim.cmd([[hi DiagnosticsWarning ctermfg=yellow]])
-vim.cmd([[hi DiagnosticsInformation ctermfg=yellow]])
 
