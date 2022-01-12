@@ -45,6 +45,7 @@ packer.startup(function()
 
   -- colorschemes
   use 'marko-cerovac/material.nvim'
+  use 'projekt0n/github-nvim-theme'
 
 
   -- debugger
