@@ -7,8 +7,8 @@ echo ""
 NVIM_CONFIG=./nvim
 echo "nvim config here : $NVIM_CONFIG"
 if [ -d "$NVIM_CONFIG" ]; then
-  echo "creating symlink for nvim"
-  ln -sr $NVIM_CONFIG ~/.config
+  echo "download my neovim github repo"
+  git clone git@github.com:chris-av/nvim ~/.config/nvim
 fi
 unset NVIM_CONFIG;
 
