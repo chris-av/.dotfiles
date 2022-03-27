@@ -1,9 +1,19 @@
 [user]
-	name = Christian Valenzuela
-	email = 41182258+im2wddrf@users.noreply.github.com
+  name = Christian Valenzuela
+  email = 41182258+chris-av@users.noreply.github.com
 [pager]
   branch = false
 [init]
-	defaultBranch = main
+  defaultBranch = main
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+  ui = auto
+[alias]
+  hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
+  llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
