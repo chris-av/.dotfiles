@@ -1,6 +1,6 @@
 # use gnu ls command
 alias ls='ls -Ga --color=auto --group-directories-first'
-alias l='ls -Gloa --time-style=long-iso --color=auto --group-directories-first'
+alias l='ls -Ghloa --time-style=long-iso --color=auto --group-directories-first'
 alias lsd='ls -Ga --color=auto --group-directories-first --directory *(D/)'
 
 # Always enable colored `grep` output
