@@ -55,13 +55,13 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # my configurations
 # set python version in path
-PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
-export PATH
+# PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
+# export PATH
 
 
 # make GNU commands available / replace mac version
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
+# export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+# export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
 
 
 source ~/.aliases
