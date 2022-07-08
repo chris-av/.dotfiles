@@ -42,4 +42,5 @@ nvm install node
 . ./utilites/language-servers/vscode-extract.sh
 . ./utilites/language-servers/lua-lang-server.sh
 . ./utilites/language-servers/pyright-lang-server.sh
+. ./utilites/language-servers/zig-lang-server.sh
 
