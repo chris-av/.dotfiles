@@ -7,6 +7,15 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME=""
 
 
+# if you have nvim installed, make that your default editor!
+which nvim > /dev/null 2>&1
+if [[ $? == 0 ]]; then
+  export EDITOR=nvim
+else
+  export EDITOR=vim
+fi
+
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
