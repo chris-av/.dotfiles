@@ -1,6 +1,5 @@
 # install brew
-which -s brew
-if [[ $? != 0 ]] ; then
+if ! [[ -x "$(command -v brew)" ]] ; then
   # if exit of prev command not zero
   # you don't have homebrew so install it
   echo "you don't have homebrew installing it now ..."
@@ -16,8 +15,7 @@ fi
 
 # write installation x-code tools
 echo "checking if you have x-code"
-xcode-select -p 1>/dev/null
-if [[ $? != 0 ]] ; then
+if [[ -x "$(command -v xcode-select)" ]] ; then
   echo "you do not have x-code installing it now ... "
   xcode-select --install
 else
