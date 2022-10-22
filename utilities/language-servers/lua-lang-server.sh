@@ -2,6 +2,8 @@ echo "installing lua language server ..."
 echo ""
 echo ""
 
+cwd=$(pwd)
+
 # clone the project
 git clone https://github.com/sumneko/lua-language-server ~/.cache/nvim/lua-lang-server
 cd ~/.cache/nvim/lua-lang-server/
@@ -12,4 +14,9 @@ cd 3rd/luamake
 compile/install.sh
 cd ../..
 ./3rd/luamake/luamake rebuild
+
+
+cd $cwd
+unset cwd
+
 
