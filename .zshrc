@@ -21,14 +21,11 @@ plugins=(
 
   git
 # zsh-autosuggestions
-
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
 
-
-# for syntax highlighting.
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # remove underline. I think it looks ugly
 ZSH_HIGHLIGHT_STYLES[path]=none
