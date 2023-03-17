@@ -6,7 +6,6 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export ZSH=$HOME/.oh-my-zsh
 
 
-# if you have nvim installed, make that your default editor!
 which nvim > /dev/null 2>&1
 if [[ $? == 0 ]]; then
   export EDITOR=nvim
