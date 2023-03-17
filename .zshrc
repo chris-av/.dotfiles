@@ -86,3 +86,9 @@ export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="/Users/chrisvalenzuela/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+
+# pnpm
+export PNPM_HOME="/Users/chrisvalenzuela/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
