@@ -10,8 +10,6 @@ export ZSH=$HOME/.oh-my-zsh
 which nvim > /dev/null 2>&1
 if [[ $? == 0 ]]; then
   export EDITOR=nvim
-else
-  export EDITOR=vim
 fi
 
 
