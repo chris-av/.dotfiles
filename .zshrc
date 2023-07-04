@@ -55,7 +55,13 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # make GNU commands available / replace mac version
 # check if Mac with uname AND check if coreutils have been installed with brew info coreutils with zero exit code
-if [[ -x "$(command -v coreutils)" ]] ; then
+unameOut="$(uname -s)"
+if [[ $unameOut == "Darwin" ]]; then
+  brew ls --version coreutils > /dev/null
+  if [ $? -ne 0 ]; then
+    echo "did not detect coreutils, running this now"
+    brew install coreutils
+  fi
   export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
   export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
 fi
