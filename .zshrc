@@ -51,11 +51,6 @@ LS_COLORS='no=00;37:fi=00:di=01;34:ln=00;36:pi=01;33:so=01;35:bd=40;33;01:'
 export LS_COLORS
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-# add zls to path
-PATH=$PATH:$HOME/zls
-
-# add bun to path
-PATH=$PATH:$HOME/.bun/bin/bun
 
 
 # make GNU commands available / replace mac version
@@ -77,6 +72,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # bun completions
 if [[ -x "$(command -v bun)" ]] ; then
+  # add bun to path
+  PATH=$PATH:$HOME/.bun/bin/bun
   [ -s "/Users/chrisvalenzuela/.bun/_bun" ] && source "/Users/chrisvalenzuela/.bun/_bun"
   export BUN_INSTALL="/Users/chrisvalenzuela/.bun"
   export PATH="$BUN_INSTALL/bin:$PATH"
