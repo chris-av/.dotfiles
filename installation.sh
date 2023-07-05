@@ -7,7 +7,6 @@ echo ""
 if [[ "$unameOut" == "Darwin" ]]; then 
 
   echo "you are on a mac, running installation for mac ... "
-  # installation steps
   . ./utilites/mac-installation.sh
 
 elif [[ "$unameOut" == "Linux" ]]; then 
@@ -36,12 +35,4 @@ cur -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
 nvm install node
 
-
-# # install language servers
-# # mason nvim should handle language servers
-# . ./utilites/language-servers/tsserver.sh
-# . ./utilites/language-servers/vscode-extract.sh
-# . ./utilites/language-servers/lua-lang-server.sh
-# . ./utilites/language-servers/pyright-lang-server.sh
-# . ./utilites/language-servers/zig-lang-server.sh
 

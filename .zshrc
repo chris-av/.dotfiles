@@ -1,7 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/bin:$PATH
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -55,21 +51,15 @@ LS_COLORS='no=00;37:fi=00:di=01;34:ln=00;36:pi=01;33:so=01;35:bd=40;33;01:'
 export LS_COLORS
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-# my configurations
-# set python version in path
-PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
-export PATH
-
-# add zls to path
-PATH=$PATH:$HOME/zls
-
-# add bun to path
-PATH=$PATH:$HOME/.bun/bin/bun
 
 
 # make GNU commands available / replace mac version
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
+# check if Mac with uname AND check if coreutils have been installed with brew info coreutils with zero exit code
+unameOut="$(uname -s)"
+if [[ $unameOut == "Darwin" ]]; then
+  export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
+fi
 
 
 source ~/.aliases
@@ -79,16 +69,23 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# bun completions
-[ -s "/Users/chrisvalenzuela/.bun/_bun" ] && source "/Users/chrisvalenzuela/.bun/_bun"
 
-# Bun
-export BUN_INSTALL="/Users/chrisvalenzuela/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+if [[ -x "$(command -v bun)" ]] ; then
+  # add bun to path
+  PATH=$PATH:$HOME/.bun/bin/bun
+  [ -s "/Users/chrisvalenzuela/.bun/_bun" ] && source "/Users/chrisvalenzuela/.bun/_bun"
+  export BUN_INSTALL="/Users/chrisvalenzuela/.bun"
+  export PATH="$BUN_INSTALL/bin:$PATH"
+fi
+
+
 
 
 # pnpm
-export PNPM_HOME="/Users/chrisvalenzuela/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
+if [[ -x "$(command -v bun)" ]] ; then
+  export PNPM_HOME="/Users/chrisvalenzuela/Library/pnpm"
+  export PATH="$PNPM_HOME:$PATH"
+fi
 
