@@ -27,11 +27,6 @@ source $ZSH/oh-my-zsh.sh
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
-# remove all commands with "git commit" from history
-# see this link for explanation : https://stackoverflow.com/questions/7243983/how-to-remove-an-entry-from-the-history-in-zsh
-LC_ALL=C sed -i '' '/git commit/d' $HISTFILE
-LC_ALL=C sed -i '' '/echo /d' $HISTFILE
-
 
 
 # load in the colors!
