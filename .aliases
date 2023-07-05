@@ -51,30 +51,21 @@ function socials() {
   linkedin="https://www.linkedin.com/in/christian-a-valenzuela/"
   website="https://chrisav.dev"
 
-  if [[ $# == 0 ]]; then
-    echo "github: $github"
-    echo "linkedin: $linkedin"
-    echo "website: $website"
-    return 0
-  fi
-
-  if [[ $# > 1 ]]; then
-    echo "received too many arguments ... "
-    return 1
-  fi
-
-  if [[ $1 == "--linkedin" ]]; then
-    echo $linkedin
-  elif [[ $1 == "--github" ]]; then
-    echo $github
-  elif [[ $1 == "--website" ]]; then
-    echo $website
-  else
-    echo "invalid argument : $1"
-    return 1
-  fi
-
-  return 0
+  for arg in "$@"; do
+    case $arg in 
+      -l|--linkedin)
+        echo "$linkedin"
+        ;;
+      -g|--github)
+        echo "$github"
+        ;;
+      -w|--website)
+        echo "$website"
+        ;;
+      *)
+      ;;
+    esac
+  done
 
 }
 
