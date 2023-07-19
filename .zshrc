@@ -70,17 +70,16 @@ export NVM_DIR="$HOME/.nvm"
 if [[ -x "$(command -v bun)" ]] ; then
   # add bun to path
   PATH=$PATH:$HOME/.bun/bin/bun
-  [ -s "/Users/chrisvalenzuela/.bun/_bun" ] && source "/Users/chrisvalenzuela/.bun/_bun"
-  export BUN_INSTALL="/Users/chrisvalenzuela/.bun"
+  [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+  export BUN_INSTALL="$HOME/.bun"
   export PATH="$BUN_INSTALL/bin:$PATH"
 fi
 
 
 
-
-# pnpm
-if [[ -x "$(command -v bun)" ]] ; then
-  export PNPM_HOME="/Users/chrisvalenzuela/Library/pnpm"
-  export PATH="$PNPM_HOME:$PATH"
-fi
+export PNPM_HOME="/home/chrisv/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 
