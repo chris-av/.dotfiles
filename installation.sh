@@ -9,11 +9,16 @@ if [[ "$unameOut" == "Darwin" ]]; then
   echo "you are on a mac, running installation for mac ... "
   . ./utilites/mac-installation.sh
 
+  stow aliases git nvim tmux vim zsh
+
 elif [[ "$unameOut" == "Linux" ]]; then 
 
   echo "you are on linux!"
   echo ""
   . ./utilities/linux-installation.sh
+
+  stow aliases git nvim tmux vim zsh \
+    cava hyprland mpd waybar wofi
 
 fi
 
