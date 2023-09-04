@@ -70,6 +70,7 @@ slurp
 smartmontools
 sof-firmware
 starship
+stow
 swappy
 swaybg
 swaylock-effects
