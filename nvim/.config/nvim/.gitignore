@@ -1,0 +1,2 @@
+# do not commit compiled packer file
+plugin/packer_compiled.lua
