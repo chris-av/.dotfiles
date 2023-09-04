@@ -1,21 +1,3 @@
-echo "preparing nvim"
-echo ""
-echo ""
-
-
-NVIM_CONFIG=~/.config/nvim
-echo "nvim config here : $NVIM_CONFIG"
-if [ ! -d "$NVIM_CONFIG" ]; then
-  echo "download my neovim github repo"
-  git clone git@github.com:chris-av/nvim ~/.config/nvim
-else
-  echo "nvim already set up! ^^"
-fi
-unset NVIM_CONFIG;
-
-echo ""
-echo ""
-
 echo "check packer for nvim ... "
 PACKER_DIR=~/.local/share/nvim/site/pack
 if [ ! -d "$PACKER_DIR" ]; then
