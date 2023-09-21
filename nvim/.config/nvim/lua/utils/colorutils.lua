@@ -3,7 +3,10 @@ local M = {}
 
 M.theme_table = {
   ["Material Deep Ocean"] = "material",
-  ["Catppuccin"] = "catppuccin",
+  ["Catppuccin Frappe"] = "catppuccin-frappe",
+  ["Catppuccin Latte"] = "catppuccin-latte",
+  ["Catppuccin Macchiato"] = "catppuccin-macchiato",
+  ["Catppuccin Mocha"] = "catppuccin-mocha",
   ["Embark"] = "embark",
   ["Coal"] = "coal",
   ["Matrix"] = "matrix",
