@@ -56,6 +56,10 @@ if [[ $unameOut == "Darwin" ]]; then
   export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
 fi
 
+# if you are using iterm, set TERM_PROFILE, which should be equal to ITERM_PROFILE
+if [[ -v "${ITERM_PROFILE}" ]]; then
+  export TERM_PROFILE="$ITERM_PROFILE"
+fi
 
 source ~/.aliases
 
