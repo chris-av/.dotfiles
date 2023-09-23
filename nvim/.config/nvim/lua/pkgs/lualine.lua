@@ -1,5 +1,6 @@
 local status_ok, navic = pcall(require, 'nvim-navic')
 local notifications = require('utils.notifications')
+local colorutils = require('utils.colorutils')
 if not status_ok then
   notifications.plugin_error('nvim-navic')
   return
@@ -11,6 +12,9 @@ if not status_ok then
   return
 end
 
+local use_theme = colorutils.get_lualine_theme()
+local import_path = 'lualine.themes.' .. use_theme
+local lualine_theme = require('lualine.themes.' .. use_theme)
 
 
 navic.setup({
@@ -48,6 +52,9 @@ navic.setup({
 
 -- now call lualine, and extend it with gps
 lualine.setup({
+  options = {
+    theme = lualine_theme,
+  },
   sections = {
     lualine_a = { 'mode' },
     lualine_b = { 'branch', 'diff', 'diagnostics' },
