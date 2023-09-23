@@ -11,7 +11,7 @@ M.theme_table = {
   ["Grey"] = { colorscheme = "grey", lualine_theme = "auto" },
   ["Matrix"] = { colorscheme = "matrix", lualine_theme = "auto" },
   ["Dark"] = { colorscheme = "dark", lualine_theme = "material" },
-  ["Snazzy"] = { colorscheme = "snazzy", lualine_theme = "wombat" },
+  ["Snazzy"] = { colorscheme = "snazzy", lualine_theme = "material" },
 }
 
 M.set_colorscheme = function()
