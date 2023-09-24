@@ -18,7 +18,7 @@ elif [[ "$unameOut" == "Linux" ]]; then
   . ./utilities/linux-installation.sh
 
   stow aliases git nvim tmux vim zsh \
-    cava hyprland mpd waybar wofi
+    cava hyprland mpd waybar wofi kitty
 
 fi
 
