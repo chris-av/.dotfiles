@@ -51,6 +51,7 @@ packer.startup(function()
   use 'voldikss/vim-floaterm'
   use 'rcarriga/nvim-notify'
   use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+  use 'christoomey/vim-tmux-navigator'
 
   -- completion
   use 'hrsh7th/nvim-cmp'
