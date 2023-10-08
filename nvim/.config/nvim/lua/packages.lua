@@ -77,7 +77,7 @@ local plugins = {
   },
   {
     'christoomey/vim-tmux-navigator',
-    event = "BufReadPre",
+    event = "BufReadPre", -- necessary for the plugin to work
   },
 
   -- completion
