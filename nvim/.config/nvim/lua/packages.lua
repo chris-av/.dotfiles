@@ -32,7 +32,7 @@ local plugins = {
   'ziglang/zig.vim',
   {
     'laytan/tailwind-sorter.nvim',
-    dependencies = {'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim'},
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim' },
     build = 'cd formatter && npm i && npm run build',
     config = true,
   },
@@ -141,7 +141,7 @@ local plugins = {
 local opts = {
   root = lazydir, -- directory where plugins will be installed
   defaults = {
-    lazy = false,                           -- should plugins be lazy-loaded?
+    lazy = false, -- should plugins be lazy-loaded?
   },
   -- leave nil when passing the spec as the first argument to setup()
   lockfile = vim.fn.stdpath("config") .. "/lazy-lock.json", -- lockfile generated after running update.
