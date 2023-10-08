@@ -1,6 +1,6 @@
 local lazydir = vim.fn.stdpath("data") .. '/site/lazy'
 local lazypath = vim.fn.stdpath("data") .. '/site/lazy/lazy.nvim'
-local devpath = vim.fn.stdpath("data") .. '/plugin-dev'
+local devdir = vim.fn.stdpath("data") .. '/plugin-dev'
 
 
 if not vim.loop.fs_stat(lazypath) then
@@ -161,7 +161,7 @@ local opts = {
   },
   dev = {
     -- directory where you store your local plugin projects
-    path = devpath,
+    path = devdir,
     ---@type string[] plugins that match these patterns will use your local versions instead of being fetched from GitHub
     patterns = {},    -- For example {"folke"}
     fallback = false, -- Fallback to git when local plugin doesn't exist
