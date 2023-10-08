@@ -67,7 +67,10 @@ local plugins = {
       'kevinhwang91/promise-async'
     }
   },
-  'christoomey/vim-tmux-navigator',
+  {
+    'christoomey/vim-tmux-navigator',
+    event = "BufReadPre",
+  },
 
   -- completion
   'hrsh7th/nvim-cmp',
