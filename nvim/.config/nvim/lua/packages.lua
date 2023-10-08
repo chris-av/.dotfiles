@@ -3,6 +3,14 @@ local lazypath = vim.fn.stdpath("data") .. '/site/lazy/lazy.nvim'
 local devdir = vim.fn.stdpath("data") .. '/plugin-dev'
 
 
+-- create the directory if it doesnt exist ... 
+for _, f in ipairs({ lazydir, devdir }) do
+  if vim.fn.isdirectory(f) == 0 then
+    vim.fn.mkdir(f, 'p')
+  end
+end
+
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
