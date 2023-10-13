@@ -18,7 +18,7 @@ local dark = {
   NonText =  { fg = 'none' },
   IncSearch =  { bold = true, bg = 'yellow', fg = 'black' },
   Search =  { bold = true, fg = 'black', bg = 'yellow' },
-  Visual =  { bg = 'darkgrey' },
+  Visual =  { bg = 'darkgrey', fg = 'black' },
   VisualNOS =  { bold = true },
   Operator =  { fg = 'white' },
   Statement =  { fg = 'lightgreen' },
