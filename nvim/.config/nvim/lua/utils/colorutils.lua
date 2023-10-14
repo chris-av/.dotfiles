@@ -15,7 +15,7 @@ M.theme_table = {
 }
 
 M.set_colorscheme = function()
-  local term_prof = os.getenv('TERM_PROFILE')
+  local term_prof = os.getenv('TERM_PROFILE') or os.getenv('ITERM_PROFILE')
   if (term_prof == nil) then
     vim.cmd " colorscheme dark "
     return
