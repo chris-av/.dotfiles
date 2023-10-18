@@ -110,7 +110,7 @@ local resourceConfig = function()
 end
 
 -- resource files
-vim.keymap.set("n", "<leader><leader>s",
+vim.keymap.set("n", "<leader>s",
   resourceConfig,
   extend(opts, { desc = "source the lua config again" }))
 
