@@ -5,10 +5,56 @@ if not status_ok then
   return
 end
 
+
+local ensure_installed = {
+  -- other programming languages
+  "c", "make",
+  "cpp",
+  "c_sharp",
+  "java",
+  "go",
+  "lua", "luadoc",
+  "llvm",
+  "python",
+  "r",
+  "rust",
+
+
+  -- system
+  "bash", "awk",
+  "perl",
+  "regex",
+  "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
+  "ssh_config",
+
+  -- vim / nvim
+  "vim", "vimdoc",
+
+  -- web dev
+  "html", "css", "htmldjango", "http", "scss",
+  "javascript", "jq",
+  "tsx", "typescript",
+
+
+  -- config files
+  "dockerfile",
+  "json", "jsdoc", "json5", "jsonc",
+  "toml", "yaml",
+
+  -- query lang
+  "query", "sql", "graphql",
+
+  -- markup
+  "markdown", "markdown_inline",
+  "xml",
+  "latex", "bibtex",
+  "ledger",
+}
+
 require('nvim-treesitter.configs').setup({
-  ensure_installed = "all",
   auto_install = true,
   ignore_install = {},
+  ensure_installed = ensure_installed,
   sync_install = false,
   highlight = {
     enable = true,
