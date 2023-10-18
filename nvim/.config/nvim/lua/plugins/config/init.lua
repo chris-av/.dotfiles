@@ -7,6 +7,8 @@ require('plugins.config.gitsigns')
 require('plugins.config.nvim-tree')
 require('plugins.config.telescope')
 require('plugins.config.floaterm')
+require('plugins.config.todo-comments')
+require('plugins.config.trouble')
 
 
 -- syntax, autocomplete, etc.
