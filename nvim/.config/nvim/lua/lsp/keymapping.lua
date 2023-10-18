@@ -7,8 +7,6 @@ end
 
 
 vim.keymap.set("", "<Space>", "<Nop>", extend(opts, { desc = "reserve space for leader" }))
-vim.g.mapleader = " "
-vim.g.localmapleader = " "
 
 
 local telescope = require('telescope')
