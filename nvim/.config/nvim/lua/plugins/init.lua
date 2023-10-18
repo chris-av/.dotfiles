@@ -11,7 +11,7 @@ for _, f in ipairs({ lazydir, devdir }) do
 end
 
 if not vim.loop.fs_stat(lazypath) then
-  print("cloning!!!")
+  print("did not find lazy in runtimepath (rtp), cloning it to : " .. lazypath)
   vim.fn.system({
     "git",
     "clone",
