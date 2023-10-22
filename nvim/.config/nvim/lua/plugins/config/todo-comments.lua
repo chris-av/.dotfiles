@@ -18,6 +18,7 @@ todo_comments.setup({
     PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
     NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
     TEST = { icon = "󰙨", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+    QUESTION = { icon = "", color = "question", }
   },
   gui_style = {
     fg = "NONE", -- The gui style to use for the fg highlight group.
@@ -48,7 +49,8 @@ todo_comments.setup({
     info = { "DiagnosticInfo", "#2563EB" },
     hint = { "DiagnosticHint", "#10B981" },
     default = { "Identifier", "#7C3AED" },
-    test = { "Identifier", "#FF00FF" }
+    test = { "Identifier", "#FF00FF" },
+    question = { "#A9FF68" },
   },
   search = {
     command = "rg",
