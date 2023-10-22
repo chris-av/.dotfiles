@@ -57,7 +57,7 @@ trouble.setup({
 
 
 -- Lua
-vim.keymap.set("n", "<leader><leader>", function() trouble.toggle() end, { desc = "Trouble toggle" })
+vim.keymap.set("n", "<leader><leader>", function() trouble.toggle("workspace_diagnostics") end, { desc = "Trouble toggle" })
 vim.keymap.set("n", "<leader>tw", function() trouble.toggle("workspace_diagnostics") end, { desc = "Trouble workspace diagnostics" })
 vim.keymap.set("n", "<leader>td", function() trouble.toggle("document_diagnostics") end, { desc = "Trouble document diagnostics" })
 vim.keymap.set("n", "<leader>gr", function() trouble.toggle("lsp_references") end, { desc = "Trouble lsp_references" })
