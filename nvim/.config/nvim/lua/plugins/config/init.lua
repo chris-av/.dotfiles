@@ -9,6 +9,8 @@ require('plugins.config.telescope')
 require('plugins.config.floaterm')
 require('plugins.config.todo-comments')
 require('plugins.config.trouble')
+require('plugins.config.twilight')
+require('plugins.config.zen')
 
 
 -- syntax, autocomplete, etc.
