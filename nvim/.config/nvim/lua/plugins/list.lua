@@ -66,6 +66,7 @@ local plugins = {
     build = function() vim.fn["mkdp#util#install"]() end,
   },
   "folke/twilight.nvim",
+  "folke/zen-mode.nvim",
 
   -- completion
   'hrsh7th/nvim-cmp',
