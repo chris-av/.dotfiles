@@ -65,3 +65,7 @@ zen.setup({
   on_close = function()
   end,
 })
+
+
+vim.keymap.set("n", "<leader>z", function() zen.toggle() end, { desc = "Toggle Zen Mode" })
+
