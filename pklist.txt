@@ -1,5 +1,6 @@
 alsa-utils
 ark
+at
 autoconf-archive
 base
 base-devel
