@@ -74,8 +74,8 @@ sof-firmware
 starship
 stow
 swappy
-swaybg
 swaylock-effects
+swww
 sxiv
 thunar
 tmux
