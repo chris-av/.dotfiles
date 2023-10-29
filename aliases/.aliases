@@ -45,6 +45,11 @@ if [[ "$unameOut" == "Darwin" ]]; then
 
 fi
 
+if [[ "$unameOut" == "Linux" ]];then
+  alias wlc=wl-copy
+  alias wlp=wl-paste
+fi
+
 
 function socials() {
   github="https://github.com/chris-av"
