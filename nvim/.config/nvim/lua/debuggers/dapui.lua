@@ -16,7 +16,7 @@ end
 
 
 dapui.setup({
-  icons = { expanded = "▾", collapsed = "▸" },
+  icons = { expanded = "", collapsed = "", circular = "" },
   expand_lines = false,
   mappings = {
     -- Use a table to apply multiple mappings
@@ -52,14 +52,15 @@ dapui.setup({
     -- Display controls in this element
     element = "repl",
     icons = {
-      pause = "",
-      play = "",
-      step_into = "",
-      step_over = "",
-      step_out = "",
-      step_back = "",
-      run_last = "↻",
-      terminate = "□",
+      disconnect = "",
+      pause = "",
+      play = "",
+      run_last = "",
+      step_back = "",
+      step_into = "",
+      step_out = "",
+      step_over = "",
+      terminate = ""
     },
   },
   floating = {
