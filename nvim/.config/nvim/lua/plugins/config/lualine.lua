@@ -73,12 +73,12 @@ lualine.setup({
     lualine_y = {},
     lualine_z = {}
   },
-  winbar = {
-    lualine_z = { { 'filename', path = 1 } }
-  },
-  inactive_winbar = {
-    lualine_z = { { 'filename', path = 1 } }
-  },
+  -- winbar = {
+  --   lualine_z = { { 'filename', path = 1 } }
+  -- },
+  -- inactive_winbar = {
+  --   lualine_z = { { 'filename', path = 1 } }
+  -- },
   tabline = {},
   extensions = {}
 })
