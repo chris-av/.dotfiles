@@ -4,6 +4,7 @@ at
 autoconf-archive
 base
 base-devel
+bat
 bluez
 bluez-utils
 bpytop
@@ -31,6 +32,7 @@ hyprland
 intel-media-driver
 intel-ucode
 iwd
+jq
 kate
 kitty
 konsole
@@ -68,6 +70,7 @@ rstudio-desktop-bin
 rust
 sddm
 silicon
+slack-desktop
 slurp
 smartmontools
 sof-firmware
