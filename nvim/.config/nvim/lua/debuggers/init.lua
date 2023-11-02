@@ -11,7 +11,7 @@ require('dap').set_log_level('DEBUG')
 local signs = {
   DapBreakpoint = { icon = "", hl = { fg = "red", bg = "" }},
   DapStopped = { icon = "", hl = { fg = "red", bg = "" }},
-  DapBreakpointCondition = { icon = "", hl = { fg = "green", bg = "" }},
+  DapBreakpointCondition = { icon = "", hl = { fg = "orange", bg = "", bold = true }},
   DapBreakpointRejected = { icon = "", hl = { fg = "red", bg = "" }},
   DapLogPoint = { icon = "", hl = { fg = "cyan", bg = "" }},
 }
