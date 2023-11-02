@@ -70,8 +70,8 @@ require('nvim-treesitter.configs').setup({
     enable = true
   },
   indent = {
-    enable = false,
-    disable = { 'yaml', 'python', 'javascript' }
+    enable = true,
+    disable = { 'yaml', 'javascript' }
   },
   autotag = {
     enable = true,
