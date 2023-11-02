@@ -76,7 +76,7 @@ vim.keymap.set('n', '<F2>', function ()
   if condition then
     dap.toggle_breakpoint(condition, nil, nil, true)
   end
-end, extend(opts, { desc = "Debugger (DAP) - toggle breakpoint" }))
+end, extend(opts, { desc = "Debugger (DAP) - toggle conditional breakpoint" }))
 vim.keymap.set('n', '<leader>daa', debuggers.attach, extend(opts, { desc = "Debugger (DAP) - attach" }))
 vim.keymap.set('n', '<leader>dar', debuggers.attachToRemote, extend(opts, { desc = "Debugger (DAP) - attach to remote" }))
 vim.keymap.set('n', '<F3>', dap.terminate, extend(opts, { desc = "Debugger (DAP) - terminate" }))
