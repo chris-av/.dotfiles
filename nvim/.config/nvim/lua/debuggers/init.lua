@@ -9,15 +9,19 @@ require('dap').set_log_level('DEBUG')
 
 
 local signs = {
-  DapBreakpoint = "",
-  DapBreakpointCondition = "",
-  DapBreakpointRejected = "",
-  DapLogPoint = "",
-  DapStopped = "◌"
+  DapBreakpoint = { icon = "", hl = { fg = "red", bg = "" }},
+  DapStopped = { icon = "", hl = { fg = "red", bg = "" }},
+  DapBreakpointCondition = { icon = "", hl = { fg = "green", bg = "" }},
+  DapBreakpointRejected = { icon = "", hl = { fg = "red", bg = "" }},
+  DapLogPoint = { icon = "", hl = { fg = "cyan", bg = "" }},
 }
 
-for type, icon in pairs(signs) do
-  vim.fn.sign_define(type, { text = icon, texthl = type, numhl = "" })
+for name, info in pairs(signs) do
+  local icon = info.icon
+  local fg = info.hl.fg
+  local bg=  info.hl.bg
+  vim.fn.sign_define(name, { text = icon, texthl = name, numhl = "" })
+  vim.api.nvim_set_hl(0, name, { fg = fg, bg = bg })
 end
 
 
