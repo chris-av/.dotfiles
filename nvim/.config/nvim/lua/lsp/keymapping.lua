@@ -70,6 +70,13 @@ vim.keymap.set('n', '<F11>', dap.step_into, extend(opts, { desc = "Debugger (DAP
 vim.keymap.set('n', '<F10>', dap.step_over, extend(opts, { desc = "Debugger (DAP) - step over" }))
 vim.keymap.set('n', '<F5>', dap.continue, extend(opts, { desc = "Debugger (DAP) - continue" }))
 vim.keymap.set('n', '<F1>', dap.toggle_breakpoint, extend(opts, { desc = "Debugger (DAP) - toggle breakpoint" }))
+vim.keymap.set('n', '<F2>', function ()
+  -- dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+  local condition = vim.fn.input({ prompt = 'Breakpoint Condition: '})
+  if condition then
+    dap.toggle_breakpoint(condition, nil, nil, true)
+  end
+end, extend(opts, { desc = "Debugger (DAP) - toggle breakpoint" }))
 vim.keymap.set('n', '<leader>daa', debuggers.attach, extend(opts, { desc = "Debugger (DAP) - attach" }))
 vim.keymap.set('n', '<leader>dar', debuggers.attachToRemote, extend(opts, { desc = "Debugger (DAP) - attach to remote" }))
 vim.keymap.set('n', '<F3>', dap.terminate, extend(opts, { desc = "Debugger (DAP) - terminate" }))
