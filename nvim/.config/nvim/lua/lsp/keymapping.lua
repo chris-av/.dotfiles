@@ -74,8 +74,8 @@ vim.keymap.set('n', '<leader>daa', debuggers.attach, extend(opts, { desc = "Debu
 vim.keymap.set('n', '<leader>dar', debuggers.attachToRemote, extend(opts, { desc = "Debugger (DAP) - attach to remote" }))
 vim.keymap.set('n', '<F3>', dap.terminate, extend(opts, { desc = "Debugger (DAP) - terminate" }))
 
-vim.keymap.set('n', '<leader>duh', dapui_widgets.hover, extend(opts, { desc = "DAP - widget hover" }))
-vim.keymap.set('n', '<leader>duf',
+vim.keymap.set('n', '<leader>dh', dapui_widgets.hover, extend(opts, { desc = "DAP - widget hover" }))
+vim.keymap.set('n', '<leader>dr',
           function ()
             local widgets=require'dap.ui.widgets'
             widgets.centered_float(widgets.scopes)
@@ -84,18 +84,12 @@ vim.keymap.set('n', '<leader>duf',
 
 
 -- telescope-dap
-vim.keymap.set('n', '<leader>dcc',
-          telescope.extensions.dap.commands,
-          extend(opts, extend(opts, { desc = "DAP - see commands" })))
-vim.keymap.set('n', '<leader>dco',
+vim.keymap.set('n', '<leader>dc',
           telescope.extensions.dap.configurations,
           extend(opts, extend(opts, { desc = "DAP - see configurations" })))
-vim.keymap.set('n', '<leader>dlb',
+vim.keymap.set('n', '<leader>dl',
           telescope.extensions.dap.list_breakpoints,
           extend(opts, extend(opts, { desc = "DAP -  list breakpoints" })))
-vim.keymap.set('n', '<leader>dv',
-          telescope.extensions.dap.variables,
-          extend(opts, extend(opts, { desc = "DAP - go to variables" })))
 vim.keymap.set('n', '<leader>df',
           telescope.extensions.dap.frames,
           extend(opts, extend(opts, { desc = "DAP - open frames" })))
