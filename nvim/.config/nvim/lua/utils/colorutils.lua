@@ -9,9 +9,9 @@ M.theme_table = {
   ["Catppuccin Mocha"] = { colorscheme = "catppuccin-mocha", lualine_theme = "auto" },
   ["Embark"] = { colorscheme = "embark", lualine_theme = "auto" },
   ["Grey"] = { colorscheme = "grey", lualine_theme = "auto" },
-  ["Matrix"] = { colorscheme = "matrix", lualine_theme = "auto" },
-  ["Dark"] = { colorscheme = "dark", lualine_theme = "material" },
-  ["Snazzy"] = { colorscheme = "snazzy", lualine_theme = "material" },
+  ["Matrix"] = { colorscheme = "matrix", lualine_theme = custom_path .. "matrix" },
+  ["Dark"] = { colorscheme = "dark", lualine_theme = std_path .. "material" },
+  ["Snazzy"] = { colorscheme = "snazzy", lualine_theme = std_path .. "material" },
 }
 
 M.set_colorscheme = function()
@@ -26,8 +26,6 @@ M.set_colorscheme = function()
   end
 end
 
-M.get_lualine_theme = function()
-  local term_prof = os.getenv('TERM_PROFILE')
 M.get_lualine_theme_path = function()
   local term_prof = os.getenv('TERM_PROFILE') or os.getenv('ITERM_PROFILE')
   if (term_prof == nil) then
