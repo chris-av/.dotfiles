@@ -1,6 +1,9 @@
 local M = {}
 
 
+local std_path = "lualine.themes."            -- import path to themes from lualine package
+local custom_path = "utils.lualine-themes."   -- import path for my own custom themes
+
 M.theme_table = {
   ["Material Deep Ocean"] = { colorscheme = "material", lualine_theme = "auto" },
   ["Catppuccin Frappe"] = { colorscheme = "catppuccin-frappe", lualine_theme = "auto" },
