@@ -29,6 +29,7 @@ end
 M.get_lualine_theme = function()
   local term_prof = os.getenv('TERM_PROFILE')
 M.get_lualine_theme_path = function()
+  local term_prof = os.getenv('TERM_PROFILE') or os.getenv('ITERM_PROFILE')
   if (term_prof == nil) then
     return "auto"
   else
