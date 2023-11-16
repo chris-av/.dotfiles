@@ -94,6 +94,9 @@ vim.keymap.set('n', '<leader>dr',
 vim.keymap.set('n', '<leader>dc',
           telescope.extensions.dap.configurations,
           extend(opts, extend(opts, { desc = "DAP - see configurations" })))
+vim.keymap.set('n', '<leader>dd',
+          dap.clear_breakpoints,
+          extend(opts, extend(opts, { desc = "DAP - clear breakpoints" })))
 vim.keymap.set('n', '<leader>dl',
           telescope.extensions.dap.list_breakpoints,
           extend(opts, extend(opts, { desc = "DAP -  list breakpoints" })))
