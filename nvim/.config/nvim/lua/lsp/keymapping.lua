@@ -4,6 +4,9 @@ local extend = function (tbl, desc)
 end
 
 
+local toggleWrap = function ()
+  vim.wo.wrap = not vim.wo.wrap
+end
 
 
 vim.keymap.set("", "<Space>", "<Nop>", extend(opts, { desc = "reserve space for leader" }))
