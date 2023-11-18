@@ -12,33 +12,33 @@ local colors = {
 }
 return {
   normal = {
-    a = {bg = colors.green, fg = colors.black, gui = 'bold'},
-    b = {bg = colors.green, fg = colors.white},
-    c = {bg = colors.green, fg = colors.gray}
+    a = { bg = colors.green, fg = colors.black, gui = 'bold' },
+    b = { bg = colors.green, fg = colors.black },
+    c = { bg = colors.green, fg = colors.gray }
   },
   insert = {
-    a = {bg = colors.green, fg = colors.black, gui = 'bold'},
-    b = {bg = colors.green, fg = colors.white},
-    c = {bg = colors.green, fg = colors.white}
+    a = { bg = colors.green, fg = colors.black, gui = 'bold' },
+    b = { bg = colors.green, fg = colors.black },
+    c = { bg = colors.green, fg = colors.black }
   },
   visual = {
-    a = {bg = colors.green, fg = colors.black, gui = 'bold'},
-    b = {bg = colors.green, fg = colors.white},
-    c = {bg = colors.green, fg = colors.black}
+    a = { bg = colors.green, fg = colors.black, gui = 'bold' },
+    b = { bg = colors.green, fg = colors.black },
+    c = { bg = colors.green, fg = colors.black }
   },
   replace = {
-    a = {bg = colors.green, fg = colors.black, gui = 'bold'},
-    b = {bg = colors.green, fg = colors.white},
-    c = {bg = colors.green, fg = colors.white}
+    a = { bg = colors.green, fg = colors.black, gui = 'bold' },
+    b = { bg = colors.green, fg = colors.black },
+    c = { bg = colors.green, fg = colors.black }
   },
   command = {
-    a = {bg = colors.green, fg = colors.black, gui = 'bold'},
-    b = {bg = colors.green, fg = colors.white},
-    c = {bg = colors.green, fg = colors.black}
+    a = { bg = colors.green, fg = colors.black, gui = 'bold' },
+    b = { bg = colors.green, fg = colors.black },
+    c = { bg = colors.green, fg = colors.black }
   },
   inactive = {
-    a = {bg = colors.green, fg = colors.gray, gui = 'bold'},
-    b = {bg = colors.green, fg = colors.gray},
-    c = {bg = colors.green, fg = colors.gray}
+    a = { bg = colors.green, fg = colors.black, gui = 'bold' },
+    b = { bg = colors.green, fg = colors.black },
+    c = { bg = colors.green, fg = colors.black }
   }
 }
