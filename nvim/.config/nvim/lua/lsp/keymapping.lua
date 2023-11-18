@@ -5,7 +5,10 @@ end
 
 
 local toggleWrap = function ()
-  vim.wo.wrap = not vim.wo.wrap
+  local curr_wrap = vim.wo.wrap
+  local new_wrap = not curr_wrap
+  print("setting wrap to " .. tostring(new_wrap))
+  vim.wo.wrap = new_wrap
 end
 
 
