@@ -23,7 +23,11 @@ M.set_colorscheme = function()
     vim.cmd " colorscheme dark "
     return
   else
-    local colorscheme = M.theme_table[term_prof].colorscheme
+    local theme = M.theme_table[term_prof]
+    if theme == nil then
+      return
+    end
+    local colorscheme = theme.colorscheme
     vim.cmd(" colorscheme " .. colorscheme)
     return
   end
@@ -32,14 +36,19 @@ end
 M.get_lualine_theme_path = function()
   local term_prof = os.getenv('TERM_PROFILE') or os.getenv('ITERM_PROFILE')
   if (term_prof == nil) then
-    return "auto"
+    return "utils.lualine-themes.auto"
   else
     local theme = M.theme_table[term_prof]
-    local lualine_theme = theme.lualine_theme
-    if lualine_theme == nil then
+    if theme == nil then
       print('could not find theme for : ' .. term_prof)
       print("defaulting to 'auto' for lualine")
-      return "auto"
+      return "utils.lualine-themes.auto"
+    end
+    local lualine_theme = theme.lualine_theme
+    if lualine_theme == nil then
+      print('could not find lualine theme for : ' .. theme)
+      print("defaulting to 'auto' for lualine")
+      return "utils.lualine-themes.auto"
     end
     return lualine_theme
   end
