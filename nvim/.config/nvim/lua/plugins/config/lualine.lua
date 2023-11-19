@@ -55,16 +55,7 @@ lualine.setup({
   options = {
     theme = lualine_theme,
   },
-  sections = {
-    lualine_a = { 'mode' },
-    lualine_b = { 'branch', 'diff', 'diagnostics' },
-    lualine_c = {
-      "navic",
-    },
-    lualine_x = { 'encoding', 'fileformat', 'filetype' },
-    lualine_y = {},
-    lualine_z = { 'location' }
-  },
+  sections = lualine_components,
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
