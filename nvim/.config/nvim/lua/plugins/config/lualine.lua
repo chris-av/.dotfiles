@@ -13,8 +13,14 @@ if not status_ok then
 end
 
 local theme_path = colorutils.get_lualine_theme_path()
-local lualine_theme = require(theme_path).theme
-local lualine_components = require(theme_path).components
+local lualine_theme, lualine_components
+if theme_path == "auto" then
+  lualine_theme = "auto"
+  lualine_components = require("utils.lualine-themes.auto").components
+else
+  lualine_theme = require(theme_path).theme
+  lualine_components = require(theme_path).components
+end
 
 
 navic.setup({
