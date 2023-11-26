@@ -18,7 +18,13 @@ if theme_path == "auto" then
   lualine_theme = "auto"
   lualine_components = require("utils.lualine-themes.auto").components
 else
-  lualine_theme = require(theme_path).theme
+  if string.find(theme_path, "lualine-themes") then
+    -- using custom theme, I have a theme key
+    lualine_theme = require(theme_path).theme
+  else
+    -- using out of the box theme from lualine
+    lualine_theme = require(theme_path)
+  end
   lualine_components = require(theme_path).components
 end
 
