@@ -5,6 +5,6 @@ if [ -f /tmp/current_wallpaper ]; then
   rm /tmp/current_wallpaper
 fi
 
-kitty +kitten themes material
+kitty +kitten themes --dump-theme material > ~/.config/kitty/tmp/current-theme.conf
 swww clear 0F111A
 
