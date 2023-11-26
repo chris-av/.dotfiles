@@ -8,3 +8,6 @@ kitty.conf.bak
 kitty/**/tmp/*
 
 
+# vim
+vim/**/plugged
+.netrwhist
