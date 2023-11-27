@@ -160,3 +160,16 @@ tooltip {
     margin-left: 0px;
 }
 
+#custom-recorder {
+  background: #1e1e2e;
+  opacity: 0.8;
+  padding: 0px 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border: 1px solid #181825;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#custom-recorder.enabled {
+    color: red;
+}
