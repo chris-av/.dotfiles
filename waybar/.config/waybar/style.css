@@ -59,7 +59,8 @@ tooltip {
 #temperature,
 #workspaces,
 #tray,
-#backlight {
+#backlight,
+#keyboard-state {
     background: #1e1e2e;
     opacity: 0.8;
     padding: 0px 10px;
