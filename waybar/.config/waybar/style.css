@@ -152,3 +152,10 @@ tooltip {
     border-right: 0px;
     margin-left: 0px;
 }
+
+#keyboard-state {
+    border-radius: 0px 10px 10px 0px;
+    border-right: 0px;
+    margin-left: 0px;
+}
+
