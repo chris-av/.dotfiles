@@ -13,21 +13,15 @@
         "format": "{}"
     },
 
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "on-click": "activate",
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
+        "format": "{name}: {icon}",
+        "format-icons": {
+          "1": "",       // coding
+          "2": "",       // web browsing
+          "3": "󰭻",       // chat
+          "4": ""        // misc
         }
     },
     
