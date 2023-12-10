@@ -40,5 +40,5 @@ fi
 
 swww img -t wipe --transition-step 190 --transition-duration 1.3 $prof_image
 kitty +kitten themes --dump-theme $prof_theme > ~/.config/kitty/tmp/current-theme.conf
-kitty +kitten themes --reload-in all $prof_theme
+killall -SIGUSR1 kitty
 
