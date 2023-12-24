@@ -30,6 +30,7 @@ gst-plugin-pipewire
 gvfs
 htop
 hyprland
+hyprpicker-git
 intel-media-driver
 intel-ucode
 iwd
