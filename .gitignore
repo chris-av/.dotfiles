@@ -7,6 +7,9 @@ vim/.vim/autoload/*
 kitty.conf.bak
 kitty/**/tmp/*
 
+# waybar
+waybar/**/tmp/*
+
 
 # vim
 vim/**/plugged
