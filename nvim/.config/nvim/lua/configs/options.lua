@@ -32,7 +32,7 @@ vim.opt.laststatus = 3
 vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.termguicolors = true
-vim.api.nvim_set_option("clipboard", "unnamed")
+vim.api.nvim_set_option("clipboard", "unnamedplus")
 vim.wo.foldlevel = 99
 vim.opt.guifont = "Hack Nerd Font:h11"
 vim.g.neovide_remember_window = true
