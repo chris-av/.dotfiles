@@ -7,4 +7,5 @@ fi
 
 kitty +kitten themes --dump-theme material > ~/.config/kitty/tmp/current-theme.conf
 swww clear 0F111A
+killall -SIGUSR1 kitty
 
