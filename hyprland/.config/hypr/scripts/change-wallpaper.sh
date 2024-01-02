@@ -43,3 +43,8 @@ kitty +kitten themes --dump-theme $prof_theme > ~/.config/kitty/tmp/current-them
 killall -SIGUSR1 kitty
 killall -SIGUSR1 nvim
 
+# update waybar style
+cp ~/.config/waybar/themes/$prof_theme.css ~/.config/waybar/tmp/style.css
+pkill -x waybar
+waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/tmp/style.css &
+
