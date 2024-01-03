@@ -32,4 +32,9 @@ devicons.set_icon({
     color = 'grey',
     cterm_color = "56",
   },
+  ["snippets"] = {
+    icon = " ",
+    name = "Snippet",
+    color =  "Cyan",
+  },
 })
