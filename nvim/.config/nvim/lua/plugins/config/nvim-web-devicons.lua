@@ -37,4 +37,9 @@ devicons.set_icon({
     name = "Snippet",
     color =  "Cyan",
   },
+  ["ledger"] = {
+    icon = " ",
+    name = "Ledger",
+    color = "lightgreen",
+  },
 })
