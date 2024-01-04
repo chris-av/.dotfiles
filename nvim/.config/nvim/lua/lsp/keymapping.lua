@@ -120,6 +120,7 @@ vim.keymap.set('n', '<leader>df',
 
 -- silicon
 vim.keymap.set('n', '<leader>s', exec_silicon, extend(opts, { desc = "Silicon - save contents of buffer" }))
+vim.keymap.set('v', '<leader>s', function() silicon.visualise_api({ to_clip = false, }) end, extend(opts, { desc = "Silicon - save visual selected lines" }))
 
 
 local resourceConfig = function()
