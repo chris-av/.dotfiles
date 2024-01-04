@@ -117,6 +117,8 @@ vim.keymap.set('n', '<leader>df',
           extend(opts, extend(opts, { desc = "DAP - open frames" })))
 
 
+-- silicon
+vim.keymap.set('n', '<leader>s', exec_silicon, extend(opts, { desc = "Silicon - save contents of buffer" }))
 
 
 local resourceConfig = function()
