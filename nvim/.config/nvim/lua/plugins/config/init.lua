@@ -33,4 +33,4 @@ require('plugins.config.nvim-tundra')
 
 
 -- misc
--- require('plugins.config.silicon')
+require('plugins.config.silicon')
