@@ -129,6 +129,10 @@ local plugins = {
 
   -- miscellaneous
   -- { 'krivahtoo/silicon.nvim', run = './install.sh build' }
+  {
+    "narutoxy/silicon.lua",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
 
   -- non neovim plugins
   'maxmellon/vim-jsx-pretty'
