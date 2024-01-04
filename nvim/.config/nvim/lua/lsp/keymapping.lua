@@ -20,6 +20,7 @@ local telebuiltins = require('telescope.builtin')
 local debuggers = require('debuggers.node')
 local dap = require('dap')
 local dapui_widgets = require('dap.ui.widgets')
+local silicon = require("silicon")
 
 
 
