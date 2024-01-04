@@ -5,8 +5,6 @@ end
 
 
 
-vim.keymap.set("", "<Space>", "<Nop>", extend(opts, { desc = "reserve space for leader" }))
-
 
 local telescope = require('telescope')
 local telebuiltins = require('telescope.builtin')
@@ -42,6 +40,9 @@ local toggle_cond_breakpoint = function()
     dap.toggle_breakpoint(condition, nil, nil, true)
   end
 end
+-- reserve space for leader
+vim.keymap.set("", "<Space>", "<Nop>", extend(opts, { desc = "reserve space for leader" }))
+
 -- general
 vim.keymap.set('n', '<esc><esc>', '<cmd>nohlsearch<CR>', extend(opts, extend(opts, { desc = "stop incremental search" })))
 vim.keymap.set('n', '<C-d>', '<C-d>zz', extend(opts, extend(opts, { desc = "paginate down and center" })))
