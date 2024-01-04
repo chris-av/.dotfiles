@@ -30,6 +30,10 @@ local curr_buff_srch = function()
   telebuiltins.current_buffer_fuzzy_find(previewer)
 end
 
+local exec_silicon = function()
+  opts = { to_clip = false, show_buf = true, }
+  silicon.visualise_api(opts)
+end
 
 -- general
 vim.keymap.set('n', '<esc><esc>', '<cmd>nohlsearch<CR>', extend(opts, extend(opts, { desc = "stop incremental search" })))
