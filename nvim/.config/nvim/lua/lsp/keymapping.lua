@@ -4,13 +4,6 @@ local extend = function (tbl, desc)
 end
 
 
-local toggleWrap = function ()
-  local curr_wrap = vim.wo.wrap
-  local new_wrap = not curr_wrap
-  print("setting wrap to " .. tostring(new_wrap))
-  vim.wo.wrap = new_wrap
-end
-
 
 vim.keymap.set("", "<Space>", "<Nop>", extend(opts, { desc = "reserve space for leader" }))
 
@@ -28,6 +21,13 @@ local curr_buff_srch = function()
   local themes = require('telescope.themes')
   local previewer = themes.get_dropdown({ previewer = false })
   telebuiltins.current_buffer_fuzzy_find(previewer)
+end
+
+local toggleWrap = function ()
+  local curr_wrap = vim.wo.wrap
+  local new_wrap = not curr_wrap
+  print("setting wrap to " .. tostring(new_wrap))
+  vim.wo.wrap = new_wrap
 end
 
 local exec_silicon = function()
