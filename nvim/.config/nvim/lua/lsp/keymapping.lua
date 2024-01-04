@@ -4,8 +4,6 @@ local extend = function (tbl, desc)
 end
 
 
-
-
 local telescope = require('telescope')
 local telebuiltins = require('telescope.builtin')
 local debuggers = require('debuggers.node')
@@ -40,20 +38,21 @@ local toggle_cond_breakpoint = function()
     dap.toggle_breakpoint(condition, nil, nil, true)
   end
 end
+
 -- reserve space for leader
 vim.keymap.set("", "<Space>", "<Nop>", extend(opts, { desc = "reserve space for leader" }))
 
 -- general
-vim.keymap.set('n', '<esc><esc>', '<cmd>nohlsearch<CR>', extend(opts, extend(opts, { desc = "stop incremental search" })))
-vim.keymap.set('n', '<C-d>', '<C-d>zz', extend(opts, extend(opts, { desc = "paginate down and center" })))
-vim.keymap.set('n', '<C-u>', '<C-u>zz', extend(opts, extend(opts, { desc = "paginate up and center" })))
-vim.keymap.set('n', '<leader>w', toggleWrap, extend(opts, extend(opts, { desc = "toggle wrap for the current buffer" })))
+vim.keymap.set('n', '<esc><esc>', '<cmd>nohlsearch<CR>', extend(opts, { desc = "stop incremental search" }))
+vim.keymap.set('n', '<C-d>', '<C-d>zz', extend(opts, { desc = "paginate down and center" }))
+vim.keymap.set('n', '<C-u>', '<C-u>zz', extend(opts, { desc = "paginate up and center" }))
+vim.keymap.set('n', '<leader>w', toggleWrap, extend(opts, { desc = "toggle wrap for the current buffer" }))
 
 
 -- nvim tree key bindings
-vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', extend(opts, extend(opts, { desc = "toggle nvim tree" })))
-vim.keymap.set('n', '<leader>r', '<cmd>NvimTreeRefresh<CR>', extend(opts, extend(opts, { desc = "refresh nvim tree" })))
-vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>', extend(opts, extend(opts, { desc = "find file within nvim tree" })))
+vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', extend(opts, { desc = "toggle nvim tree" }))
+vim.keymap.set('n', '<leader>r', '<cmd>NvimTreeRefresh<CR>', extend(opts, { desc = "refresh nvim tree" }))
+vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>', extend(opts, { desc = "find file within nvim tree" }))
 
 
 -- telescope
@@ -107,16 +106,16 @@ vim.keymap.set('n', '<leader>dr',
 -- telescope-dap
 vim.keymap.set('n', '<leader>dc',
           telescope.extensions.dap.configurations,
-          extend(opts, extend(opts, { desc = "DAP - see configurations" })))
+          extend(opts, { desc = "DAP - see configurations" }))
 vim.keymap.set('n', '<leader>dd',
           dap.clear_breakpoints,
-          extend(opts, extend(opts, { desc = "DAP - clear breakpoints" })))
+          extend(opts, { desc = "DAP - clear breakpoints" }))
 vim.keymap.set('n', '<leader>dl',
           telescope.extensions.dap.list_breakpoints,
-          extend(opts, extend(opts, { desc = "DAP -  list breakpoints" })))
+          extend(opts, { desc = "DAP -  list breakpoints" }))
 vim.keymap.set('n', '<leader>df',
           telescope.extensions.dap.frames,
-          extend(opts, extend(opts, { desc = "DAP - open frames" })))
+          extend(opts, { desc = "DAP - open frames" }))
 
 
 -- silicon
