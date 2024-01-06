@@ -90,6 +90,7 @@ local plugins = {
   },
   {
     "embark-theme/vim",
+    name = "embark",
   },
   -- 'B4mbus/oxocarbon-lua.nvim'
   'nyoom-engineering/oxocarbon.nvim',
