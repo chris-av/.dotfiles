@@ -122,6 +122,12 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'q', api.tree.close, opts('Close'))
   vim.keymap.set('n', 'g?', api.tree.toggle_help, opts('Help'))
 
+  api.events.subscribe(Event.TreeClose, function()
+    if require("dap").session() then
+      require("dapui").open({ reset = true, })
+    end
+  end)
+
 end
 
 
