@@ -94,6 +94,7 @@ ttf-nerd-fonts-symbols-mono
 vim
 vulkan-intel
 waybar
+wev
 wf-recorder
 wget
 wireless_tools
