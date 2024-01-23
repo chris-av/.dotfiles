@@ -69,6 +69,7 @@ polkit-gnome
 python-requests
 r
 ripgrep
+rofi
 rstudio-desktop-bin
 rust
 sddm
