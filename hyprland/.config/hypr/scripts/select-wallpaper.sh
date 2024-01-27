@@ -30,10 +30,8 @@ update_cache() {
 
 select_wallpaper() {
   check_cache
-  select=$(ls ~/.config/hypr/wallpapers | $DMENU -p "Record" -theme-str 'window {width: 30%;} listview {lines: 5;}')
-  rm ~/.cache/wallpaper/*
-  cp ~/.config/hypr/wallpapers/$select ~/.cache/wallpaper/$select
-  echo "$HOME/.config/hypr/wallpapers/$select"
+  prof_theme=$(cat $WALLPAPER_MAPPING | sed -e "s/.*,//" | $DMENU -p "Themes" -theme-str 'window {width: 30%;} listview {lines: 5;}')
+  echo $prof_theme
 }
 
 
