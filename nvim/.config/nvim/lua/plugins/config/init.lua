@@ -1,7 +1,8 @@
 require('plugins.config.nvim-notify')
 
 -- core functionality
-require('plugins.config.bufferline')
+-- require('plugins.config.bufferline')
+require('plugins.config.harpoon')
 require('plugins.config.lualine')
 require('plugins.config.gitsigns')
 require('plugins.config.nvim-tree')
