@@ -79,12 +79,19 @@ vim.keymap.set('n', 'fh', telebuiltins.help_tags, extend(opts, { desc = "help ta
 
 
 -- bufferline
-vim.keymap.set('n', '<S-l>', ':bnext<CR>', extend(opts, { desc = "next buffer" }))
-vim.keymap.set('n', '<S-h>', ':bprevious<CR>', extend(opts, { desc = "previous buffer" }))
+-- vim.keymap.set('n', '<S-l>', ':bnext<CR>', extend(opts, { desc = "next buffer" }))
+-- vim.keymap.set('n', '<S-h>', ':bprevious<CR>', extend(opts, { desc = "previous buffer" }))
 vim.keymap.set('n', 'Q', '<cmd>Bdelete!<CR>', extend(opts, { desc = "delete buffer" }))
 vim.keymap.set('n', 'tl', '<cmd>:tabnext<CR>', extend(opts, { desc = "next tab" }))
 vim.keymap.set('n', 'th', '<cmd>:tabprev<CR>', extend(opts, { desc = "previous tab" }))
 vim.keymap.set('n', 'ti', '<cmd>:tabnew<CR>', extend(opts, { desc = "new tab" }))
+
+
+-- harpoon
+vim.keymap.set('n', '<S-l>', require("harpoon.ui").nav_next, extend(opts, { desc = "next buffer" }))
+vim.keymap.set('n', '<S-h>', require("harpoon.ui").nav_prev, extend(opts, { desc = "previous buffer" }))
+vim.keymap.set('n', '<leader>i', harpoon_add, extend(opts, { desc = "previous buffer" }))
+vim.keymap.set('n', '<leader>ll', require("harpoon.ui").toggle_quick_menu, extend(opts, { desc = "previous buffer" }))
 
 
 -- lazygit
