@@ -15,32 +15,32 @@ local lualine_theme = {
   normal = {
     a = { bg = colors.green, fg = colors.black, gui = "bold" },
     b = { bg = colors.green, fg = colors.black },
-    c = { bg = colors.green, fg = colors.gray }
+    c = { bg = colors.black, fg = colors.green }
   },
   insert = {
     a = { bg = colors.green, fg = colors.black, gui = "bold" },
     b = { bg = colors.green, fg = colors.black },
-    c = { bg = colors.green, fg = colors.black }
+    c = { bg = colors.black, fg = colors.green }
   },
   visual = {
     a = { bg = colors.green, fg = colors.black, gui = "bold" },
     b = { bg = colors.green, fg = colors.black },
-    c = { bg = colors.green, fg = colors.black }
+    c = { bg = colors.black, fg = colors.green }
   },
   replace = {
     a = { bg = colors.green, fg = colors.black, gui = "bold" },
     b = { bg = colors.green, fg = colors.black },
-    c = { bg = colors.green, fg = colors.black }
+    c = { bg = colors.black, fg = colors.green }
   },
   command = {
     a = { bg = colors.green, fg = colors.black, gui = "bold" },
     b = { bg = colors.green, fg = colors.black },
-    c = { bg = colors.green, fg = colors.black }
+    c = { bg = colors.black, fg = colors.green }
   },
   inactive = {
     a = { bg = colors.green, fg = colors.black, gui = "bold" },
     b = { bg = colors.green, fg = colors.black },
-    c = { bg = colors.green, fg = colors.black }
+    c = { bg = colors.black, fg = colors.green }
   }
 }
 
