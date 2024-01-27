@@ -99,6 +99,8 @@ local plugins = {
   -- 'B4mbus/oxocarbon-lua.nvim'
   'nyoom-engineering/oxocarbon.nvim',
   'sam4llis/nvim-tundra',
+  { "rose-pine/neovim", name = "rose-pine" },
+  { "morhetz/gruvbox", name = "gruvbox" },
 
 
   -- debugger
