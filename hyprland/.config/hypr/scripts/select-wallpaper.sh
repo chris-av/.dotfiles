@@ -41,12 +41,15 @@ update_wallpaper() {
 
   update_cache $prof_image
 
+  first_char=$(echo $prof_image | cut -b 1)
+  if [[ "${first_char}" == "#" ]]; then
+    echo "using hexcode $prof_image"
+    swww clear $prof_image
   else
-    prof_theme="${arr[$prof_image]}"
+    echo "using image $prof_image"
+    swww img -t wipe --transition-step 190 --transition-duration 1.3 ~/.config/hypr/wallpapers/$prof_image
   fi
 
-
-  swww img -t wipe --transition-step 190 --transition-duration 1.3 $prof_image
   kitty +kitten themes --dump-theme $prof_theme > ~/.config/kitty/tmp/current-theme.conf
   killall -SIGUSR1 kitty
   killall -SIGUSR1 nvim
