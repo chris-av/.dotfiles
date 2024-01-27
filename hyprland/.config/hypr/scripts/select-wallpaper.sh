@@ -36,19 +36,10 @@ select_wallpaper() {
 
 
 update_wallpaper() {
-  prof_image="$(select_wallpaper)"
-  prof_theme=""
+  prof_theme="$(select_wallpaper)"
+  prof_image="$(echo $prof_theme | grep -f - $WALLPAPER_MAPPING | sed -e 's/,.*//' )"
 
-  declare -A arr
-  IFS=","
-  while read c1 c2 leftovers;do
-    path="$HOME/.config/hypr/wallpapers/$c1"
-    arr[$path]=$c2;
-  done < ~/.config/hypr/consts/prof-mapping.txt
 
-  # find the theme from the image
-  if [[ ! -v "arr[$prof_image]" ]]; then
-    prof_theme="dark"
   else
     prof_theme="${arr[$prof_image]}"
   fi
