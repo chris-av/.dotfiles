@@ -30,6 +30,7 @@ require('plugins.config.nvim-web-devicons')
 require('plugins.config.material')
 require('plugins.config.catppuccin')
 require('plugins.config.nvim-tundra')
+require('plugins.config.rose-pine')
 -- require('plugins.config.github-themes')
 
 
