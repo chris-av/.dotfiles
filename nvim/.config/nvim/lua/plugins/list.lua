@@ -67,6 +67,10 @@ local plugins = {
   },
   "folke/twilight.nvim",
   "folke/zen-mode.nvim",
+  {
+    "ThePrimeagen/harpoon",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
 
   -- completion
   'hrsh7th/nvim-cmp',

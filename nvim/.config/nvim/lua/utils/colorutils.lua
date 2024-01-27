@@ -10,7 +10,7 @@ M.theme_table = {
   ["Catppuccin Latte"] = { colorscheme = "catppuccin-latte", lualine_theme = "auto" },
   ["Catppuccin Macchiato"] = { colorscheme = "catppuccin-macchiato", lualine_theme = "auto" },
   ["Catppuccin Mocha"] = { colorscheme = "catppuccin-mocha", lualine_theme = "auto" },
-  ["Embark"] = { colorscheme = "embark", lualine_theme = "auto" },
+  ["Embark"] = { colorscheme = "embark", lualine_theme = custom_path .. "embark" },
   ["Grey"] = { colorscheme = "grey", lualine_theme = "auto" },
   ["Matrix"] = { colorscheme = "matrix", lualine_theme = custom_path .. "matrix" },
   ["Dark"] = { colorscheme = "dark", lualine_theme = std_path .. "material" },

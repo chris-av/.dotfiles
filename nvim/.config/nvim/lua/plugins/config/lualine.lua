@@ -18,7 +18,7 @@ if theme_path == "auto" then
   lualine_theme = "auto"
   lualine_components = require("utils.lualine-themes.auto").components
 else
-  if string.find(theme_path, "lualine-themes") then
+  if string.match(theme_path, "lualine%-themes") then
     -- using custom theme, I have a theme key
     lualine_theme = require(theme_path).theme
   else
@@ -76,12 +76,22 @@ lualine.setup({
     lualine_y = {},
     lualine_z = {}
   },
-  -- winbar = {
-  --   lualine_z = { { 'filename', path = 1 } }
-  -- },
-  -- inactive_winbar = {
-  --   lualine_z = { { 'filename', path = 1 } }
-  -- },
+  winbar = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = { { 'filename', path = 1 } }
+  },
+  inactive_winbar = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = { { 'filename', path = 1 } }
+  },
   tabline = {},
   extensions = {}
 })
