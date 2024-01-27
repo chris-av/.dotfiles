@@ -5,6 +5,8 @@ end
 
 
 local telescope = require('telescope')
+local harpoon_ui = require("harpoon.ui")
+local harpoon_mark = require("harpoon.mark")
 local telebuiltins = require('telescope.builtin')
 local debuggers = require('debuggers.node')
 local dap = require('dap')
