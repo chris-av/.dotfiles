@@ -41,6 +41,13 @@ local toggle_cond_breakpoint = function()
   end
 end
 
+
+local harpoon_add = function()
+  harpoon_mark.add_file()
+  local curr_buff=  vim.api.nvim_buf_get_name(0)
+  print("added " .. curr_buff .. " to harpoon")
+end
+
 -- reserve space for leader
 vim.keymap.set("", "<Space>", "<Nop>", extend(opts, { desc = "reserve space for leader" }))
 
