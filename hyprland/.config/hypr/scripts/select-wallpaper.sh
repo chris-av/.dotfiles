@@ -12,6 +12,22 @@ check_cache() {
   fi
 }
 
+update_cache() {
+  if [ -n "$(ls -A $WALLPAPER_CACHE)" ]; then
+    rm -r $WALLPAPER_CACHE/*
+    echo "wallpaper cache contents removed."
+  else
+    echo "wallpaper cache is already empty."
+  fi
+
+  # check to see if image
+  first_char=$(echo $1 | cut -b 1)
+  if [[ "${first_char}" != "#" ]]; then
+    echo "updating cache with image $1"
+    cp ~/.config/hypr/wallpapers/$1 ~/.cache/wallpaper/$1
+  fi
+}
+
 select_wallpaper() {
   check_cache
   select=$(ls ~/.config/hypr/wallpapers | $DMENU -p "Record" -theme-str 'window {width: 30%;} listview {lines: 5;}')
