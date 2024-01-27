@@ -12,7 +12,7 @@ catppuccin.setup({
     shade = "dark",
     percentage = 0.15,
   },
-  transparent_background = false,
+  transparent_background = true,
   term_colors = false,
   compile = {
     enabled = true,
@@ -60,12 +60,12 @@ catppuccin.setup({
     nvimtree = {
       enabled = true,
       show_root = true,
-      transparent_panel = false,
+      transparent_panel = true,
     },
     neotree = {
       enabled = false,
       show_root = true,
-      transparent_panel = false,
+      transparent_panel = true,
     },
     dap = {
       enabled = false,
