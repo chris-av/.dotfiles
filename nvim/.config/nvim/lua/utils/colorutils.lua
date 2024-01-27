@@ -12,6 +12,7 @@ M.theme_table = {
   ["Catppuccin Mocha"] = { colorscheme = "catppuccin-mocha", lualine_theme = "auto" },
   ["Embark"] = { colorscheme = "embark", lualine_theme = custom_path .. "embark" },
   ["Grey"] = { colorscheme = "grey", lualine_theme = "auto" },
+  ["Gruvbox"] = { colorscheme = "gruvbox", lualine_theme = "gruvbox" },
   ["Matrix"] = { colorscheme = "matrix", lualine_theme = custom_path .. "matrix" },
   ["Dark"] = { colorscheme = "dark", lualine_theme = std_path .. "material" },
   ["Snazzy"] = { colorscheme = "snazzy", lualine_theme = std_path .. "material" },
