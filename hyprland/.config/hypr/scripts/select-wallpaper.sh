@@ -39,6 +39,7 @@ update_wallpaper() {
   prof_theme="$(select_wallpaper)"
   prof_image="$(echo $prof_theme | grep -f - $WALLPAPER_MAPPING | sed -e 's/,.*//' )"
 
+  update_cache $prof_image
 
   else
     prof_theme="${arr[$prof_image]}"
