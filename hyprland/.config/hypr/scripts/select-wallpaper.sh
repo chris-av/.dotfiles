@@ -3,6 +3,7 @@
 # keep a cache of current wallpaper
 WALLPAPER_CACHE=~/.cache/wallpaper
 DMENU="rofi -dmenu -i"
+WALLPAPER_MAPPING=~/.config/hypr/consts/prof-mapping.txt
 
 check_cache() {
   if [ ! -d $WALLPAPER_CACHE ]; then
