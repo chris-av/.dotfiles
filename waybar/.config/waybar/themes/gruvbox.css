@@ -10,11 +10,11 @@
 
 window#waybar {
     background: rgba(21, 18, 27, 0);
-    color: #cdd6f4;
+    color: #a89984;
 }
 
 tooltip {
-    background: #1e1e2e;
+    background: #282828;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
@@ -28,7 +28,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    color: #a6adc8;
+    color: #a89984;
 }
 
 #workspaces button.focused {
@@ -44,9 +44,9 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: #11111b;
-    color: #cdd6f4;
-    border-radius: 10px;
+    background: #3c3836;
+    color: #a89984;
+    border-radius: 0px;
 }
 
 #custom-power_profile,
@@ -63,8 +63,8 @@ tooltip {
 #tray,
 #backlight,
 #keyboard-state {
-    background: #1e1e2e;
-    opacity: 0.8;
+    background: #7c6f64;
+    opacity: 1;
     padding: 0px 10px;
     margin: 3px 0px;
     margin-top: 10px;
@@ -89,7 +89,7 @@ tooltip {
 }
 
 #workspaces {
-    background: #1e1e2e;
+    background: #7c6f64;
     border-radius: 10px;
     margin-left: 10px;
     padding-right: 0px;
