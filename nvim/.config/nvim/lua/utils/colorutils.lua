@@ -18,6 +18,9 @@ M.theme_table = {
   ["Snazzy"] = { colorscheme = "snazzy", lualine_theme = std_path .. "material" },
 }
 
+-- set colorscheme based on environment variable
+-- if no colorscheme is detected for TERM_PROFILE or ITERM_PROFILE, 
+-- then just use the dark theme
 M.set_colorscheme = function()
   local term_prof = os.getenv('TERM_PROFILE') or os.getenv('ITERM_PROFILE')
   if (term_prof == nil) then
@@ -34,6 +37,11 @@ M.set_colorscheme = function()
   end
 end
 
+-- return local path to a lualine theme
+--
+-- lualine template: eg, lualine.themes.gruvbox
+-- my config:        eg, utils.lualine-themes.gruvbox
+-- auto              eg, auto
 M.get_lualine_theme_path = function()
   local term_prof = os.getenv('TERM_PROFILE') or os.getenv('ITERM_PROFILE')
   if (term_prof == nil) then
