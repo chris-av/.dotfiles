@@ -29,8 +29,14 @@ update_cache() {
 }
 
 select_wallpaper() {
-  check_cache
-  prof_theme=$(cat $WALLPAPER_MAPPING | sed -e "s/.*,//" | $DMENU -p "Themes" -theme-str 'window {width: 30%;} listview {lines: 5;}')
+  # image.png,blue --> image.png
+  local wallpaper=$(cat $WALLPAPER_MAPPING | sed -e "s/,.*//" | $DMENU -p "Themes" -theme-str 'window {width: 30%;} listview {lines: 5;}')
+  echo $wallpaper
+}
+
+select_theme() {
+  # image.png,blue --> blue
+  local prof_theme=$(cat $WALLPAPER_MAPPING | sed -e "s/.*,//" | $DMENU -p "Themes" -theme-str 'window {width: 30%;} listview {lines: 5;}')
   echo $prof_theme
 }
 
