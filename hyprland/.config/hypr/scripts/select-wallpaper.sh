@@ -46,15 +46,15 @@ update_wallpaper() {
   local selected_wallpaper="$(select_wallpaper)"
   local derived_theme="$(echo $selected_wallpaper | grep -f - $WALLPAPER_MAPPING | sed -e 's/.*,//')"
 
-  update_cache $prof_image
+  update_cache $selected_wallpaper
 
-  first_char=$(echo $prof_image | cut -b 1)
+  first_char=$(echo $selected_wallpaper | cut -b 1)
   if [[ "${first_char}" == "#" ]]; then
-    echo "using hexcode $prof_image"
-    swww clear $prof_image
+    echo "using hexcode $selected_wallpaper"
+    swww clear $selected_wallpaper
   else
-    echo "using image $prof_image"
-    swww img -t wipe --transition-step 190 --transition-duration 1.3 ~/.config/hypr/wallpapers/$prof_image
+    echo "using image $selected_wallpaper"
+    swww img -t wipe --transition-step 190 --transition-duration 1.3 ~/.config/hypr/wallpapers/$selected_wallpaper
   fi
 
   kitty +kitten themes --dump-theme $prof_theme > ~/.config/kitty/tmp/current-theme.conf
@@ -62,7 +62,7 @@ update_wallpaper() {
   killall -SIGUSR1 nvim
 
   # update waybar style
-  cp ~/.config/waybar/themes/$prof_theme.css ~/.config/waybar/tmp/style.css
+  cp ~/.config/waybar/themes/$derived_theme.css ~/.config/waybar/tmp/style.css
   pkill -x waybar
   waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/tmp/style.css &
 
