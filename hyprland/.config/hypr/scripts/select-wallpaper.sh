@@ -57,8 +57,16 @@ update_wallpaper() {
     swww img -t wipe --transition-step 190 --transition-duration 1.3 ~/.config/hypr/wallpapers/$selected_wallpaper
   fi
 
-  killall -SIGUSR1 kitty
-  killall -SIGUSR1 nvim
+  kitty +kitten themes --dump-theme $derived_theme > ~/.config/kitty/tmp/current-theme.conf
+  local restart_processes=("kitty" "nvim")
+  for p in "${restart_processes[@]}"; do
+    echo "checking process : $p"
+    # check if process is running
+    if pgrep -x "$p" > /dev/null; then
+      echo "restarting : $p"
+      killall -SIGUSR1 "$p"
+    fi
+  done
 
   # update waybar style
   cp ~/.config/waybar/themes/$derived_theme.css ~/.config/waybar/tmp/style.css
