@@ -42,8 +42,8 @@ select_theme() {
 
 
 update_wallpaper() {
-  prof_theme="$(select_wallpaper)"
-  prof_image="$(echo $prof_theme | grep -f - $WALLPAPER_MAPPING | sed -e 's/,.*//' )"
+  local selected_wallpaper="$(select_wallpaper)"
+  local derived_theme="$(echo $selected_wallpaper | grep -f - $WALLPAPER_MAPPING | sed -e 's/.*,//')"
 
   update_cache $prof_image
 
