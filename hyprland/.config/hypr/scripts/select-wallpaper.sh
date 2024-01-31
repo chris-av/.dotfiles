@@ -42,6 +42,7 @@ select_theme() {
 
 
 update_wallpaper() {
+  check_cache
   local selected_wallpaper="$(select_wallpaper)"
   local derived_theme="$(echo $selected_wallpaper | grep -f - $WALLPAPER_MAPPING | sed -e 's/.*,//')"
 
