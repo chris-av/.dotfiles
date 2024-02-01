@@ -51,7 +51,7 @@ element-icon {
 }
 
 listview {
-	lines: 9;
+	lines: 5;
 	padding: 8 0;
 	fixed-height: true;
 	fixed-columns: true;
