@@ -87,3 +87,11 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+
+
+# ripgrep
+if [ -f ~/.config/ripgrep/.ripgreprc ]; then
+  export RIPGREP_CONFIG_PATH=~/.config/ripgrep/.ripgreprc
+fi
+
+
