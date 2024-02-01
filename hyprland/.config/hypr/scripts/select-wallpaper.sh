@@ -33,6 +33,18 @@ update_cache() {
   fi
 }
 
+get_current_theme() {
+  local current_wallpaper_info=$WALLPAPER_CACHE/.current
+  if [[ ! -f $current_wallpaper_info ]]; then
+    echo "could not find .current in $WALLPAPER_CACHE"
+    return 5
+  fi
+
+  local current_wallpaper="$(cat $current_wallpaper_info | sed '1q;d')"
+  local current_theme="$(cat $current_wallpaper_info | sed '2q;d')"
+  echo $current_theme
+
+}
 select_wallpaper() {
   # image.png,blue --> image.png
   local wallpaper=$(cat $WALLPAPER_MAPPING | sed -e "s/,.*//" | $DMENU -p "Themes" -config "$(get_rofi_theme)")
