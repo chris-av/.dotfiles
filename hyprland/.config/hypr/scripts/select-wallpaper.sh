@@ -45,6 +45,15 @@ get_current_theme() {
   echo $current_theme
 
 }
+
+get_rofi_theme() {
+  # get the correct rofi theme based on current wallpaper
+  # look at ~/.cache/wallpaper/.current for info on the current theme
+  local theme="$(get_current_theme)"
+  local rasi_file="~/.config/rofi/themes/$theme.rasi"
+  echo $rasi_file
+}
+
 select_wallpaper() {
   # image.png,blue --> image.png
   local wallpaper=$(cat $WALLPAPER_MAPPING | sed -e "s/,.*//" | $DMENU -p "Themes" -config "$(get_rofi_theme)")
