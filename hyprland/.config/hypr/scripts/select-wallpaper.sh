@@ -1,6 +1,7 @@
 #!/usr/bin/sh
 
 # keep a cache of current wallpaper
+DEFAULT_THEME="embark"
 WALLPAPER_CACHE=~/.cache/wallpaper
 DMENU="rofi -dmenu -i"
 WALLPAPER_MAPPING=~/.config/hypr/consts/prof-mapping.txt
