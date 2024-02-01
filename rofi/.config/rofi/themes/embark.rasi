@@ -14,7 +14,7 @@ configuration {
 	display-drun: "Launch:";
 }
 
-window { 
+window {
 	width: 35%;
 	transparency: "real";
 	orientation: vertical;
