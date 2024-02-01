@@ -46,7 +46,7 @@ update_wallpaper() {
   local selected_wallpaper="$(select_wallpaper)"
   local derived_theme="$(echo $selected_wallpaper | grep -f - $WALLPAPER_MAPPING | sed -e 's/.*,//')"
 
-  update_cache $selected_wallpaper
+  update_cache $selected_wallpaper $derived_theme
 
   first_char=$(echo $selected_wallpaper | cut -b 1)
   if [[ "${first_char}" == "#" ]]; then
