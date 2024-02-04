@@ -70,6 +70,13 @@ select_theme() {
 update_wallpaper() {
   check_cache
   local selected_wallpaper="$(select_wallpaper)"
+
+  # if you did not select a wallpaper exit early
+  if [ -z "$selected_wallpaper" ]; then
+    echo "did not select a wallpaper"
+    exit 1
+  fi
+
   local derived_theme="$(echo $selected_wallpaper | grep -f - $WALLPAPER_MAPPING | sed -e 's/.*,//')"
 
   update_cache $selected_wallpaper $derived_theme
