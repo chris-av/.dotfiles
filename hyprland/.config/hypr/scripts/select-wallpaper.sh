@@ -22,8 +22,7 @@ update_cache() {
   fi
 
   # update .current file
-  echo $1 > $WALLPAPER_CACHE/.current
-  echo $2 >> $WALLPAPER_CACHE/.current
+  echo "$1,$2" > $WALLPAPER_CACHE/.current
 
   # check to see if image
   first_char=$(echo $1 | cut -b 1)
