@@ -39,8 +39,8 @@ get_current_theme() {
     return 5
   fi
 
-  local current_wallpaper="$(cat $current_wallpaper_info | sed '1q;d')"
-  local current_theme="$(cat $current_wallpaper_info | sed '2q;d')"
+  local current_wallpaper="$(cat $current_wallpaper_info | awk -F ',' '{print $1}')"
+  local current_theme="$(cat $current_wallpaper_info | awk -F ',' '{print $2}')"
   echo $current_theme
 
 }
@@ -55,13 +55,13 @@ get_rofi_theme() {
 
 select_wallpaper() {
   # image.png,blue --> image.png
-  local wallpaper=$(cat $WALLPAPER_MAPPING | sed -e "s/,.*//" | $DMENU -p "Themes" -config "$(get_rofi_theme)")
+  local wallpaper=$(cat $WALLPAPER_MAPPING | awk -F "," '{print $1}' | $DMENU -p "Themes" -config "$(get_rofi_theme)")
   echo $wallpaper
 }
 
 select_theme() {
   # image.png,blue --> blue
-  local prof_theme=$(cat $WALLPAPER_MAPPING | sed -e "s/.*,//" | $DMENU -p "Themes" -config "$(get_rofi_theme)")
+  local prof_theme=$(cat $WALLPAPER_MAPPING | awk -F "," '{print $2}' | $DMENU -p "Themes" -config "$(get_rofi_theme)")
   echo $prof_theme
 }
 
@@ -76,7 +76,7 @@ update_wallpaper() {
     exit 1
   fi
 
-  local derived_theme="$(echo $selected_wallpaper | grep -f - $WALLPAPER_MAPPING | sed -e 's/.*,//')"
+  local derived_theme="$(echo $selected_wallpaper | grep -f - $WALLPAPER_MAPPING | awk -F ',' '{print $2}')"
 
   update_cache $selected_wallpaper $derived_theme
 
