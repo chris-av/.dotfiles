@@ -74,3 +74,8 @@ function socials() {
 
 }
 
+# command for showing images in the terminal
+if [[ "$TERM" == "xterm-kitty" ]]; then
+  alias icat="kitten icat"
+fi
+
