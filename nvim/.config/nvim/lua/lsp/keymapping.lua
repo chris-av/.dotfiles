@@ -90,8 +90,8 @@ vim.keymap.set('n', 'ti', '<cmd>:tabnew<CR>', extend(opts, { desc = "new tab" })
 -- harpoon
 vim.keymap.set('n', '<S-l>', require("harpoon.ui").nav_next, extend(opts, { desc = "next buffer" }))
 vim.keymap.set('n', '<S-h>', require("harpoon.ui").nav_prev, extend(opts, { desc = "previous buffer" }))
-vim.keymap.set('n', '<leader>i', harpoon_add, extend(opts, { desc = "previous buffer" }))
-vim.keymap.set('n', '<leader>ll', require("harpoon.ui").toggle_quick_menu, extend(opts, { desc = "previous buffer" }))
+vim.keymap.set('n', '<leader>i', harpoon_add, extend(opts, { desc = "add file to harpoon" }))
+vim.keymap.set('n', '<leader>ll', require("harpoon.ui").toggle_quick_menu, extend(opts, { desc = "open harpoon window" }))
 
 
 -- lazygit
