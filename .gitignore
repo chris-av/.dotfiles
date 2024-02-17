@@ -2,6 +2,9 @@
 packer_compiled.lua
 vim/.vim/autoload/*
 
+# mako
+# scripts should dynamically update the config file, based on profile
+mako/.config/mako/config 
 
 # kitty
 kitty.conf.bak
