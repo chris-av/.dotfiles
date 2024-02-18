@@ -32,7 +32,7 @@ local colors = {
 local lualine_theme = {
   normal = {
     a = { bg = colors.astral1, fg = colors.space1, gui = "bold" },
-    b = { bg = colors.cyan, fg = colors.astral1 },
+    b = { bg = colors.space4, fg = colors.cyan },
     c = { bg = colors.space1, fg = colors.astral1 }
   },
   insert = {
