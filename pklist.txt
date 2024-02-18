@@ -29,6 +29,7 @@ grub
 gst-plugin-pipewire
 gvfs
 htop
+httpie
 hyprland
 hyprpicker-git
 intel-media-driver
@@ -40,6 +41,7 @@ kate
 kitty
 konsole
 lazygit
+libreoffice-fresh
 libpulse
 libva-intel-driver
 linux
