@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 SWAPPY_DIR=~/Desktop/screenshots
+
 function check_swappy_dir() {
   if [ ! -d $SWAPPY_DIR ]; then
     mkdir $SWAPPY_DIR
@@ -8,9 +9,7 @@ function check_swappy_dir() {
 
 function take_screenshot() {
   check_swappy_dir
-  timestamp=$(date +"%Y%m%d%H%M%S")
-  screenshot_file="$SWAPPY_DIR/screenshot_$timestamp.png" 
-  grim -g "$(slurp)" - | swappy -f - -o $screenshot_file
+  grim -g "$(slurp)" - | swappy -f -
 }
 
 take_screenshot
