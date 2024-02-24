@@ -66,6 +66,7 @@ navic.setup({
 lualine.setup({
   options = {
     theme = lualine_theme,
+    component_separators = { left = ' ', right = '  '},
   },
   sections = lualine_components,
   inactive_sections = {
