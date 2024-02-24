@@ -1,6 +1,0 @@
-blue-waves.webp,embark
-hong-kong-night.jpg,material
-sanrio-hello-kitty-tulips-wallpaper-1536x864.jpeg,catppuccin-latte
-sunset.webp,dark
-cowboy-bebop-spike-den.jpg,gruvbox
-#000000,matrix
