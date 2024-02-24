@@ -22,5 +22,9 @@
   "Deep Ocean": {
     "kitty_theme": "material",
     "wallpaper": "lofi-cafe.png"
+  },
+  "Cyberpunk": {
+    "kitty_theme": "grey",
+    "wallpaper": "cyberpunk-hotel-amethyst.png"
   }
 }
