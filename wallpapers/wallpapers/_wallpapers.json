@@ -1,0 +1,26 @@
+{
+  "Matrix": {
+    "kitty_theme": "matrix",
+    "bg_color": "#000000"
+  },
+  "Rust": {
+    "kitty_theme": "gruvbox",
+    "wallpaper": "cowboy-bebop-spike-den.jpg"
+  },
+  "Blue Waves": {
+    "kitty_theme": "embark",
+    "wallpaper": "blue-waves.webp"
+  },
+  "Hello Kitty": {
+    "kitty_theme": "catppuccin-latte",
+    "wallpaper": "sanrio-hello-kitty-tulips-wallpaper-1536x864.jpeg"
+  },
+  "Sunset": {
+    "kitty_theme": "dark",
+    "wallpaper": "sunset.webp"
+  },
+  "Deep Ocean": {
+    "kitty_theme": "material",
+    "wallpaper": "hong-kong-night.jpg"
+  }
+}
