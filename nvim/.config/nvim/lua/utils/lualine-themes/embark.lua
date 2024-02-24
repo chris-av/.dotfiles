@@ -67,17 +67,19 @@ local lualine_components = {
   lualine_b = {
     "branch",
     "diff",
-    {
+  },
+  lualine_c = {
+  {
       "diagnostics",
       diagnostics_color = {
-        error = { fg = colors.space1, bg = colors.astral1 },
-        warn = { fg = colors.space1, bg = colors.astral1 },
-        info = { fg = colors.space1, bg = colors.astral1 },
-        hint = { fg = colors.space1, bg = colors.astral1 },
+        error = { fg = colors.cyan, bg = colors.dark_red },
+        warn = { fg = colors.space0, bg = colors.dark_yellow },
+        info = { fg = colors.cyan, bg = colors.dark_green },
+        hint = { fg = colors.cyan, bg = colors.dark_blue },
       },
     },
+    "navic",
   },
-  lualine_c = { "navic", },
   lualine_x = { "encoding", "fileformat", "filetype" },
   lualine_y = {},
   lualine_z = { "location" }
