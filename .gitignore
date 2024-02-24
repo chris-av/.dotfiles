@@ -17,3 +17,8 @@ waybar/**/tmp/*
 # vim
 vim/**/plugged
 .netrwhist
+
+# ignore everything in wallpapers except the info file
+wallpapers/wallpapers/*
+!wallpapers/wallpapers/_wallpapers.*
+
