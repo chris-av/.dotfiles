@@ -98,4 +98,8 @@ if [ -f ~/.config/ripgrep/.ripgreprc ]; then
   export RIPGREP_CONFIG_PATH=~/.config/ripgrep/.ripgreprc
 fi
 
+# expose custom scripts folder
+if [ -d ~/scripts ]; then
+  export PATH="${PATH}:$HOME/scripts"
+fi
 
