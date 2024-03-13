@@ -84,6 +84,7 @@ rofi
 rstudio-desktop-bin
 rust
 sddm
+showmethekey
 silicon
 slack-desktop
 slurp
