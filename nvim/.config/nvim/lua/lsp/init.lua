@@ -17,4 +17,5 @@ require('lsp.rust')
 require('lsp.clangd')
 require('lsp.zls')
 require('lsp.java')
+require('lsp.golang')
 
