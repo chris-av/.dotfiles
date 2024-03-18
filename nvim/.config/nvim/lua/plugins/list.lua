@@ -107,7 +107,7 @@ local plugins = {
   'nyoom-engineering/oxocarbon.nvim',
   'sam4llis/nvim-tundra',
   { "rose-pine/neovim", name = "rose-pine" },
-  { "morhetz/gruvbox", name = "gruvbox" },
+  { "morhetz/gruvbox",  name = "gruvbox" },
 
 
   -- debugger
