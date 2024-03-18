@@ -71,6 +71,13 @@ local plugins = {
     "ThePrimeagen/harpoon",
     dependencies = { "nvim-lua/plenary.nvim" }
   },
+  {
+    'stevearc/aerial.nvim',
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons"
+    },
+  },
 
   -- completion
   'hrsh7th/nvim-cmp',
