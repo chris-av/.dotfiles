@@ -68,7 +68,7 @@ return function(client, bufnr)
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" })
 
   -- aerial
-  vim.keymap.set('n', '<leader>a', "<cmd>AerialOpen<CR>", extend(opts, { desc = "Open Aerial" }))
+  vim.keymap.set('n', '<leader>a', "<cmd>AerialToggle!<CR>", extend(opts, { desc = "Open Aerial" }))
 
   -- Mappings.
   vim.keymap.set('n', 'gD', declaration, extend(opts, { desc = "Buffer declarations" }))
