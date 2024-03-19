@@ -15,7 +15,6 @@ fi
 # set everything else
 left_sep=""
 right_sep=""
-left_icon="#W"
 
 # set length
 tmux set-option -g status-left-length 100
@@ -32,7 +31,7 @@ tmux set-option -g message-style "fg=${message_style_fg},bg=${message_style_bg}"
 tmux set-option -g status-style "fg=${status_style_fg},bg=${status_style_bg}"
 
 # Status left
-tmux set-option -g status-left "#[bg=${status_x_bg},fg=${status_x_fg}]#{?client_prefix,#[bg=${client_prefix}],} ${left_icon} "
+tmux set-option -g status-left "#[bg=${status_x_bg},fg=${status_x_fg}]#{?client_prefix,#[bg=${client_prefix}],} #S "
 
 # Status right
 tmux set-option -g status-right ""
