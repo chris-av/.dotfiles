@@ -34,7 +34,7 @@
       "1": "", // coding
       "2": "", // web browsing
       "3": "󰭻", // chat
-      "4": ""  // misc
+      "4": "" // misc
     }
   },
   "custom/recorder": {
@@ -44,14 +44,14 @@
     "signal": 12,
     "interval": 5
   },
-  // "custom/weather" : {
-  //      //shows the current weather and forecast
-  //      "tooltip" : true,
-  //      "format" : "{}",
-  //      "interval" : 30,
-  //      "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
-  //      "return-type" : "json"
-  //  },
+  // "custom/weather": {
+  //   //shows the current weather and forecast
+  //   "tooltip": true,
+  //   "format": "{}",
+  //   "interval": 30,
+  //   "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+  //   "return-type": "json"
+  // },
   // "keyboard-state": {
   //   "numlock": true,
   //   "capslock": true,
