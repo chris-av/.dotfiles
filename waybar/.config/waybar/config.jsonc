@@ -34,7 +34,7 @@
       "1": "", // coding
       "2": "", // web browsing
       "3": "󰭻", // chat
-      "4": "" // misc
+      "4": ""  // misc
     }
   },
   "custom/recorder": {
@@ -42,7 +42,7 @@
     "exec": "~/.config/waybar/scripts/recorder.sh",
     "return-type": "json",
     "signal": 12,
-    "interval": 5 // execute script every n seconds; adjust as desired
+    "interval": 5
   },
   // "custom/weather" : {
   //      //shows the current weather and forecast
