@@ -134,6 +134,9 @@ vim.keymap.set('n', '<leader>df',
           extend(opts, { desc = "DAP - open frames" }))
 
 
+-- markdown
+vim.keymap.set('n', '<leader>m', ':MarkdownPreviewToggle<CR>', extend(opts, { desc = "Toggle MarkdownPreview" }))
+
 -- silicon
 vim.keymap.set('n', '<leader>s', exec_silicon, extend(opts, { desc = "Silicon - save contents of buffer" }))
 vim.keymap.set('v', '<leader>s', function() silicon.visualise_api({ to_clip = false, }) end, extend(opts, { desc = "Silicon - save visual selected lines" }))
