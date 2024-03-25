@@ -3,7 +3,7 @@ vim.cmd "set termguicolors"
 
 local matrix = {
   Pmenu = { fg = 'black', bg = 'LightGreen' },
-  PmenuSel = { fg = 'white', bg = 'LightGreen' },
+  PmenuSel = { fg = 'black', bg = 'LightGreen', bold = true, },
   NormalFloat = { fg = 'LightGreen', bg = 'none' },
   FloatBorder = { fg = 'LightGreen', bg = 'none' },
   NonText = { fg = 'LightGreen', bg = 'none' },
