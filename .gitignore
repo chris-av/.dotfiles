@@ -22,3 +22,7 @@ vim/**/plugged
 wallpapers/wallpapers/*
 !wallpapers/wallpapers/_wallpapers.*
 
+
+# ignoring custom env vars
+env/env/*
+
