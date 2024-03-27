@@ -55,3 +55,10 @@ if [ -d ~/scripts ]; then
   export PATH="${PATH}:$HOME/scripts"
 fi
 
+# source my custom environment variables
+if [ -d ~/env ]; then
+  for f in ~/env/*; do
+    source $f
+  done
+fi
+
