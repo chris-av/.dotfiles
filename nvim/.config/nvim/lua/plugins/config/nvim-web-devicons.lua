@@ -42,4 +42,9 @@ devicons.set_icon({
     name = "Ledger",
     color = "lightgreen",
   },
+  ["tape"] = {
+    icon = "󰨛 ",
+    name = "VHS",
+    color = "grey",
+  },
 })
