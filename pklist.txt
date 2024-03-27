@@ -11,6 +11,7 @@ bluez-utils
 bpytop
 brightnessctl
 cava
+charm-pop-bin
 dhcpcd
 discord
 docker
@@ -24,6 +25,7 @@ fftw
 firefox
 git
 git-delta
+glow
 google-chrome
 grim
 grub
