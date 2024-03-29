@@ -55,6 +55,7 @@ cmp.setup({
     { name = 'nvim_lua' },
     { name = 'path' },
     { name = 'buffer',  keyword_length = 8 },
+    { name = "emoji", },
   },
   formatting = {
     format = function(entry, vim_item)
