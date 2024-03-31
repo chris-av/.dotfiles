@@ -15,7 +15,7 @@ flags_fg="#00e82f"
 
 # none text before separator
 window_x_fg="#000000"
-window_x_bg="#000000"
+window_x_bg="#00e82f"
 
 # other windows
 window_y_fg="#000000"
@@ -28,10 +28,12 @@ window_z_fg="#000000"
 window_fmt_fg="#00e82f"
 window_fmt_bg="#000000"
 
-client_prefix_bg="#3c3836"
+client_prefix_bg="#00e82f"
 client_prefix_fg="#000000"
 
 
-left_sep=""
-right_sep=""
+# left_sep=""
+# right_sep=""
+left_sep=""
+right_sep=""
 
