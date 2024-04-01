@@ -30,9 +30,8 @@ fi
 
 
 # bun completions
-if [[ -x "$(command -v bun)" ]] ; then
+if [[ -d ~/.bun ]] ; then
   # add bun to path
-  PATH=$PATH:$HOME/.bun/bin/bun
   [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
   export BUN_INSTALL="$HOME/.bun"
   export PATH="$BUN_INSTALL/bin:$PATH"
