@@ -1,4 +1,4 @@
-j!/usr/bin/env bash
+#!/usr/bin/env bash
 foreground="#84ffff"
 background="#0f111a"
 prefix="#0f111a"
