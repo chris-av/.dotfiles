@@ -1,29 +1,7 @@
 #!/usr/bin/env bash
 
 term_prof="${TERM_PROFILE:-$ITERM_PROFILE}"
-
-case $term_prof in
-  "Gruvbox")
-    source ~/.config/tmux/utils/themes/gruvbox.sh
-    ;;
-  "Catppuccin Latte")
-    source ~/.config/tmux/utils/themes/catppuccin-latte.sk
-    ;;
-  "Material Deep Ocean")
-    source ~/.config/tmux/utils/themes/material.sh
-    ;;
-  "Matrix")
-    source ~/.config/tmux/utils/themes/matrix.sh
-    ;;
-  "Embark")
-    source ~/.config/tmux/utils/themes/embark.sh
-    ;;
-  *)
-    echo "could not find tmux theme, defaulting to material tmux theme"
-    source ~/.config/tmux/utils/themes/material.sh
-esac
-
-
+source ~/.config/tmux/utils/themes/$term_prof.sh
 
 # set length
 tmux set-option -g status-left-length 100
