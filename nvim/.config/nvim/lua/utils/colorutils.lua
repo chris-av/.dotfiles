@@ -5,17 +5,17 @@ local std_path = "lualine.themes."            -- import path to themes from lual
 local custom_path = "utils.lualine-themes."   -- import path for my own custom themes
 
 M.theme_table = {
-  ["Material Deep Ocean"] = { colorscheme = "material", lualine_theme = "auto" },
-  ["Catppuccin Frappe"] = { colorscheme = "catppuccin-frappe", lualine_theme = "auto" },
-  ["Catppuccin Latte"] = { colorscheme = "catppuccin-latte", lualine_theme = "auto" },
-  ["Catppuccin Macchiato"] = { colorscheme = "catppuccin-macchiato", lualine_theme = "auto" },
-  ["Catppuccin Mocha"] = { colorscheme = "catppuccin-mocha", lualine_theme = "auto" },
-  ["Embark"] = { colorscheme = "embark", lualine_theme = custom_path .. "embark" },
-  ["Grey"] = { colorscheme = "grey", lualine_theme = "auto" },
-  ["Gruvbox"] = { colorscheme = "gruvbox", lualine_theme = std_path .. "gruvbox" },
-  ["Matrix"] = { colorscheme = "matrix", lualine_theme = custom_path .. "matrix" },
-  ["Dark"] = { colorscheme = "dark", lualine_theme = std_path .. "material" },
-  ["Snazzy"] = { colorscheme = "snazzy", lualine_theme = std_path .. "material" },
+  ["material-deep-ocean"] = { colorscheme = "material", lualine_theme = "auto" },
+  ["catppuccin-frappe"] = { colorscheme = "catppuccin-frappe", lualine_theme = "auto" },
+  ["catppuccin-latte"] = { colorscheme = "catppuccin-latte", lualine_theme = "auto" },
+  ["catppuccin-macchiato"] = { colorscheme = "catppuccin-macchiato", lualine_theme = "auto" },
+  ["catppuccin-mocha"] = { colorscheme = "catppuccin-mocha", lualine_theme = "auto" },
+  ["embark"] = { colorscheme = "embark", lualine_theme = custom_path .. "embark" },
+  ["grey"] = { colorscheme = "grey", lualine_theme = "auto" },
+  ["gruvbox"] = { colorscheme = "gruvbox", lualine_theme = std_path .. "gruvbox" },
+  ["matrix"] = { colorscheme = "matrix", lualine_theme = custom_path .. "matrix" },
+  ["dark"] = { colorscheme = "dark", lualine_theme = std_path .. "material" },
+  ["snazzy"] = { colorscheme = "snazzy", lualine_theme = std_path .. "material" },
 }
 
 -- set colorscheme based on environment variable
@@ -27,6 +27,7 @@ M.set_colorscheme = function()
     vim.cmd " colorscheme dark "
     return
   else
+    term_prof = term_prof:lower()
     local theme = M.theme_table[term_prof]
     if theme == nil then
       return
