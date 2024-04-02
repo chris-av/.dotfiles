@@ -82,7 +82,7 @@ qt6-wayland
 r
 reflector
 ripgrep
-rofi
+rofi-lbonn-wayland
 rstudio-desktop-bin
 rust
 sddm
