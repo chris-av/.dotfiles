@@ -21,6 +21,7 @@ vim/**/plugged
 # ignore everything in wallpapers except the info file
 wallpapers/wallpapers/*
 !wallpapers/wallpapers/_wallpapers.*
+wallpapers/wallpapers/_wallpapers.tmp.json
 
 
 # ignoring custom env vars

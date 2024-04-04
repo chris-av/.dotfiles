@@ -5,7 +5,16 @@ DEFAULT_THEME="embark"
 WALLPAPER_CACHE=~/.cache/wallpaper
 DMENU="rofi -dmenu -i"
 WALLPAPERS_DIR=~/wallpapers
-WALLPAPERS_JSON=~/wallpapers/_wallpapers.json
+if [ -f ~/wallpapers/_wallpapers.tmp.json ]; then
+  WALLPAPERS_JSON=~/wallpapers/_wallpapers.tmp.json
+elif [ -f ~/wallpapers/_wallpapers.json ]; then
+  WALLPAPERS_JSON=~/wallpapers/_wallpapers.json
+else
+  echo "could not find a _wallpapers.json"
+  exit 1
+fi
+
+echo "using $WALLPAPERS_JSON"
 
 check_cache() {
   if [ ! -d $WALLPAPER_CACHE ]; then
