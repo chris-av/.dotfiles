@@ -9,24 +9,24 @@
 }
 
 window#waybar {
-    color: #00e82f;
+    color: #FF0000;
     background: rgba(21, 18, 27, 0);
 }
 
 tooltip {
     background: #000000;
     border-style: solid;
-    color: #00e82f;
+    color: #FF0000;
 }
 
 #workspaces button {
-    color: #00e82f;
+    color: #FF0000;
     padding: 5px 10px;
 }
 
 #workspaces button.active {
     color: #000000;
-    background: #00e82f;
+    background: #FF0000;
 }
 
 /* #workspaces button.focused { */
@@ -90,6 +90,5 @@ tooltip {
 }
 
 #custom-recorder.enabled {
-    color: red;
+    color: #FF0000;
 }
-
