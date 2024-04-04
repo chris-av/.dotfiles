@@ -35,7 +35,7 @@ local grey = {
   CursorLineNr = { fg = foreground, },
 
   StatusLine = { fg = foreground, },
-  StatusLineNC = { fg = foreground, },
+  StatusLineNC = { fg = 'none', },
   WinSeparator = { fg = foreground, },
   SignColumn = { fg = foreground, },
   Colorcolumn = { fg = foreground, },
