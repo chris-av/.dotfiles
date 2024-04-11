@@ -44,8 +44,8 @@ kate
 kitty
 konsole
 lazygit
-libreoffice-fresh
 libpulse
+libreoffice-fresh
 libva-intel-driver
 linux
 linux-firmware
@@ -61,12 +61,12 @@ mupdf
 nano
 neofetch
 neovim
-openbsd-netcat
-network-manager-applet
 networkmanager
+network-manager-applet
 nmap
 noto-fonts-emoji
 obs-studio
+openbsd-netcat
 pamixer
 pipewire
 pipewire-alsa
