@@ -20,7 +20,7 @@ local grey = {
 
   IncSearch = { fg = background, bg = foreground, },
   Search = { fg = background, bg = foreground, bold = true, },
-  Substitute = { fg = foreground, },
+  Substitute = { fg = background, bg = foreground, },
 
   MatchParen = { fg = foreground, },
 
@@ -45,7 +45,7 @@ local grey = {
   TabLineSel = { fg = foreground, },
 
   Pmenu = { fg = foreground, },
-  PmenuSel = { fg = foreground, },
+  PmenuSel = { fg = background, bg = foreground },
   PmenuSbar = { fg = foreground, },
   Conceal = { fg = foreground, },
   Title = { fg = foreground, },
