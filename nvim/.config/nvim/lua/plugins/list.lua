@@ -18,6 +18,7 @@ local plugins = {
   },
 
   -- interface
+  'stevearc/dressing.nvim',
   'nvim-tree/nvim-web-devicons',
   {
     'nvim-lualine/lualine.nvim',
