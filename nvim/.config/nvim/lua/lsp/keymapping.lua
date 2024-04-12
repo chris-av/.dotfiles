@@ -65,6 +65,7 @@ vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>', extend(opts, { des
 
 
 -- telescope
+vim.keymap.set('n', '<leader>hh', telebuiltins.buffers, extend(opts, { desc = "list buffers" }))
 vim.keymap.set('n', '<leader>km', telebuiltins.keymaps, extend(opts, { desc = "list keymappings" }))
 vim.keymap.set('n', '<leader>co', function ()
   telebuiltins.colorscheme({ enable_preview = true, })
