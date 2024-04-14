@@ -2,9 +2,6 @@ local foreground = "#cccccc"
 local background = "#0c0c0c"
 local selection_fg = "#000000"
 local selection_bg = "#cccccc"
-local cursor = "#cccccc"
-local cursor_text_color = "#000000"
-
 
 
 local grey = {
@@ -178,6 +175,9 @@ local grey = {
   TelescopeSelectionCaret = { fg = foreground, },
   TelescopeSelection = { fg = foreground, },
   TelescopeMatching = { fg = foreground, },
+
+  -- NvimTree
+  NvimTreeFolderIcon = { fg = foreground, },
 
   -- Netrw
   netrwMarkFile = { fg = foreground, },
