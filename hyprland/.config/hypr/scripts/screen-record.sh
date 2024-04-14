@@ -3,7 +3,8 @@ DMENU="rofi -dmenu -i"
 ROFI_CONFIG=~/.config/rofi/config.rasi
 
 function getInputAudio() {
-  echo "$(pactl list | grep "Name" | grep "alsa" | awk '{print $2}' | $DMENU -p "Input Audio " -c $ROFI_CONFIG)"
+  local audio_opts="$(echo 'No Audio'; pactl list | grep "Name" | grep "alsa" | awk '{print $2}')"
+  echo "$(echo "$audio_opts" | $DMENU -p "Input Audio " -c $ROFI_CONFIG)"
 }
 
 function getVideoOutput() {
@@ -11,12 +12,20 @@ function getVideoOutput() {
 }
 
 
-function start_recording() {
+function start_recording_w_audio() {
   recording_file="$1"
   audio_src="$2"
   video_src="$3"
   notify-send --app-name="wf-recorder" --icon="$HOME/.icons/camera.jpg" -t 15000 "wf-recorder" "starting screen recording" 
   wf-recorder -f "$recording_file" --audio="$audio_src" -o $video_src
+  exit 0
+}
+
+function start_recording_no_audio() {
+  recording_file="$1"
+  video_src="$2"
+  notify-send --app-name="wf-recorder" --icon="$HOME/.icons/camera.jpg" -t 15000 "wf-recorder" "starting screen recording" 
+  wf-recorder -f "$recording_file" -o $video_src
   exit 0
 }
 
@@ -59,10 +68,6 @@ record() {
       exit 1
     fi
 
-    echo "videos dir : $videos_dir"
-    echo "video file : $recording_file"
-
-
     # specify the output
     # default output_src="eDP-1"
     monitor_count=$(hyprctl monitors all | grep "^Monitor" | wc -l)
@@ -81,7 +86,21 @@ record() {
       echo "You got just one monitor ... "
     fi
 
-    start_recording $recording_file $audio_src $video_src
+    echo "audio source : $audio_src"
+    echo "video source : $video_src"
+    echo ""
+    echo "videos dir : $videos_dir"
+    echo "video file : $recording_file"
+    echo ""
+
+    if [[ $audio_src == "No Audio" ]]; then
+      start_recording_no_audio $recording_file $video_src
+      exit 0
+    else
+      start_recording_w_audio $recording_file $audio_src $video_src
+      exit 0
+    fi
+
 
   fi
 
