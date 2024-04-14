@@ -9,7 +9,11 @@ function check_swappy_dir() {
 
 function take_screenshot() {
   check_swappy_dir
-  grim -g "$(slurp)" - | swappy -f -
+  grim -g "$(slurp)" - | swappy -f - && notify-send \
+    --app-name="grim" \
+    --icon="$HOME/.icons/camera.jpg" \
+    -t 5000 \
+    "screenshot saved!" "to $SWAPPY_DIR"
 }
 
 take_screenshot
