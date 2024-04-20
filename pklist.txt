@@ -21,8 +21,10 @@ dracula-icons-git
 dropbox
 efibootmgr
 egl-wayland
+fd
 fftw
 firefox
+fzf
 git
 git-delta
 glow
@@ -98,6 +100,7 @@ swappy
 swaylock-effects
 swww
 sxiv
+texlive
 thunar
 tmux
 tree
