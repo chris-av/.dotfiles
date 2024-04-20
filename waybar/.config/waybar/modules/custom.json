@@ -1,0 +1,9 @@
+{
+  "custom/recorder": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/recorder.sh",
+    "return-type": "json",
+    "signal": 12,
+    "interval": 5
+  }
+}
