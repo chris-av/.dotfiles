@@ -19,7 +19,7 @@ local grey = {
   Search = { fg = background, bg = foreground, bold = true, },
   Substitute = { fg = background, bg = foreground, },
 
-  MatchParen = { fg = foreground, },
+  MatchParen = { fg = background, bg = foreground, },
 
   ModeMsg = { fg = foreground, },
   MoreMsg = { fg = foreground, },
