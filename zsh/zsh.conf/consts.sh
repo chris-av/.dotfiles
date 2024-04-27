@@ -61,3 +61,7 @@ if [ -d ~/env ]; then
   done
 fi
 
+if [ -d ~/.spicetify ]; then
+  export PATH=$PATH:~/.spicetify
+fi
+
