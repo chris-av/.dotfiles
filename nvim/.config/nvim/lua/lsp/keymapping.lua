@@ -65,7 +65,6 @@ vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>', extend(opts, { des
 
 
 -- telescope
-vim.keymap.set('n', '<leader>hh', telebuiltins.buffers, extend(opts, { desc = "list buffers" }))
 vim.keymap.set('n', '<leader>km', telebuiltins.keymaps, extend(opts, { desc = "list keymappings" }))
 vim.keymap.set('n', '<leader>co', function ()
   telebuiltins.colorscheme({ enable_preview = true, })
@@ -75,8 +74,8 @@ vim.keymap.set('n', 'ff', telebuiltins.find_files, extend(opts, { desc = "find f
 vim.keymap.set('n', '<leader>gg', telebuiltins.git_commits, extend(opts, { desc = "list git commits" }))
 vim.keymap.set('n', '<leader>/', curr_buff_srch, extend(opts, { desc = "find in current buffer" }))
 vim.keymap.set('n', 'fg', telebuiltins.live_grep, extend(opts, { desc = "live grep" }))
-vim.keymap.set('n', 'fb', telebuiltins.buffers, extend(opts, { desc = "get buffers" }))
-vim.keymap.set('n', 'fh', telebuiltins.help_tags, extend(opts, { desc = "help tags" }))
+vim.keymap.set('n', 'fb', telebuiltins.buffers, extend(opts, { desc = "list buffers" }))
+vim.keymap.set('n', '<leader>?', telebuiltins.help_tags, extend(opts, { desc = "help tags" }))
 
 
 -- bufferline
