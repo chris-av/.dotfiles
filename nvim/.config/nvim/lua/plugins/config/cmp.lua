@@ -12,7 +12,6 @@ if not status_ok then
   return
 end
 
-
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -56,6 +55,7 @@ cmp.setup({
     { name = 'path' },
     { name = 'buffer',  keyword_length = 8 },
     { name = "emoji", },
+    { name = "cmp_r" },
   },
   formatting = {
     format = function(entry, vim_item)
@@ -98,3 +98,8 @@ cmp.setup({
     end,
   },
 })
+
+
+
+require("cmp_r").setup()
+

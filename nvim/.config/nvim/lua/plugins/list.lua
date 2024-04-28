@@ -79,6 +79,10 @@ local plugins = {
       "nvim-tree/nvim-web-devicons"
     },
   },
+  {
+    "R-nvim/R.nvim",
+    lazy = false,
+  },
 
   -- completion
   'hrsh7th/nvim-cmp',
@@ -87,6 +91,7 @@ local plugins = {
   'hrsh7th/cmp-nvim-lua',
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-emoji',
+  'R-nvim/cmp-r',
   'saadparwaiz1/cmp_luasnip',
   'windwp/nvim-autopairs',
   'windwp/nvim-ts-autotag',

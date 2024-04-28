@@ -13,6 +13,7 @@ require('plugins.config.trouble')
 require('plugins.config.twilight')
 require('plugins.config.zen')
 require('plugins.config.aerial')
+require('plugins.config.rnvim')
 
 
 -- syntax, autocomplete, etc.
