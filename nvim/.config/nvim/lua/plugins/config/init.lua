@@ -14,6 +14,7 @@ require('plugins.config.twilight')
 require('plugins.config.zen')
 require('plugins.config.aerial')
 require('plugins.config.rnvim')
+require('plugins.config.neotest')
 
 
 -- syntax, autocomplete, etc.

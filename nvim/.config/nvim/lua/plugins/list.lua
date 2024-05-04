@@ -84,6 +84,20 @@ local plugins = {
     lazy = false,
   },
 
+  -- neotest
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+
+      -- adapters
+      "nvim-neotest/neotest-jest",
+    },
+  },
+
   -- completion
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-buffer',
