@@ -26,5 +26,9 @@
   "Cyberpunk": {
     "kitty_theme": "grey",
     "wallpaper": "cyberpunk-hotel-amethyst.png"
+  },
+  "Catppuccin": {
+    "kitty_theme": "catppuccin-frappe",
+    "wallpaper": "cyberpunk-hotel-amethyst.png"
   }
 }
