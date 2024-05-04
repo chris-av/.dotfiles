@@ -116,7 +116,10 @@ update_wallpaper() {
     update_cache $background $kitty_theme
   fi
 
-  kitty +kitten themes --dump-theme $kitty_theme > ~/.config/kitty/tmp/current-theme.conf
+  echo "wallpaper : $wallpaper"
+  echo "kitty theme : $kitty_theme"
+
+  cat ~/.config/kitty/themes/$kitty_theme.conf > ~/.config/kitty/tmp/current-theme.conf
   local restart_processes=("kitty" "nvim")
   for p in "${restart_processes[@]}"; do
     echo "checking process : $p"
