@@ -1,6 +1,15 @@
+local silicon = require("silicon")
+local dap = require('dap')
+local telebuiltins = require("telescope.builtin")
 local buf = vim.lsp.buf
 
 local M = {}
+
+M.resourceConfig = function()
+  local myvimrc = os.getenv("MYVIMRC")
+  print("resourcing config at : " .. myvimrc)
+  vim.api.nvim_command("source " .. myvimrc)
+end
 
 M.ls_ws_folders = function()
   print(vim.inspect(buf.list_workspace_folders()))
@@ -35,6 +44,53 @@ M.manage_loclist = function()
   local window = vim.api.nvim_get_current_win()
   vim.cmd.lwindow()                           -- open+focus loclist if has entries, else close -- this is the magic toggle command
   vim.api.nvim_set_current_win(window)        -- restore focus to window you were editing (delete this if you want to stay in loclist)
+end
+
+M.curr_buff_srch = function()
+  local themes = require('telescope.themes')
+  local previewer = themes.get_dropdown({ previewer = false })
+  telebuiltins.current_buffer_fuzzy_find(previewer)
+end
+
+M.preview_colorschemes = function()
+  telebuiltins.colorscheme({ enable_preview = true, })
+end
+
+M.toggleWrap = function()
+  local curr_wrap = vim.wo.wrap
+  local new_wrap = not curr_wrap
+  print("setting wrap to " .. tostring(new_wrap))
+  vim.wo.wrap = new_wrap
+end
+
+M.exec_silicon = function()
+  local opts = { to_clip = false, show_buf = true, }
+  silicon.visualise_api(opts)
+end
+
+M.exec_silicon_visual = function()
+  local opts = { to_clip = false, }
+  silicon.visualise_api(opts)
+end
+
+M.toggle_cond_breakpoint = function()
+  -- dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+  local condition = vim.fn.input({ prompt = 'Breakpoint Condition: ' })
+  if condition then
+    dap.toggle_breakpoint(condition, nil, nil, true)
+  end
+end
+
+
+M.harpoon_add = function()
+  harpoon_mark.add_file()
+  local curr_buff = vim.api.nvim_buf_get_name(0)
+  print("added " .. curr_buff .. " to harpoon")
+end
+
+M.dap_ui_hover = function()
+  local widgets = require 'dap.ui.widgets'
+  widgets.centered_float(widgets.scopes)
 end
 
 return M
