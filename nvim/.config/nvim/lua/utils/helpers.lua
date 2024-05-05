@@ -1,6 +1,7 @@
 local silicon = require("silicon")
 local dap = require('dap')
 local telebuiltins = require("telescope.builtin")
+local harpoon_mark = require("harpoon.mark")
 local buf = vim.lsp.buf
 
 local M = {}
