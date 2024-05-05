@@ -8,5 +8,6 @@ require('neotest').setup({
       jest_test_discovery = false,
       jestCommand = 'jest --watch',
     }),
+    require("neotest-python"),
   },
 })

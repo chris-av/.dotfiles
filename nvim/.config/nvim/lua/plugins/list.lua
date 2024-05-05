@@ -95,6 +95,7 @@ local plugins = {
 
       -- adapters
       "nvim-neotest/neotest-jest",
+      "nvim-neotest/neotest-python",
     },
   },
 
