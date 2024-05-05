@@ -100,4 +100,10 @@ vim.keymap.set("n", "<Right>", "<cmd>:vertical resize +2<CR>", extend(opts, { de
 vim.keymap.set("n", "<Down>", "<cmd>:resize -2<CR>", extend(opts, { desc = "Contract buffer vertically" }))
 vim.keymap.set("n", "<Up>", "<cmd>:resize +2<CR>", extend(opts, { desc = "Expand window vertically" }))
 
+-- neotest
+vim.keymap.set("n", "<leader>tt", helpers.neotest_run_curr_file, extend(opts, { desc = "Neotest - run current file" }))
+vim.keymap.set("n", "<leader>tl", helpers.neotest_summary, extend(opts, { desc = "Neotest - run current file" }))
+vim.keymap.set("n", "<leader>to", helpers.neotest_output_panel, extend(opts, { desc = "Neotest - show output panel" }))
+vim.keymap.set("n", "<leader>ta", helpers.neotest_attach, extend(opts, { desc = "Neotest - attach" }))
+vim.keymap.set("n", "<leader>tw", helpers.neotest_watch, extend(opts, { desc = "Neotest - attach" }))
 

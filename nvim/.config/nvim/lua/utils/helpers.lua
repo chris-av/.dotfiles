@@ -3,6 +3,7 @@ local dap = require('dap')
 local telebuiltins = require("telescope.builtin")
 local harpoon_mark = require("harpoon.mark")
 local buf = vim.lsp.buf
+local neotest = require("neotest")
 
 local M = {}
 
@@ -92,6 +93,27 @@ end
 M.dap_ui_hover = function()
   local widgets = require 'dap.ui.widgets'
   widgets.centered_float(widgets.scopes)
+end
+
+
+M.neotest_summary = function()
+  neotest.summary.toggle()
+end
+
+M.neotest_run_curr_file = function()
+  neotest.run.run(vim.fn.expand("%"))
+end
+
+M.neotest_output_panel = function()
+  neotest.output_panel.toggle()
+end
+
+M.neotest_watch = function()
+  neotest.watch.toggle(vim.fn.expand("%"))
+end
+
+M.neotest_attach = function()
+  neotest.run.attach()
 end
 
 return M
