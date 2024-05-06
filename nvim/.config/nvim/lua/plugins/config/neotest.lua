@@ -6,5 +6,6 @@ require('neotest').setup({
       jestCommand = 'jest --watch',
     }),
     require("neotest-python"),
+    require("neotest-zig"),
   },
 })
