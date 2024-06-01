@@ -21,6 +21,7 @@ dracula-icons-git
 dropbox
 efibootmgr
 egl-wayland
+fastfetch
 fd
 fftw
 firefox
