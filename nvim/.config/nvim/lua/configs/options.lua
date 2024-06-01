@@ -39,6 +39,18 @@ vim.g.neovide_remember_window = true
 vim.g.neovide_fullscreen = true
 vim.opt.fillchars = { eob = " " }
 
+vim.filetype.add({
+  extension = {
+    env = "dotenv",
+  },
+  filename = {
+    [".env"] = "dotenv",
+  },
+  pattern = {
+    ["%.env%.[%w_.-]+"] = {"dotenv", priority = 100},
+  },
+})
+
 
 -- will get over written by other plugins
 -- I this does not work with nvim-tree since you need to rerun this on every new buffer
