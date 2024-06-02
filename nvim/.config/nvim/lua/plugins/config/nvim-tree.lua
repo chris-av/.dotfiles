@@ -178,6 +178,16 @@ nvim_tree.setup ({
   },
   renderer = {
     icons = {
+      web_devicons = {
+        file = {
+          enable = true,
+          color = true,
+        },
+        folder = {
+          enable = false,
+          color = true,
+        },
+      },
       glyphs = {
         default = '',
         symlink = '',
