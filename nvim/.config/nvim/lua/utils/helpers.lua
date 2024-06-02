@@ -13,6 +13,16 @@ M.resourceConfig = function()
   vim.api.nvim_command("source " .. myvimrc)
 end
 
+M.copyFilePath = function()
+  local home = os.getenv("HOME")
+  local filepath = vim.fn.expand("%:p"):gsub(home, "~")
+  vim.fn.setreg("+", filepath)
+  vim.notify(filepath, vim.log.levels.INFO, {
+    title = " Copied path",
+    timeout = 4000,
+  })
+end
+
 M.ls_ws_folders = function()
   print(vim.inspect(buf.list_workspace_folders()))
 end

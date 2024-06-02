@@ -20,6 +20,7 @@ vim.keymap.set('n', '<esc><esc>', '<cmd>nohlsearch<CR>', extend(opts, { desc = "
 vim.keymap.set('n', '<C-d>', '<C-d>zz', extend(opts, { desc = "paginate down and center" }))
 vim.keymap.set('n', '<C-u>', '<C-u>zz', extend(opts, { desc = "paginate up and center" }))
 vim.keymap.set('n', '<leader>w', helpers.toggleWrap, extend(opts, { desc = "toggle wrap for the current buffer" }))
+vim.keymap.set('n', '<C-g>', helpers.copyFilePath, extend(opts, { desc = "copy filepath" }))
 
 
 -- nvim tree key bindings
