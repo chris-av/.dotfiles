@@ -19,7 +19,17 @@ devicons.setup({
   strict = true,
 })
 
+devicons.set_icon_by_filetype({
+  dotenv = "dotenv",
+})
+
 devicons.set_icon({
+  ["dotenv"] = {
+    icon = devicons.get_icon('.env', 'Env', { default = true }),
+    name = "Env",
+    color = '#20c2e3',
+    cterm_color = "45",
+  },
   ["tsx"] = {
     icon = devicons.get_icon('index.jsx', 'jsx', { default = true }),
     name = "Tsx",
@@ -35,7 +45,7 @@ devicons.set_icon({
   ["snippets"] = {
     icon = " ",
     name = "Snippet",
-    color =  "Cyan",
+    color = "Cyan",
   },
   ["ledger"] = {
     icon = " ",
@@ -48,3 +58,4 @@ devicons.set_icon({
     color = "grey",
   },
 })
+
