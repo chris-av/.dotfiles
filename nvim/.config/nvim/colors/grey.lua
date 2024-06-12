@@ -181,6 +181,43 @@ local grey = {
 
   -- Netrw
   netrwMarkFile = { fg = foreground, },
+
+  -- Diagnostics
+  DiagnosticOk = { fg = foreground, },
+  DiagnosticHint = { fg = foreground, },
+  DiagnosticInfo = { fg = foreground, },
+  DiagnosticWarn = { fg = foreground, },
+  DiagnosticError = { fg = foreground, },
+
+  DiagnosticSignOk = { fg = foreground, },
+  DiagnosticSignHint = { fg = foreground, },
+  DiagnosticSignInfo = { fg = foreground, },
+  DiagnosticSignWarn = { fg = foreground, },
+  DiagnosticSignError = { fg = foreground, },
+
+  DiagnosticFloatingOk = { fg = foreground, },
+  DiagnosticFloatingHint = { fg = foreground, },
+  DiagnosticFloatingInfo = { fg = foreground, },
+  DiagnosticFloatingWarn = { fg = foreground, },
+  DiagnosticFloatingError = { fg = foreground, },
+
+  DiagnosticUnderlineOk = { fg = foreground, },
+  DiagnosticUnderlineHint = { fg = foreground, },
+  DiagnosticUnderlineInfo = { fg = foreground, },
+  DiagnosticUnderlineWarn = { fg = foreground, },
+  DiagnosticUnderlineError = { fg = foreground, },
+
+  DiagnosticVirtualTextOk = { fg = foreground, },
+  DiagnosticVirtualTextHint = { fg = foreground, },
+  DiagnosticVirtualTextInfo = { fg = foreground, },
+  DiagnosticVirtualTextWarn = { fg = foreground, },
+  DiagnosticVirtualTextError = { fg = foreground, },
+
+  -- Git
+  Added = { fg = foreground, },
+  Removed = { fg = foreground, },
+
+
 }
 
 
