@@ -19,7 +19,7 @@ local opts = {
     "RSPlot",
     "RSaveClose",
   },
-  auto_start = "on startup",
+  auto_start = "no",
   objbr_auto_start = true,
   objbr_place = "BOTTOM",
   rconsole_with = 40,
