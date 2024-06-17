@@ -37,7 +37,7 @@ vim.keymap.set('n', 'ff', builtins.find_files, extend(opts, { desc = "find files
 vim.keymap.set('n', '<leader>gg', builtins.git_commits, extend(opts, { desc = "list git commits" }))
 vim.keymap.set('n', '<leader>/', helpers.curr_buff_srch, extend(opts, { desc = "find in current buffer" }))
 vim.keymap.set('n', 'fg', builtins.live_grep, extend(opts, { desc = "live grep" }))
-vim.keymap.set('n', 'fb', builtins.buffers, extend(opts, { desc = "list buffers" }))
+vim.keymap.set('n', '<leader>lb', builtins.buffers, extend(opts, { desc = "list buffers" }))
 vim.keymap.set('n', '<leader>?', builtins.help_tags, extend(opts, { desc = "help tags" }))
 
 
