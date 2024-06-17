@@ -1,5 +1,5 @@
 vim.cmd "hi clear"
-vim.cmd "set termguicolors"
+vim.cmd "set notermguicolors"
 
 local matrix = {
   Pmenu = { fg = 'black', bg = 'LightGreen' },
