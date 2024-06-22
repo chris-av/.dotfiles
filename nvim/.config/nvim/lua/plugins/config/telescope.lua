@@ -33,5 +33,8 @@ telescope.setup({
         },
       },
     },
+    colorscheme = {
+      enable_preview = true,
+    },
   },
 })
