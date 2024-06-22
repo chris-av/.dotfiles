@@ -31,3 +31,6 @@
   whoadded = log --diff-filter=A
 [credential]
 	helper = cache
+[push]
+  default = current
+  autoSetUpRemote = true
