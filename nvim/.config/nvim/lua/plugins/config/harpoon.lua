@@ -1,4 +1,11 @@
 require("telescope").load_extension("harpoon")
+
+local calculateWindowSize = function()
+  local win_width = vim.api.nvim_win_get_width(0)
+  local result = math.ceil(.65 * win_width)
+  return result
+end
+
 require("harpoon").setup({
   -- sets the marks upon calling `toggle` on the ui, instead of require `:w`.
   save_on_toggle = false,
@@ -22,4 +29,7 @@ require("harpoon").setup({
   tabline = false,
   tabline_prefix = "   ",
   tabline_suffix = "   ",
+  menu = {
+    width = calculateWindowSize(),
+  },
 })
