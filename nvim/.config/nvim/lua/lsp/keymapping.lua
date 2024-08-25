@@ -20,6 +20,10 @@ vim.keymap.set('n', '<esc><esc>', '<cmd>nohlsearch<CR>', extend(opts, { desc = "
 vim.keymap.set('n', '<leader>w', helpers.toggleWrap, extend(opts, { desc = "toggle wrap for the current buffer" }))
 vim.keymap.set('n', '<C-g>', helpers.copyFilePath, extend(opts, { desc = "copy filepath" }))
 
+-- marks
+vim.keymap.set('n', '<leader>md', ':delmark<CR>', extend(opts, { desc = "Delete mark on current line" }))
+vim.keymap.set('n', '<leader>m', ':delm! | delm A-Z0-9<CR>>', extend(opts, { desc = "Delete all marks" }))
+
 
 -- nvim tree key bindings
 vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', extend(opts, { desc = "toggle nvim tree" }))
@@ -37,11 +41,10 @@ vim.keymap.set('n', '<leader>/', helpers.curr_buff_srch, extend(opts, { desc = "
 vim.keymap.set('n', 'fg', builtins.live_grep, extend(opts, { desc = "live grep" }))
 vim.keymap.set('n', '<leader>lb', builtins.buffers, extend(opts, { desc = "list buffers" }))
 vim.keymap.set('n', '<leader>?', builtins.help_tags, extend(opts, { desc = "help tags" }))
+vim.keymap.set('n', '<leader>ml', builtins.marks, extend(opts, { desc = "list marks" }))
 
 
 -- bufferline
--- vim.keymap.set('n', '<S-l>', ':bnext<CR>', extend(opts, { desc = "next buffer" }))
--- vim.keymap.set('n', '<S-h>', ':bprevious<CR>', extend(opts, { desc = "previous buffer" }))
 vim.keymap.set('n', 'Q', '<cmd>Bdelete!<CR>', extend(opts, { desc = "delete buffer" }))
 vim.keymap.set('n', 'tl', '<cmd>:tabnext<CR>', extend(opts, { desc = "next tab" }))
 vim.keymap.set('n', 'th', '<cmd>:tabprev<CR>', extend(opts, { desc = "previous tab" }))
