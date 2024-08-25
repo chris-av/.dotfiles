@@ -80,10 +80,6 @@ vim.keymap.set('n', '<leader>dd', dap.clear_breakpoints, extend(opts, { desc = "
 vim.keymap.set('n', '<leader>dl', exts.dap.list_breakpoints, extend(opts, { desc = "DAP -  list breakpoints" }))
 vim.keymap.set('n', '<leader>df', exts.dap.frames, extend(opts, { desc = "DAP - open frames" }))
 
-
--- markdown
-vim.keymap.set('n', '<leader>m', ':MarkdownPreviewToggle<CR>', extend(opts, { desc = "Toggle MarkdownPreview" }))
-
 -- silicon
 vim.keymap.set('n', '<leader>s', helpers.exec_silicon, extend(opts, { desc = "Silicon - save contents of buffer" }))
 vim.keymap.set('v', '<leader>s', helpers.exec_silicon_visual, extend(opts, { desc = "Silicon - save visual selected lines" }))
