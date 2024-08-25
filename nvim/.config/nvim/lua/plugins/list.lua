@@ -100,6 +100,7 @@ local plugins = {
     },
   },
   'karb94/neoscroll.nvim',
+  'chentoast/marks.nvim',
 
   -- completion
   'hrsh7th/nvim-cmp',

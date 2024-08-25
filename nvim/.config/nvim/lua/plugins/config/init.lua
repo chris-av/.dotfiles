@@ -16,6 +16,7 @@ require('plugins.config.aerial')
 require('plugins.config.rnvim')
 require('plugins.config.neotest')
 require('plugins.config.neoscroll')
+require('plugins.config.marks')
 
 
 -- syntax, autocomplete, etc.
