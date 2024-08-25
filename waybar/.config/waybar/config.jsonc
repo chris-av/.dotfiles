@@ -11,17 +11,18 @@
     "gtk-layer-shell": true,
     "height": 20,
     "modules-left": [
-      "clock"
+      "clock",
+      "temperature",
+      "battery"
     ],
     "modules-center": [
       "hyprland/workspaces"
     ],
     "modules-right": [
+      "cava",
       "custom/recorder",
       "network",
       "bluetooth",
-      "temperature",
-      "battery",
       "backlight",
       "pulseaudio",
       "pulseaudio#microphone",
