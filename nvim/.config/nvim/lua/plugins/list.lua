@@ -99,6 +99,7 @@ local plugins = {
       "lawrence-laz/neotest-zig",
     },
   },
+  'karb94/neoscroll.nvim',
 
   -- completion
   'hrsh7th/nvim-cmp',

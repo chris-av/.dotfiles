@@ -15,6 +15,7 @@ require('plugins.config.zen')
 require('plugins.config.aerial')
 require('plugins.config.rnvim')
 require('plugins.config.neotest')
+require('plugins.config.neoscroll')
 
 
 -- syntax, autocomplete, etc.
