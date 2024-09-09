@@ -6,6 +6,7 @@ local blue = "#57c6fe"
 local magenta = "#fe69c0"
 local cyan = "#9aecfd"
 local white = "#f1f0ef"
+local grey = "grey"
 
 
 local foreground = "#efefea"
@@ -15,8 +16,9 @@ local selection_bg = "#92bbd0"
 
 
 
-local grey = {
+local colors = {
   Normal = { fg = foreground, },
+  NormalFloat = { fg = foreground, bg = background },
 
   -- Bold = { em = 'bold' },
   -- Italic = { em = 'italic' },
@@ -72,13 +74,13 @@ local grey = {
   -- Syntax
   Boolean = { fg = foreground, },
   Character = { fg = foreground, },
-  Comment = { fg = foreground, },
+  Comment = { fg = grey, },
   Conditional = { fg = foreground, },
   Constant = { fg = magenta, },
   Define = { fg = foreground, },
   Delimiter = { fg = foreground, },
   Float = { fg = foreground, },
-  Function = { fg = foreground, },
+  Function = { fg = 'orange', },
   Identifier = { fg = foreground, },
   Include = { fg = foreground, },
   Keyword = { fg = yellow, },
@@ -201,6 +203,6 @@ local function set_hl(hl_group, highlights)
   vim.api.nvim_set_hl(0, hl_group, highlights)
 end
 
-for group, val in pairs(grey) do
+for group, val in pairs(colors) do
   set_hl(group, val)
 end
