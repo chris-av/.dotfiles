@@ -18,7 +18,7 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 
 # set zstyle
-zstyle ':vcs_info:git:*' formats 'on branch %b '
+zstyle ':vcs_info:git:*' formats ' %b '
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # set the z shell prompt
