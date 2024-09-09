@@ -30,6 +30,7 @@
   llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
   whoadded = log --diff-filter=A
   compare = diff ..main --
+  ll = branch -vv --sort=committerdate
   lsm = ls-files -m
   lsu = ls-files -o --exclude-standard
 [credential]
