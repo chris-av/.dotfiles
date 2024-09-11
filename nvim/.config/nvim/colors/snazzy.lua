@@ -18,7 +18,7 @@ local selection_bg = "#92bbd0"
 
 local colors = {
   Normal = { fg = foreground, },
-  NormalFloat = { fg = foreground, bg = background },
+  NormalFloat = { fg = foreground, bg = "#282828" },
 
   -- Bold = { em = 'bold' },
   -- Italic = { em = 'italic' },
