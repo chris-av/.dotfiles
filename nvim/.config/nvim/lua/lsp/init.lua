@@ -4,7 +4,7 @@ require('mason-lspconfig').setup()
 
 require('lsp.keymapping')
 require('lsp.pyright')
-require('lsp.tsserver')
+require('lsp.ts_ls')
 require('lsp.json')
 require('lsp.css')
 require('lsp.tailwindcss')
