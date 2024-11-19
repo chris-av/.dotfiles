@@ -31,7 +31,7 @@
   slog = log --date=format:\"%Y-%m-%d %I:%M:%S %p\" --pretty=format:\"%C(red)%h %C(reset) [%C(yellow)%cd]%C(reset) %C(blue)%an %C(reset)%s\"
   whoadded = log --diff-filter=A
   compare = diff ..main --
-  ll = branch -vv --sort=committerdate
+  ll = branch -vv --sort=-committerdate
   lsm = ls-files -m
   lsu = ls-files -o --exclude-standard
 [credential]
