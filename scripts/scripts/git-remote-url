@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+
+# inspired by asottile <3
+# link: https://github.com/asottile/scratch/blob/main/python/git-github-url
+
+from __future__ import annotations
+
+import argparse
+import subprocess
+
+
+def extract_endpoint(remote: str, https: str, ssh: str, dot_git: str):
+    if remote.startswith(https):
+        remote = remote[len(https):]
+    if remote.startswith(ssh):
+        remote = remote[len(ssh):]
+    if remote.endswith(dot_git):
+        remote = remote[:-1 * len(dot_git)]
+    return remote
+
+
+def parse_github_remote(remote):
+    HTTPS = 'https://github.com/'
+    SSH = 'git@github.com:'
+    DOT_GIT = '.git'
+    endpoint = extract_endpoint(
+        remote, https=HTTPS, ssh=SSH,dot_git=DOT_GIT
+    )
+    url = f'https://github.com/{endpoint}'
+    return url
+
+def parse_codeberg_remote(remote):
+    HTTPS = 'https://codeberg.org/'
+    SSH = 'git@codeberg.org:'
+    DOT_GIT = '.git'
+    endpoint = extract_endpoint(
+        remote, https=HTTPS, ssh=SSH,dot_git=DOT_GIT
+    )
+    url = f'https://codeberg.org/{endpoint}'
+    return url
+
+def parse_gitlab_remote(remote):
+    HTTPS = 'https://gitlab.com/'
+    SSH = 'git@gitlab.com:'
+    DOT_GIT = '.git'
+    endpoint = extract_endpoint(
+        remote, https=HTTPS, ssh=SSH,dot_git=DOT_GIT
+    )
+    url = f'https://codeberg.org/{endpoint}'
+    return url
+
+def main(argv=None):
+    parser = argparse.ArgumentParser()
+    parser.parse_args(argv)
+
+    cmd = ('git', 'config', 'remote.origin.url')
+    remote = subprocess.check_output(cmd, encoding='UTF-8').strip()
+    if 'github' in remote:
+        print(parse_github_remote(remote))
+    elif 'codeberg' in remote:
+        print(parse_codeberg_remote(remote))
+    elif 'gitlab' in remote:
+        print(parse_gitlab_remote(remote))
+    else:
+        raise Exception(f"could not detect platform for {remote}")
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())
