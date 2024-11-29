@@ -5,6 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 which nvim > /dev/null 2>&1
 if [[ $? == 0 ]]; then
   export EDITOR=nvim
+  export MANPAGER='nvim +Man!'
 fi
 
 # make GNU commands available / replace mac version
