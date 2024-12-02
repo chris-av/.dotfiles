@@ -11,7 +11,7 @@ status_y_fg="#ebdbb2"
 status_y_bg="#282828"
 status_z_fg="#ebdbb2"
 status_z_bg="#282828"
-flags_fg="#000000"
+flags_fg="#282828"
 
 # none text before separator
 window_x_fg="#282828"
@@ -28,8 +28,8 @@ window_z_fg="#ebdbb2"
 window_fmt_fg="#ebdbb2"
 window_fmt_bg="#282828"
 
-client_prefix_bg="#3c3836"
-client_prefix_fg="#ebdbb2"
+client_prefix_bg="#ebdbb2"
+client_prefix_fg="#282828"
 
 left_sep=""
 right_sep=""

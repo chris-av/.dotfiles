@@ -29,8 +29,9 @@ tmux set-option -g status-right "#(~/.config/tmux/utils/network_bandwidth.sh)"
 flags="#{?window_flags,#[fg=${flags_fg}]#{window_flags},}"
 current_flags="#{?window_flags,#[fg=${flags_fg}]#{window_flags},}"
 
-tmux set-window-option -g window-status-current-format "#[fg=${window_x_fg},bg=${window_x_bg}]${left_sep}#[fg=${window_y_fg},bg=${window_y_bg}] #I #[bg=${window_x_bg}] #W${current_flags} #[fg=${window_z_fg},bg=${window_z_bg}]${left_sep}"
+# tmux set-window-option -g window-status-current-format "#[fg=${window_x_fg},bg=${window_x_bg}]${left_sep}#[fg=${window_y_fg},bg=${window_y_bg}] #I #[bg=${window_x_bg}] #W${current_flags} #[fg=${window_z_fg},bg=${window_z_bg}]${left_sep}"
+tmux set-window-option -g window-status-current-format "#[fg=${window_x_fg},bg=${window_x_bg},]#{?client_prefix,#[fg=${client_prefix_bg}]#[bg=${client_prefix_bg}],}${left_sep}#[fg=${window_y_fg},bg=${window_y_bg}] #I #[bg=${window_x_bg}] #W${current_flags} #[fg=${window_z_fg},bg=${window_z_bg}]${left_sep}"
 tmux set-window-option -g window-status-format "#[fg=${window_fmt_fg}]#[bg=${window_fmt_bg}] #I #W${flags}"
 tmux set-window-option -g window-status-activity-style "bold"
 tmux set-window-option -g window-status-bell-style "bold"
-
+tmux set -wg mode-style bg="#ebdbb2",fg="#282828"
