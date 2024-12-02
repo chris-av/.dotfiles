@@ -1,0 +1,77 @@
+# git
+.git
+
+# editor
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+./vscode
+.vs/
+.vscode
+.vscode/*
+
+
+# build
+.cache
+.webpack
+dist
+bin
+build
+dist
+objs
+x64
+x86
+
+
+# object files
+*.dll
+*.o
+*.obj
+*.so
+*.rmeta
+*.d
+
+
+# secrets
+.env
+.env*.local
+.env.*
+.env.*.local
+env/
+
+
+# executables
+*.exe
+*.out
+
+
+# misc
+*.sln
+*.sln.docstates
+*.sln.iml
+*.swp
+*.tlb
+*.tlh
+*.tli
+.DS_Store
+
+
+# virtual env
+.env
+.venv
+env
+venv
+
+
+# proj folders
+.fingerprint
+.ipynb_checkpoints
+.netlify
+.next/
+.vercel
+/.next/
+__pycache__
+next-env.d.ts
+node_modules
+**/target/debug/incremental
+**/target/debug/deps

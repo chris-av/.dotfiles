@@ -3,6 +3,13 @@ alias ls='ls -GA --color=auto --group-directories-first'
 alias l='ls -GAhlo --time-style=long-iso --color=auto --group-directories-first'
 alias lsd='ls -GA --color=auto --group-directories-first --directory *(D/)'
 
+if command -v fd 2>&1 >/dev/null; then
+  # show hidden files
+  # dont use gitignore to determine what's shown by fd
+  # rely only on my ~/.config/fd/ignore file
+  alias fd='fd -H --no-ignore-vcs'
+fi
+
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
 alias grep='grep --color=auto'
