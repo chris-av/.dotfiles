@@ -127,7 +127,6 @@ xdg-utils
 xfce4-settings
 xorg-server
 xorg-xinit
-xwaylandvideobridge
 yay
 yt-dlp
 zig
