@@ -1,4 +1,4 @@
-local paths = require("plugins.paths")
+local paths = require("plugins.lazy.paths")
 local lazydir = paths.lazydir
 local devdir = paths.devdir
 
