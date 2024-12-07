@@ -1,3 +1,8 @@
 #/usr/bin/env bash
-tmux new-session -d -s "personal" -n "main" -c ~/Documents/projects
-tmux new-session -d -s "nvim" -n "main" -c ~/.dotfiles/nvim/.config/nvim
+
+# dotfiles
+tmux new-session -d -s "dotfiles" -n "main" -c ~/Documents/projects
+tmux new-session -d -n "nvim" -c ~/.dotfiles/nvim/.config/nvim
+
+# other projects
+tmux new-session -d -s "projects" -n "main" -c ~/Documents/projects
