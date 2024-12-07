@@ -37,4 +37,5 @@ client_prefix_fg="#000000"
 left_sep=""
 right_sep=""
 
-
+window_sel_fg="#000000"
+window_sel_bg="#cccccc"

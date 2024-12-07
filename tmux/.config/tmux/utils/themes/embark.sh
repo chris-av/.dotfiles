@@ -42,4 +42,5 @@ window_fmt_bg="$background"
 left_sep=""
 right_sep=""
 
-
+window_sel_fg="#cbe3e7"
+window_sel_bg="#3e3859"

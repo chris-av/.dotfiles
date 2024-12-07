@@ -35,3 +35,5 @@ client_prefix_fg="#ebdbb2"
 left_sep=""
 right_sep=""
 
+window_sel_fg="#eff1f5"
+window_sel_bg="#dc8a78"

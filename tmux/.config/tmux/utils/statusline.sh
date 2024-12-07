@@ -34,4 +34,4 @@ tmux set-window-option -g window-status-current-format "#[fg=${window_x_fg},bg=$
 tmux set-window-option -g window-status-format "#[fg=${window_fmt_fg}]#[bg=${window_fmt_bg}] #I #W${flags}"
 tmux set-window-option -g window-status-activity-style "bold"
 tmux set-window-option -g window-status-bell-style "bold"
-tmux set -wg mode-style bg="#ebdbb2",fg="#282828"
+tmux set -wg mode-style bg="${window_sel_bg}",fg="${window_sel_fg}"
