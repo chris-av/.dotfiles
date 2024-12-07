@@ -1,11 +1,12 @@
 local foreground = "#cccccc"
-local background = "#0c0c0c"
+local background = "#000000"
 local selection_fg = "#000000"
 local selection_bg = "#cccccc"
 
 
 local grey = {
   Normal = { fg = foreground, },
+  NormalFloat = { fg = foreground, bg = background, },
 
   -- Bold = { em = 'bold' },
   -- Italic = { em = 'italic' },
@@ -66,7 +67,7 @@ local grey = {
   Constant = { fg = foreground, },
   Define = { fg = foreground, },
   Delimiter = { fg = foreground, },
-  Float = { fg = foreground, },
+  Float = { fg = foreground, bg = background, },
   Function = { fg = foreground, },
   Identifier = { fg = foreground, },
   Include = { fg = foreground, },
