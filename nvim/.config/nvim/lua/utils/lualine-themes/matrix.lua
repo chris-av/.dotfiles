@@ -47,7 +47,7 @@ local lualine_theme = {
 local lualine_components = {
   lualine_a = { "mode" },
   lualine_b = {
-    "branch",
+    { "branch", icon = " " },
     "diff",
     {
       "diagnostics",
