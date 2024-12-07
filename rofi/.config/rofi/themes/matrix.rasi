@@ -31,7 +31,7 @@ mainbox {
 
 element {
 	padding: 4 12;
-	text-color: #00E82F;
+	text-color: #90EE90;
 }
 
 element selected {
@@ -63,19 +63,19 @@ listview {
 //------------------------------------------------
 
 entry {
-	text-color: #00E82F;
+	text-color: #90EE90;
 	padding: 10 10 0 0;
 	margin: 0 -2 0 0;
 }
 
 inputbar {
-  background-color: #00E82F;
+  background-color: #90EE90;
 	padding: 0 0 0;
 	margin: 0 0 0 0;
 } 
 
 prompt {
-	text-color: #00E82F;
+	text-color: #90EE90;
 	padding: 10 6 0 10;
 	margin: 0 -2 0 0;
 }
