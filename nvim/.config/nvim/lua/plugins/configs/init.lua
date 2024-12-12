@@ -22,6 +22,7 @@ require('plugins.configs.marks')
 -- syntax, autocomplete, etc.
 require('plugins.configs.cmp')
 require('plugins.configs.nvim-autopairs')
+require('plugins.configs.nvim-autotag')
 require('plugins.configs.treesitter')
 require('plugins.configs.luasnip')
 require('plugins.configs.ufo')
