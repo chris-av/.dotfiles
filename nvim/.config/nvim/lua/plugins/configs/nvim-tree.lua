@@ -9,10 +9,10 @@ local vim = vim
 
 
 -- a list of groups can be found at `:help nvim_tree_highlight`
-vim.cmd" highlight NvimTreeFolderIcon ctermfg=blue guifg=blue "
-vim.cmd" highlight NvimTreeGitNew ctermfg=red guifg=red "
-vim.cmd" highlight NvimTreeGitDirty ctermfg=DarkGreen guifg=LightGreen "
-vim.cmd" highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=LightGreen "
+vim.cmd([[ highlight NvimTreeFolderIcon ctermfg=blue guifg=blue ]])
+vim.cmd([[ highlight NvimTreeGitNew ctermfg=red guifg=red ]])
+vim.cmd([[ highlight NvimTreeGitDirty ctermfg=DarkGreen guifg=LightGreen ]])
+vim.cmd([[ highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=LightGreen ]])
 
 
 
@@ -40,8 +40,8 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'a',     api.fs.create,                         opts('Create'))
   vim.keymap.set('n', 'B',     api.tree.toggle_no_buffer_filter,      opts('Toggle No Buffer'))
   vim.keymap.set('n', 'c',     api.fs.copy.node,                      opts('Copy'))
-  vim.keymap.set('n', 'C',     api.node.navigate.git.prev_recursive,            opts('Prev Git'))
-  vim.keymap.set('n', 'c',     api.node.navigate.git.next_recursive,            opts('Next Git'))
+  vim.keymap.set('n', 'C',     api.node.navigate.git.prev_recursive,  opts('Prev Git'))
+  vim.keymap.set('n', 'c',     api.node.navigate.git.next_recursive,  opts('Next Git'))
   vim.keymap.set('n', 'd',     api.fs.remove,                         opts('Delete'))
   vim.keymap.set('n', 'E',     api.tree.expand_all,                   opts('Expand All'))
   vim.keymap.set('n', 'W',     api.tree.collapse_all,                 opts('Collapse'))
