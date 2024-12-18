@@ -37,6 +37,7 @@
   ll = branch -vv --sort=-committerdate
   lsm = ls-files -m
   lsu = ls-files -o --exclude-standard
+  change-commits = git-change-commits
 [credential]
 	helper = cache
 [push]

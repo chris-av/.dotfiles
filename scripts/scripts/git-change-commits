@@ -1,0 +1,14 @@
+#!/bin/env bash
+
+# inspired from : https://github.com/brauliobo/gitconfig/blob/master/configs/.gitconfig
+# e.g. GIT_AUTHOR_NAME, GIT_AUTHOR_EMAIL
+# git change-commit GIT_AUTHOR_EMAIL "old_email@email.com" "new_email@email.com"
+
+VAR=$1
+OLD=$2
+NEW=$3
+
+shift 3
+echo "changing $VAR, $OLD --> $NEW"
+echo ""
+git filter-branch -f --env-filter "if [[ \"$`echo $VAR`\" = '$OLD' ]]; then export $VAR='$NEW'; fi" $@
