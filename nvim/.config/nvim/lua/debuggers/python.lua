@@ -11,7 +11,7 @@ if vim.fn.isdirectory(debugpy_path) == 0 then
 
   -- run this in the background
   vim.fn.jobstart(
-    "python3 -m venv ~/.virtualenvs/debugpy;~/.virtualenvs/debugpy/bin/python -m pip install debugpy",
+    "python -m venv ~/.virtualenvs/debugpy;~/.virtualenvs/debugpy/bin/python -m pip install debugpy",
     {
       cwd = "",
       on_exit = function()
