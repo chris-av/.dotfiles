@@ -27,8 +27,21 @@
     "kitty_theme": "grey",
     "wallpaper": "cyberpunk-hotel-amethyst.png"
   },
-  "Catppuccin": {
+  "Evil": {
+    "kitty_theme": "evil",
+    "wallpaper": "darth-vader-rogue-one.png"
+  },
+  "Catppuccin Frappe": {
     "kitty_theme": "catppuccin-frappe",
-    "wallpaper": "cyberpunk-hotel-amethyst.png"
+    "wallpaper": "catppuccin.png"
+  },
+  "Catppuccin Mocha": {
+    "kitty_theme": "catppuccin-mocha",
+    "wallpaper": "catppuccin.png"
+  },
+  "Catppuccin Macchiato": {
+    "kitty_theme": "catppuccin-macchiato",
+    "wallpaper": "catppuccin.png"
+  },
   }
 }
