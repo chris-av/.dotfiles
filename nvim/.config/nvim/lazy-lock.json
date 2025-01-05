@@ -56,7 +56,7 @@
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
   "promise-async": { "branch": "main", "commit": "119e8961014c9bfaf1487bf3c2a393d254f337e2" },
   "ripgrep": { "branch": "master", "commit": "79cbe89deb1151e703f4d91b19af9cdcc128b765" },
-  "rose-pine": { "branch": "main", "commit": "8b1fd252255a7f2c41b4192a787ab62660b29f72" },
+  "rose-pine": { "branch": "main", "commit": "91548dca53b36dbb9d36c10f114385f759731be1" },
   "scope.nvim": { "branch": "main", "commit": "932102696ead2b7ab9ff65017767b57e2722fdde" },
   "silicon.lua": { "branch": "main", "commit": "b742773c2dd4a13dc7ecbda97ae45fad07e2a7c6" },
   "tailwind-sorter.nvim": { "branch": "main", "commit": "e03eea3909c28509375993fb77a42454ac8ecbb2" },

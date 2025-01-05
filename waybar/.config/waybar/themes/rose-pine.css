@@ -1,0 +1,94 @@
+/* Rose Pine */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "FreeMono";
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    color: #e0def4;
+    background: rgba(21, 18, 27, 1);
+}
+
+tooltip {
+    background: #191724;
+    border-style: solid;
+    color: #e0def4;
+}
+
+#workspaces button {
+    color: #e0def4;
+    padding: 5px 10px;
+}
+
+#workspaces button.active {
+    color: #191724;
+    background: #e0def4;
+}
+
+/* #workspaces button.focused { */
+/* } */
+
+/* #workspaces button.urgent { */
+/* } */
+
+#workspaces button:hover {
+    color: #e0def4;
+}
+
+#custom-power_profile,
+#custom-weather,
+#custom-recorder,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#temperature,
+#workspaces,
+#tray,
+#backlight,
+#keyboard-state {
+    opacity: 0.8;
+    padding: 0px 10px;
+    margin: 3px 0px;
+    border: 1px solid #181825;
+}
+
+#temperature {
+    border-radius: 0px 0px 0px 0px;
+}
+
+#temperature.critical {
+    color: #26233a;
+}
+
+#workspaces {
+    border-radius: 0px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#bluetooth {
+    margin-right: 10px
+} 
+
+#pulseaudio.microphone {
+    margin-right: 10px;
+}
+
+#battery {
+    margin-right: 10px;
+}
+
+#custom-recorder {
+    margin-right: 10px;
+}
+
+#custom-recorder.enabled {
+    color: red;
+}
