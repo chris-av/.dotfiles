@@ -8,6 +8,8 @@ local red = "red"
 local blue = "blue"
 local yellow = "yellow"
 local cyan = "cyan"
+local purple = "#5f00af"
+local navy = "#00005f"
 
 local matrix = {
   Pmenu                            = { fg = black, bg = green },
@@ -38,6 +40,10 @@ local matrix = {
   DiagnosticInfo                   = { fg = blue, bold = true },
   DiagnosticWarn                   = { fg = yellow, bold = true },
   DiagnosticHint                   = { fg = green, bold = true },
+  DiffText                         = { fg = green, bg = none, },
+  DiffAdd                          = { fg = "white", bg = navy, },
+  DiffDelete                       = { fg = "black", bg = red, bold = true, },
+  DiffChange                       = { fg = '#ffff00', bg = none, bold = true, },
 
   -- bufferline
   BufferLineBufferSelected         = { fg = green, bg = none, italic = true, bold = true },
