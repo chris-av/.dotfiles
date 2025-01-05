@@ -8,6 +8,14 @@
   side-by-side = true
 [merge]
   conflictstyle = diff3
+  tool = nvimdiff4
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "nvimdiff"]
+  layout = "LOCAL,BASE,REMOTE / MERGED"
+[mergetool "nvimdiff4"]
+  cmd  = nvim -d $LOCAL $BASE $REMOTE $MERGED -c '$wincmd w' -c '$wincmd J'
 [diff]
   colorMoved = default
 [user]
