@@ -1,5 +1,5 @@
 local colors = {
-  black        = "black",
+  black        = "#000000",
   white        = "#000000",
   red          = "#000000",
   green        = "LightGreen",
@@ -48,7 +48,15 @@ local lualine_components = {
   lualine_a = { "mode" },
   lualine_b = {
     { "branch", icon = " " },
-    "diff",
+    {
+      "diff",
+      colored = true,
+      diff_color = {
+        added = { fg= colors.black, bg = colors.green, },
+        modified = { fg= colors.black, bg = colors.green, },
+        deleted = { fg= colors.black, bg = colors.green, },
+      }
+    },
     {
       "diagnostics",
       diagnostics_color = {
