@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-pane_active_border_fg="#524f67"
-pane_border_fg="#191724"
+pane_active_border_fg="#31748f"
+pane_border_fg="#524f67"
 message_style_fg="#e0def4"
 message_style_bg="#191724"
 status_style_fg="#e0def4"
