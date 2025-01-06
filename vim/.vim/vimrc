@@ -19,6 +19,7 @@ imap <F1> <Esc>
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'rose-pine/vim'
 Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 call plug#end()
 
