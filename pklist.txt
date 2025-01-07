@@ -126,5 +126,6 @@ xdg-utils
 xfce4-settings
 yay
 yt-dlp
+zen-browser-bin 1.0.2.b.5-1
 zig
 zsh
