@@ -43,9 +43,7 @@ intel-ucode
 iwd
 jdk-openjdk
 jq
-kate
 kitty
-konsole
 lazygit
 libpulse
 libreoffice-fresh
@@ -75,8 +73,6 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
-plasma-meta
-plasma-wayland-session
 polkit-gnome
 postgresql
 python-requests
