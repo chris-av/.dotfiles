@@ -11,20 +11,16 @@ bluez-utils
 bpytop
 brightnessctl
 cava
-charm-pop-bin
 dhcpcd
 discord
 docker
-dolphin
 dracula-gtk-theme
 dracula-icons-git
-dropbox
 efibootmgr
 egl-wayland
 fastfetch
 fd
 fftw
-firefox
 fzf
 git
 git-delta
@@ -66,7 +62,6 @@ networkmanager
 network-manager-applet
 nmap
 noto-fonts-emoji
-obs-studio
 openbsd-netcat
 pamixer
 pipewire
@@ -87,7 +82,6 @@ rust
 sddm
 showmethekey
 silicon
-slack-desktop
 slurp
 smartmontools
 sof-firmware
