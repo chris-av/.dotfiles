@@ -111,6 +111,7 @@ ttf-nerd-fonts-symbols-mono
 usbutils
 vesktop-bin
 vim
+visidata
 waybar
 wev
 wf-recorder
