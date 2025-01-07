@@ -1,5 +1,4 @@
 alsa-utils
-ark
 at
 autoconf-archive
 base
@@ -46,7 +45,6 @@ libva-intel-driver
 linux
 linux-firmware
 lsof
-lz4
 mako
 man-db
 minisign
@@ -69,8 +67,6 @@ pipewire-pulse
 polkit-gnome
 postgresql
 python-requests
-qt5-wayland
-qt6-wayland
 r
 reflector
 ripgrep
@@ -81,9 +77,7 @@ sddm
 showmethekey
 silicon
 slurp
-smartmontools
 sof-firmware
-starship
 stow
 swappy
 swaylock-effects
@@ -114,5 +108,4 @@ xfce4-settings
 yay
 yt-dlp
 zig
-zram-generator
 zsh
