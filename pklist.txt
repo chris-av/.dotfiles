@@ -92,6 +92,8 @@ showmethekey
 silicon
 slurp
 sof-firmware
+spicetify-launcher
+spotify-launcher
 stow
 strace
 swappy
