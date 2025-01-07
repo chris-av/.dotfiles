@@ -13,6 +13,7 @@ catppuccin-gtk-theme-latte 1.0.3-1
 catppuccin-gtk-theme-macchiato 1.0.3-1
 catppuccin-gtk-theme-mocha 1.0.3-1
 cava
+codelldb-bin 1.11.0-1
 dhcpcd
 discord
 docker
@@ -26,6 +27,7 @@ fftw
 fzf
 git
 git-delta
+glib2-devel 2.82.4-2
 glow
 google-chrome
 grim
@@ -36,6 +38,7 @@ htop
 httpie
 hyprland
 hyprpicker-git
+inetutils
 intel-media-driver
 intel-ucode
 iwd
@@ -83,6 +86,7 @@ silicon
 slurp
 sof-firmware
 stow
+strace
 swappy
 swaylock-effects
 swww
