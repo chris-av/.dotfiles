@@ -46,7 +46,6 @@ libva-intel-driver
 linux
 linux-firmware
 lsof
-lxappearance
 lz4
 mako
 man-db
@@ -89,7 +88,6 @@ stow
 swappy
 swaylock-effects
 swww
-sxiv
 texlive
 thunar
 tmux
@@ -113,8 +111,6 @@ xclip
 xdg-desktop-portal-hyprland
 xdg-utils
 xfce4-settings
-xorg-server
-xorg-xinit
 yay
 yt-dlp
 zig
