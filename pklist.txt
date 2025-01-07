@@ -26,6 +26,7 @@ fastfetch
 fd
 fftw
 fzf
+ghostty-git
 git
 git-delta
 glib2-devel 2.82.4-2
