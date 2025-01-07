@@ -72,7 +72,7 @@ reflector
 ripgrep
 rofi-lbonn-wayland
 rstudio-desktop-bin
-rust
+rustup
 sddm
 showmethekey
 silicon
