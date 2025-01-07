@@ -73,6 +73,9 @@ pipewire-jack
 pipewire-pulse
 polkit-gnome
 postgresql
+python-debugpy
+python-pip
+python-pipx
 python-requests
 r
 reflector
