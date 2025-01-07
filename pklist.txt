@@ -8,6 +8,10 @@ bc
 bluez-utils
 bpytop
 brightnessctl
+catppuccin-gtk-theme-frappe 1.0.3-1
+catppuccin-gtk-theme-latte 1.0.3-1
+catppuccin-gtk-theme-macchiato 1.0.3-1
+catppuccin-gtk-theme-mocha 1.0.3-1
 cava
 dhcpcd
 discord
