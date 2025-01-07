@@ -68,6 +68,7 @@ networkmanager
 network-manager-applet
 nmap
 noto-fonts-emoji
+nvm
 openbsd-netcat
 openssh
 pamixer
