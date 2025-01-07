@@ -6,7 +6,6 @@ base
 base-devel
 bat
 bc
-bluez
 bluez-utils
 bpytop
 brightnessctl
