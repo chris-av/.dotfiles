@@ -92,6 +92,7 @@ update_wallpaper() {
   
   theme=$(echo "$desktop_theme" | grep "^theme" | cut -d ',' -f 2)
   kitty_theme=$(echo "$desktop_theme" | grep "^kitty" | cut -d ',' -f 2)
+  ghostty_theme=$(echo "$desktop_theme" | grep "^kitty" | cut -d ',' -f 2)
   wallpaper=$(echo "$desktop_theme" | grep "^wallpaper" | cut -d ',' -f 2)
   background=$(echo "$desktop_theme" | grep "^bg_color" | cut -d ',' -f 2)
 
@@ -120,6 +121,7 @@ update_wallpaper() {
   echo "kitty theme : $kitty_theme"
 
   cat ~/.config/kitty/themes/$kitty_theme.conf > ~/.config/kitty/tmp/current-theme.conf
+  cat ~/.config/ghostty/themes/$ghostty_theme.conf > ~/.config/ghostty/tmp/current-theme.conf
   local restart_processes=("kitty" "nvim")
   for p in "${restart_processes[@]}"; do
     echo "checking process : $p"
