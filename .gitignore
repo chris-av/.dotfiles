@@ -10,6 +10,9 @@ mako/.config/mako/config
 kitty.conf.bak
 kitty/**/tmp/*
 
+# ghostty
+ghostty/**/tmp/*
+
 # waybar
 waybar/**/tmp/*
 
