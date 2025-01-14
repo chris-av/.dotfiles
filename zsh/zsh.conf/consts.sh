@@ -73,3 +73,9 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 
 # pipx
 export PATH=$PATH:/home/chrisv/.local/bin
+
+if command -v pyenv > /dev/null 2>&1; then
+  PYENV_ROOT="$HOME/.pyenv"
+  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init - zsh)"
+fi
