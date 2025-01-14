@@ -1,0 +1,6 @@
+keybind = clear
+keybind = ctrl+shift+r=reload_config
+keybind = ctrl+shift+plus=increase_font_size:1
+keybind = ctrl+shift+minus=decrease_font_size:1
+
+# config-file = ./window-management.conf
