@@ -26,23 +26,3 @@ elif [[ "$unameOut" == "Linux" ]]; then
     scripts
 
 fi
-
-
-
-# install oh my zsh
-echo "installing oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-. ./utilites/omz.sh
-. ./utilites/symlink-files.sh
-
-
-. ./utilites/nvim.sh
-
-
-# install nvm for managing node
-# this will only work if a .bashrc or .zshrc already exists
-cur -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-
-nvm install node
-
-
