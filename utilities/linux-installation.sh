@@ -1,31 +1,31 @@
-# update package manager
-
-# install packages that we will need
-
-
-# install git
-# install zsh
-# install zsh-syntax-highlighting
-# install heroku
-# install curl
-# install tree-sitter
-# install neovim
-# install lua
-# install luajit
-# install ruby
-# install youtube-dl
-# install bat
-# install ninja
-# install ffmpeg
-# install fd
-# install mongosh
-# install tmux
+# assuming you are on arch linux
+cwd=$(pwd)
+pacman -S jq yq git base base-develop
 
 
-## UPDATE if already on the system
-# git
-# bash
-# vim
-# python
+# need yay
+yay_loc=/tmp/yay
+git clone https://aur.archlinux.org/yay.git $yay_loc
+cd $yay_loc
 
 
+if [[ "$(echo $?)" != 0 ]]; then
+  echo "something went wrong with the installation of yay"
+  if [ -d $yay_loc ]; then
+    echo "cleaning up yay folder"
+    rm -rf $yay_loc
+  fi
+  exit 1
+else
+  echo "success!"
+  # makepkg -si
+  echo "removing yay repository from downloads"
+  rm -rf $yay_loc
+  cd -
+fi
+
+
+# install all the dependencies whose "repository" is not null
+yq -r \
+  '.packages | map(select(.repository != null)) | map(.name) | .[]' ~/.dotfiles/packages/list.yml | \
+  xargs yay -S
