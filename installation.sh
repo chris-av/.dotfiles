@@ -17,9 +17,13 @@ elif [[ "$unameOut" == "Linux" ]]; then
   echo ""
   . ./utilities/linux-installation.sh
 
-  stow aliases git nvim tmux vim zsh \
-    cava hyprland mpd waybar wofi kitty \
-    rofi ripgrep
+  echo "creating symlinks now"
+  stow -v aliases git nvim tmux vim zsh \
+    cava hyprland mpd waybar mako \
+    kitty ghostty \
+    rofi wofi\
+    fd ripgrep \
+    scripts
 
 fi
 
