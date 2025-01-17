@@ -1,7 +1,7 @@
 #!/bin/bash
 
 unameOut="$(uname -s)"
-echo "uname : $unameOut"
+echo "detected system : $unameOut"
 echo ""
 
 if [[ "$unameOut" == "Darwin" ]]; then 
