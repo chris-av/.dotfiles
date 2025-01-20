@@ -1,6 +1,7 @@
 #!/bin/bash
 
 unameOut="$(uname -s)"
+dotfiles_dir=$(pwd)
 echo "detected system : $unameOut"
 echo ""
 

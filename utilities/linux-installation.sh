@@ -1,5 +1,4 @@
 # assuming you are on arch linux
-cwd=$(pwd)
 pacman -S jq yq git base base-develop
 
 
@@ -21,7 +20,7 @@ else
   # makepkg -si
   echo "removing yay repository from downloads"
   rm -rf $yay_loc
-  cd -
+  cd $dotfiles_dir
 fi
 
 
