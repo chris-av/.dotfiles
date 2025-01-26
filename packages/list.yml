@@ -439,6 +439,11 @@ packages:
     description: >
       App launcher, installed with yay. Not sure if I can find it?
 
+  - name: rose-pine-hyprcursor
+    repository: aur
+    description: >
+      Cursor theme, to be used in hyprland as a hyprcursor
+
   - name: rstudio-desktop-bin
     repository: aur
     description: >
