@@ -39,15 +39,15 @@ packages:
     description: >
       Development and debugging utilities for the bluetooth protocol stack
 
-  - name: bpytop
-    repository: extra
-    description: >
-      Resource monitor that shows usage and stats for processor, memory, disks, network and processes
-
   - name: brightnessctl
     repository: extra
     description: >
       Lightweight brightness control tool
+
+  - name: btop
+    repository: extra
+    description: >
+      A monitor of system resources, bpytop ported to C++
 
   - name: catppuccin-gtk-theme-frappe
     repository: aur
