@@ -57,5 +57,11 @@ devicons.set_icon({
     name = "VHS",
     color = "grey",
   },
+  ["R"] = {
+    icon = "󰟔",
+    color = "#2266ba",
+    cterm_color = "25",
+    name = "R",
+  },
 })
 
