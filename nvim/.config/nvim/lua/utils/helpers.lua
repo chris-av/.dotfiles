@@ -138,4 +138,8 @@ M.find_git_ancestor = function()
   return nil
 end
 
+M.find_proj_root = function(patterns)
+  return vim.fs.root(0, patterns)
+end
+
 return M

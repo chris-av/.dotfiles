@@ -3,6 +3,11 @@ local nvim_lsp = require('lspconfig')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
+local proj_files = {
+  'tailwind.config.js', 'tailwind.config.ts', 'tailwind.config.cjs',
+  'postcss.config.js', 'postcss.config.ts', 'postcss.config.cjs'
+}
+
 nvim_lsp['tailwindcss'].setup({
   on_attach = on_attach,
   cmd = { "tailwindcss-language-server", "--stdio" },
@@ -21,8 +26,7 @@ nvim_lsp['tailwindcss'].setup({
     "rescript", "vue", "svelte"
   },
 
-  root_dir = nvim_lsp.util.root_pattern('tailwind.config.js', 'tailwind.config.ts', 'tailwind.config.cjs',
-                                        'postcss.config.js', 'postcss.config.ts', 'postcss.config.cjs'),
+  root_dir = require("utils.helpers").find_proj_root(proj_files),
 
   settings = {
     tailwindCSS = {

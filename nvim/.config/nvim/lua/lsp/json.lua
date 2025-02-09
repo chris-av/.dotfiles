@@ -8,6 +8,6 @@ nvim_lsp['jsonls'].setup({
   cmd = { "vscode-json-language-server", "--stdio" },
   filetypes = { 'json', 'jsonc' },
   capabilities = capabilities,
-  root_dir = nvim_lsp.util.find_git_ancestor
+  root_dir = require("utils.helpers").find_git_ancestor()
 })
 

@@ -10,9 +10,8 @@ nvim_lsp['sqlls'].setup({
   cmd = { home .. "/.local/share/nvim/mason/bin/sqls" },
   filetypes = { "sql" },
   capabilities = capabilities,
-  root_dir = nvim_lsp.util.find_git_ancestor,
+  root_dir = require("utils.helpers").find_git_ancestor(),
 
-  --
   settings = {
     sqls = {
       connections = {

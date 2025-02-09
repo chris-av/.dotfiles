@@ -9,5 +9,5 @@ nvim_lsp['r_language_server'].setup({
   cmd = { 'R', '--slave', '-e', 'languageserver::run()' },
   filetypes = { 'r', 'rmd' },
   log_level = 2,
-  root_dir = nvim_lsp.util.root_pattern('')
+  root_dir = require("utils.helpers").find_proj_root({ ".Rproj" })
 })
