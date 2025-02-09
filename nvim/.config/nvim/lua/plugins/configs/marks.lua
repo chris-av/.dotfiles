@@ -1,5 +1,5 @@
 local marks = require("marks")
-marks.setup {
+marks.setup({
   -- whether to map keybinds or not. default true
   default_mappings = true,
   -- which builtin marks to show. default {}
@@ -34,4 +34,4 @@ marks.setup {
     annotate = false,
   },
   mappings = {}
-}
+})

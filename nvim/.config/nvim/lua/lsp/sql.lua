@@ -5,7 +5,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local home = os.getenv('HOME')
 
-nvim_lsp['sqlls'].setup {
+nvim_lsp['sqlls'].setup({
   on_attach = on_attach,
   cmd = { home .. "/.local/share/nvim/mason/bin/sqls" },
   filetypes = { "sql" },
@@ -24,4 +24,4 @@ nvim_lsp['sqlls'].setup {
     },
   },
 
-}
+})
