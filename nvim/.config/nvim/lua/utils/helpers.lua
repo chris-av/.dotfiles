@@ -126,4 +126,16 @@ M.neotest_attach = function()
   neotest.run.attach()
 end
 
+M.find_git_ancestor = function()
+  local results = vim.fs.find(".git", {
+    upward = true,
+    type = "directory",
+    path = vim.uv.cwd(),
+  })
+  if #results > 0 then
+    return results[1]
+  end
+  return nil
+end
+
 return M
