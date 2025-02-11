@@ -4,9 +4,9 @@ local lazypath = paths.lazypath
 local devdir = paths.devdir
 
 -- create the directory if it doesnt exist ... 
-for _, f in ipairs({ lazydir, devdir }) do
-  if vim.fn.isdirectory(f) == 0 then
-    vim.fn.mkdir(f, 'p')
+for _, dir in ipairs({ lazydir, devdir }) do
+  if vim.fn.isdirectory(dir) == 0 then
+    vim.fn.mkdir(dir, 'p')
   end
 end
 
