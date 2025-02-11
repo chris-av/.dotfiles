@@ -15,7 +15,7 @@ local navy = "#00005f"
 local matrix = {
   Pmenu                            = { fg = black, bg = green },
   PmenuSel                         = { fg = black, bg = green, bold = true, },
-  Normal                           = { fg = green, bg = none },
+  Normal                           = { fg = green, bg = black, },
   NormalFloat                      = { fg = green, bg = none },
   FloatBorder                      = { fg = green, bg = none },
   NonText                          = { fg = green, bg = none },
