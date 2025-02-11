@@ -3,12 +3,10 @@ local silicon = require('silicon')
 -- create folder that will contain the silicon screenshots
 local dir = vim.fn.expand("~/Desktop/silicon/")
 if vim.fn.isdirectory(dir) == 0 then
-  print("why is this printing ?? ")
   vim.notify("did not find " .. dir, vim.log.levels.ERROR)
   vim.notify("creating dir " .. dir, vim.log.levels.INFO)
   vim.fn.mkdir(dir)
 end
-
 
 local timefmt = os.date("%Y-%m-%d--%H:%M:%S")
 local filename = "silicon-" .. timefmt .. ".png"
@@ -34,4 +32,3 @@ silicon.setup({
   gobble = false, -- enable lsautogobble like feature
   debug = false, -- enable debug output
 })
-
