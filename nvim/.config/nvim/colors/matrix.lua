@@ -1,4 +1,5 @@
 vim.cmd "hi clear"
+vim.g.colors_name = "matrix"
 
 local none = 'none'
 local black = "#000000"

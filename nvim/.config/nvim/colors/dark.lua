@@ -1,8 +1,5 @@
 vim.cmd "hi clear"
-vim.cmd "set termguicolors"
-vim.opt.termguicolors = true
-
-
+vim.g.colors_name = "dark"
 
 local dark = {
   Normal =  { fg = 'white' },

@@ -1,3 +1,6 @@
+vim.cmd "hi clear"
+vim.g.colors_name = "snazzy"
+
 local black = "#000000"
 local red = "#fe5b56"
 local green = "#5af68d"

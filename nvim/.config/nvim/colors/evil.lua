@@ -1,3 +1,6 @@
+vim.cmd "hi clear"
+vim.g.colors_name = "evil"
+
 local foreground = "#FF0000"
 local background = "#000000"
 local selection_fg = "#000000"
