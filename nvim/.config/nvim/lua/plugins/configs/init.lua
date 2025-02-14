@@ -17,6 +17,7 @@ require('plugins.configs.rnvim')
 require('plugins.configs.neotest')
 require('plugins.configs.neoscroll')
 require('plugins.configs.marks')
+require('plugins.configs.colorizer')
 
 
 -- syntax, autocomplete, etc.

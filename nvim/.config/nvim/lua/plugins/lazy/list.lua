@@ -83,6 +83,7 @@ local plugins = {
     "R-nvim/R.nvim",
     lazy = false,
   },
+  "norcalli/nvim-colorizer.lua",
 
   -- neotest
   {
