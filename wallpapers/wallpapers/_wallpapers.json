@@ -46,5 +46,9 @@
   "Rose Pine": {
     "kitty_theme": "rose-pine",
     "wallpaper": "cat-couple-pink.png"
+  },
+  "Neon": {
+    "kitty_theme": "fluoromachine",
+    "wallpaper": "skull-army.png"
   }
 }

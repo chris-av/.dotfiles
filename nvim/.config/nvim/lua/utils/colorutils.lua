@@ -18,6 +18,7 @@ M.theme_table = {
   ["snazzy"] = { colorscheme = "snazzy", lualine_theme = std_path .. "material" },
   ["evil"] = { colorscheme = "evil", lualine_theme = "auto" },
   ["rose-pine"] = { colorscheme = "rose-pine-main", lualine_theme = "auto" },
+  ["fluoromachine"] = { colorscheme = "fluoromachine", lualine_theme = std_path .. "fluoromachine", },
 }
 
 -- set colorscheme based on environment variable
