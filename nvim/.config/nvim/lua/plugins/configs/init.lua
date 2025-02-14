@@ -38,6 +38,7 @@ require('plugins.configs.catppuccin')
 require('plugins.configs.nvim-tundra')
 require('plugins.configs.rose-pine')
 -- require('plugins.configs.github-themes')
+require('plugins.configs.fluoro')
 
 
 -- misc

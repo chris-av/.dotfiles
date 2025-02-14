@@ -133,6 +133,7 @@ local plugins = {
   'sam4llis/nvim-tundra',
   { "rose-pine/neovim", name = "rose-pine" },
   { "morhetz/gruvbox",  name = "gruvbox" },
+  { "maxmx03/fluoromachine.nvim" },
 
 
   -- debugger
