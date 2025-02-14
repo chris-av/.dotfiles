@@ -46,6 +46,9 @@ local matrix = {
   DiffDelete                       = { fg = "black", bg = red, bold = true, },
   DiffChange                       = { fg = '#ffff00', bg = none, bold = true, },
 
+  -- telescope
+  TelescopeMatching                = { fg = black, bg = green, bold = true, },
+
   -- bufferline
   BufferLineBufferSelected         = { fg = green, bg = none, italic = true, bold = true },
   BufferLineBackground             = { fg = green, bg = none },
