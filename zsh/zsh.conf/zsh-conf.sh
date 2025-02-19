@@ -1,5 +1,4 @@
 plugins=(
-  git
   zsh-syntax-highlighting
   vi-mode
 )
