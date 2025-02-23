@@ -38,6 +38,7 @@ vim.opt.guifont = "Hack Nerd Font:h11"
 vim.g.neovide_remember_window = true
 vim.g.neovide_fullscreen = true
 vim.opt.fillchars = { eob = " " }
+vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
 
 vim.filetype.add({
   extension = {
