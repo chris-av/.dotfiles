@@ -59,13 +59,11 @@ zen.setup({
     },
   },
   -- callback where you can add custom code when the Zen window opens
-  on_open = function(win)
-  end,
+  -- on_open = function(win)
+  -- end,
   -- callback where you can add custom code when the Zen window closes
   on_close = function()
   end,
 })
 
-
 vim.keymap.set("n", "<leader>z", function() zen.toggle() end, { desc = "Toggle Zen Mode" })
-

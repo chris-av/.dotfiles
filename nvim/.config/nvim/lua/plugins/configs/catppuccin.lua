@@ -98,4 +98,3 @@ catppuccin.setup({
     DevIconJsx = { fg = '#20c2e3' },
   }
 })
-

@@ -100,6 +100,4 @@ cmp.setup({
 })
 
 
-
 require("cmp_r").setup()
-

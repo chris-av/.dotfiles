@@ -4,7 +4,6 @@ if not status_ok then
   return
 end
 
-
 notify.setup({
   stages = 'fade_in_slide_out',
   on_open = nil,
@@ -14,7 +13,5 @@ notify.setup({
   background_colour = '#000000',
   minimum_width = 10
 })
-
-
 
 vim.notify = notify

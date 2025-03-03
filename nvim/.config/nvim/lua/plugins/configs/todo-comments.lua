@@ -1,6 +1,5 @@
 local todo_comments = require('todo-comments')
 
-
 todo_comments.setup({
   signs = true, -- show icons in the signs column
   sign_priority = 8, -- sign priority
@@ -68,9 +67,6 @@ todo_comments.setup({
   },
 })
 
-
-
-
 vim.keymap.set("n", "]t", function()
   todo_comments.jump_next()
 end, { desc = "Next todo comment" })
@@ -80,10 +76,8 @@ vim.keymap.set("n", "[t", function()
 end, { desc = "Previous todo comment" })
 
 -- You can also specify a list of valid jump keywords
-
 vim.keymap.set("n", "]t", function()
   todo_comments.jump_next({keywords = { "ERROR", "WARNING" }})
 end, { desc = "Next error/warning todo comment" })
 
 vim.keymap.set("n", "<leader>to", "<cmd>:TodoTrouble<CR>", { desc = "Todo Comments Trouble" })
-

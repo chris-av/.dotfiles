@@ -51,6 +51,3 @@ require('nvim-tundra').setup({
     highlights = {},
   },
 })
-
-
-

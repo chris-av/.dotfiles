@@ -7,14 +7,11 @@ end
 
 local vim = vim
 
-
 -- a list of groups can be found at `:help nvim_tree_highlight`
 vim.cmd([[ highlight NvimTreeFolderIcon ctermfg=blue guifg=blue ]])
 vim.cmd([[ highlight NvimTreeGitNew ctermfg=red guifg=red ]])
 vim.cmd([[ highlight NvimTreeGitDirty ctermfg=DarkGreen guifg=LightGreen ]])
 vim.cmd([[ highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=LightGreen ]])
-
-
 
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
@@ -213,17 +210,12 @@ nvim_tree.setup ({
   }
 })
 
-
-
 -- to ensure easy navigation
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-r>', ':mod<CR>', { noremap = true, silent = true })
-
-
-
 
 -- auto close
 -- courtesy of @ppwwyyxx <3
@@ -243,5 +235,3 @@ vim.api.nvim_create_autocmd("QuitPre", {
     end
   end
 })
-
-

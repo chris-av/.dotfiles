@@ -25,6 +25,3 @@ material.setup({
     GitSignsDelete = { fg = 'red', bg = 'none' },
   }
 })
-
-
-

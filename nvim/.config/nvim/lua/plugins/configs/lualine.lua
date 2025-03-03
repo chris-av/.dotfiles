@@ -61,7 +61,6 @@ navic.setup({
 })
 
 
-
 -- now call lualine, and extend it with gps
 lualine.setup({
   options = {
