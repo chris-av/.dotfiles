@@ -24,3 +24,36 @@ Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 call plug#end()
 
 nmap ff :FZF<CR>
+
+
+function! SetColorSchemeFromEnv()
+    let l:profile = getenv("TERM_PROFILE")
+    let l:default_scheme = "default"
+
+    let s:profile_to_colorscheme = {
+      \"material-deep-ocean": "material",
+      \"catppuccin-frappe": "catppuccin-frappe",
+      \"catppuccin-latte":  "catppuccin-latte",
+      \"catppuccin-macchiato": "catppuccin-macchiato",
+      \"catppuccin-mocha": "catppuccin-mocha",
+      \"embark": "embark",
+      \"grey": "grey",
+      \"gruvbox": "snazzy",
+      \"matrix": "matrix",
+      \"dark": "dark",
+      \"snazzy": "snazzy",
+      \"evil": "evil",
+      \"rose-pine": "rose-pine-main",
+      \"fluoromachine": "fluoromachine",
+    \ }
+
+    " If TERM_PROFILE is set and not empty, use it as the colorscheme
+    if has_key(s:profile_to_colorscheme, l:profile)
+        execute "colorscheme " . s:profile_to_colorscheme[l:profile]
+    else
+        execute "colorscheme " . l:default_scheme
+    endif
+endfunction
+
+" Call the function on Vim startup
+autocmd VimEnter * call SetColorSchemeFromEnv()
