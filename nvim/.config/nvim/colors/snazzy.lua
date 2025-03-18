@@ -1,107 +1,106 @@
 vim.cmd "hi clear"
 vim.g.colors_name = "snazzy"
 
-local black = "#000000"
-local red = "#fe5b56"
-local green = "#5af68d"
-local yellow = "#f3f89c"
-local blue = "#57c6fe"
-local magenta = "#fe69c0"
-local cyan = "#9aecfd"
-local white = "#f1f0ef"
-local orange = "#ffaf00"
-local grey = "grey"
+local palette = {
+  black = "#000000",
+  red = "#fe5b56",
+  green = "#5af68d",
+  yellow = "#f3f89c",
+  blue = "#57c6fe",
+  magenta = "#fe69c0",
+  cyan = "#9aecfd",
+  white = "#f1f0ef",
+  orange = "#ffaf00",
+  grey = "grey",
+  foreground = "#efefea",
+  background = "#282935",
+  selection_fg = "#000000",
+  selection_bg = "#92bbd0",
+}
 
-
-local foreground = "#efefea"
-local background = "#282935"
-local selection_fg = "#000000"
-local selection_bg = "#92bbd0"
-
-
-
-local colors = {
-  Normal = { fg = foreground, },
-  NormalFloat = { fg = foreground, bg = "#282828" },
-  Visual = { fg = selection_fg, bg = selection_bg, },
-  Directory = { fg = foreground, },
-  IncSearch = { fg = background, bg = foreground, },
-  Search = { fg = background, bg = foreground, bold = true, },
-  Substitute = { fg = foreground, },
-  MatchParen = { fg = foreground, },
-  ModeMsg = { fg = foreground, },
-  MoreMsg = { fg = foreground, },
-  NonText = { fg = foreground, },
-  LineNr = { fg = yellow, },
-  CursorLine = { fg = '', bg = '' },
-  -- CursorLineNr = { fg = yellow, bold = true, },
-  StatusLine = { fg = foreground, },
-  StatusLineNC = { fg = foreground, },
-  WinSeparator = { fg = foreground, },
-  SignColumn = { fg = foreground, },
-  Colorcolumn = { fg = foreground, },
-  TabLineFill = { fg = foreground, },
-  TabLine = { fg = foreground, },
-  TabLineSel = { fg = foreground, },
-  Pmenu = { fg = foreground, },
-  PmenuSel = { fg = 'black', bg = foreground },
-  PmenuSbar = { fg = foreground, },
-  Conceal = { fg = foreground, },
-  Title = { fg = foreground, },
-  Question = { fg = foreground, },
-  SpecialKey = { fg = foreground, },
-  WildMenu = { fg = background, bg = orange, },
-  Folded = { fg = foreground, },
-  FoldColumn = { fg = foreground, },
+local p = palette
+local highlight_groups = {
+  Normal                  = { fg = p.foreground, },
+  NormalFloat             = { fg = p.foreground, bg = "#282828" },
+  Visual                  = { fg = p.selection_fg, bg = p.selection_bg, },
+  Directory               = { fg = p.foreground, },
+  IncSearch               = { fg = p.background, bg = p.foreground, },
+  Search                  = { fg = p.background, bg = p.foreground, bold = true, },
+  Substitute              = { fg = p.foreground, },
+  MatchParen              = { fg = p.foreground, },
+  ModeMsg                 = { fg = p.foreground, },
+  MoreMsg                 = { fg = p.foreground, },
+  NonText                 = { fg = p.foreground, },
+  LineNr                  = { fg = p.yellow, },
+  CursorLine              = { fg = '', bg = '' },
+  CursorLineNr            = { fg = p.yellow, bold = true, },
+  StatusLine              = { fg = p.foreground, },
+  StatusLineNC            = { fg = p.foreground, },
+  WinSeparator            = { fg = p.foreground, },
+  SignColumn              = { fg = p.foreground, },
+  Colorcolumn             = { fg = p.foreground, },
+  TabLineFill             = { fg = p.foreground, },
+  TabLine                 = { fg = p.foreground, },
+  TabLineSel              = { fg = p.foreground, },
+  Pmenu                   = { fg = p.foreground, },
+  PmenuSel                = { fg = p.black, bg = p.foreground },
+  PmenuSbar               = { fg = p.foreground, },
+  Conceal                 = { fg = p.foreground, },
+  Title                   = { fg = p.foreground, },
+  Question                = { fg = p.foreground, },
+  SpecialKey              = { fg = p.foreground, },
+  WildMenu                = { fg = p.background, bg = p.orange, },
+  Folded                  = { fg = p.foreground, },
+  FoldColumn              = { fg = p.foreground, },
 
   -- Syntax
-  Boolean = { fg = foreground, },
-  Character = { fg = foreground, },
-  Comment = { fg = grey, },
-  Conditional = { fg = yellow, },
-  Constant = { fg = magenta, },
-  Define = { fg = foreground, },
-  Delimiter = { fg = foreground, },
-  Float = { fg = foreground, },
-  Function = { fg = orange, },
-  Identifier = { fg = yellow, },
-  Include = { fg = yellow, },
-  Keyword = { fg = yellow, },
-  Label = { fg = foreground, },
-  Number = { fg = foreground, },
-  Operator = { fg = yellow, },
-  PreProc = { fg = foreground, },
-  Repeat = { fg = yellow, },
-  Special = { fg = yellow, },
-  SpecialChar = { fg = foreground, },
-  Statement = { fg = yellow, },
-  StorageClass = { fg = foreground, },
-  String = { fg = magenta, },
-  Structure = { fg = yellow, },
-  Tag = { fg = foreground, },
-  Todo = { fg = foreground, },
-  Type = { fg = yellow, },
-  Typedef = { fg = foreground, },
+  Boolean                 = { fg = p.foreground, },
+  Character               = { fg = p.foreground, },
+  Comment                 = { fg = p.grey, },
+  Conditional             = { fg = p.yellow, },
+  Constant                = { fg = p.magenta, },
+  Define                  = { fg = p.foreground, },
+  Delimiter               = { fg = p.foreground, },
+  Float                   = { fg = p.foreground, },
+  Function                = { fg = p.orange, },
+  Identifier              = { fg = p.yellow, },
+  Include                 = { fg = p.yellow, },
+  Keyword                 = { fg = p.yellow, },
+  Label                   = { fg = p.foreground, },
+  Number                  = { fg = p.foreground, },
+  Operator                = { fg = p.yellow, },
+  PreProc                 = { fg = p.foreground, },
+  Repeat                  = { fg = p.yellow, },
+  Special                 = { fg = p.yellow, },
+  SpecialChar             = { fg = p.foreground, },
+  Statement               = { fg = p.yellow, },
+  StorageClass            = { fg = p.foreground, },
+  String                  = { fg = p.magenta, },
+  Structure               = { fg = p.yellow, },
+  Tag                     = { fg = p.foreground, },
+  Todo                    = { fg = p.foreground, },
+  Type                    = { fg = p.yellow, },
+  Typedef                 = { fg = p.foreground, },
 
   -- Diff
-  DiffAdd = { fg = black, bg = "#00d7ff" },
-  DiffAdded = { fg = yellow, },
-  DiffDelete = { fg = foreground, bg =red, },
-  DiffRemoved = { fg = foreground, bg = red, },
-  DiffChange = { fg = cyan, },
-  DiffText = { fg = foreground, },
-  DiffLine = { fg = foreground, },
+  DiffAdd                 = { fg = p.black, bg = "#00d7ff" },
+  DiffAdded               = { fg = p.yellow, },
+  DiffDelete              = { fg = p.foreground, bg = p.red, },
+  DiffRemoved             = { fg = p.foreground, bg = p.red, },
+  DiffChange              = { fg = p.cyan, },
+  DiffText                = { fg = p.foreground, },
+  DiffLine                = { fg = p.foreground, },
 
   -- Telescope
-  TelescopeSelectionCaret = { fg = foreground, },
-  TelescopeSelection = { fg = foreground, },
-  TelescopeMatching = { fg = foreground, },
+  TelescopeSelectionCaret = { fg = p.foreground, },
+  TelescopeSelection      = { fg = p.foreground, },
+  TelescopeMatching       = { fg = p.foreground, },
 
   -- NvimTree
-  NvimTreeFolderIcon = { fg = cyan, },
+  NvimTreeFolderIcon      = { fg = p.cyan, },
 
   -- other
-  ["@tag.tsx"] = { fg = yellow, },
+  ["@tag.tsx"]            = { fg = p.yellow, },
 
 }
 
@@ -111,6 +110,6 @@ local function set_hl(hl_group, highlights)
   vim.api.nvim_set_hl(0, hl_group, highlights)
 end
 
-for group, val in pairs(colors) do
+for group, val in pairs(highlight_groups) do
   set_hl(group, val)
 end
