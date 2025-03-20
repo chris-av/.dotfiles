@@ -1,127 +1,151 @@
 vim.cmd "hi clear"
 vim.g.colors_name = "dark"
 
-local dark = {
-  Normal =  { fg = 'white' },
-  Comment =  { fg = 'grey', bold = true },
-  Constant =  { fg = '#FF5EFF' },
-  Conditional =  { fg = 'lightgreen' },
-  Identifier =  { fg = '#40ffff' },
-  Include =  { fg = 'lightgreen' },
-  Function =  { fg = 'white' },
-  Keyword =  { fg = 'lightgreen' },
-  Error =  { bg = 'red' },
-  Directory =  { fg = 'cyan' },
-  NonText =  { fg = 'none' },
-  IncSearch =  { bold = true, bg = 'yellow', fg = 'black' },
-  Search =  { bold = true, fg = 'black', bg = 'yellow' },
-  Visual =  { bg = 'darkgrey', fg = 'black' },
-  VisualNOS =  { bold = true },
-  Operator =  { fg = 'white' },
-  Statement =  { fg = 'lightgreen' },
+local palette = {
+  black = "#000000",
+  white = "#ffffff",
+  grey = "#676767",
+  darkgrey = "#262626",
+  lightgrey = "#d0d0d0",
+  green = "#5af78d",
+  yellow = "#eeff03",
+  red = "#ff5b56",
+  orange = "#ffaf00",
+  cyan = "#9aecfe",
+  aqua = "#00ffff",
+  magenta = "#ff76ff",
+
+  none = 'none',
+}
+
+local p = palette
+
+local highlight_groups = {
+  Normal      = { fg = p.white },
+  Comment     = { fg = p.grey, bold = true },
+  Constant    = { fg = p.magenta },
+  Conditional = { fg = p.green },
+  Identifier  = { fg = p.aqua, },
+  Include     = { fg = p.green },
+  Function    = { fg = p.orange, },
+  Keyword     = { fg = p.green },
+  Error       = { bg = p.red },
+  Directory   = { fg = p.cyan },
+  NonText     = { fg = p.none },
+  IncSearch   = { bold = true, bg = p.yellow, fg = p.black },
+  Search      = { bold = true, fg = p.black, bg = p.yellow },
+  Visual      = { bg = p.green, fg = p.black, },
+  VisualNOS   = { bold = true },
+  Operator    = { fg = p.white },
+  Statement   = { fg = p.green },
 
 
   -- primitives
-  Boolean =  { fg = 'yellow' },
-  Number =  { fg = 'yellow' },
-  String =  { fg = '#FF5EFF' },
+  Boolean                       = { fg = p.yellow },
+  Number                        = { fg = p.yellow },
+  String                        = { fg = p.magenta },
 
   -- splits, borders and cursor
-  VertSplit =  { fg = 'None', bg = 'None' },
-  FloatBoarder =  { fg = 'None' },
-  WinSeparator =  { bg = 'None' },
+  VertSplit                     = { fg = p.none, bg = p.none },
+  FloatBoarder                  = { fg = p.none },
+  WinSeparator                  = { bg = p.none },
 
   -- tabline
-  TabLine =  { bg = 'darkgrey' },
-  TabLineSel =  { bold = true },
-  TabLineFill =  { reverse = true },
-  ToolbarLine =  { bg = 'grey50' },
-  ToolbarButton =  { bg = 'lightgrey' },
+  TabLine                       = { bg = p.grey },
+  TabLineSel                    = { bold = true },
+  TabLineFill                   = { reverse = true },
+  ToolbarLine                   = { bg = p.grey },
+  ToolbarButton                 = { bg = p.grey },
 
   -- visual, selections, line numbers
-  Pmenu =  { bg = 'None' },
-  PmenuSel =  { bg = 'darkgrey' },
-  PmenuSbar =  { bg = 'grey' },
-  PmenuThumb =  { bg = 'black' },
-  NormalFloat =  { fg = 'None', bg = 'None' },
-  LineNr =  { fg = '#00EA8C' },
-  LineNrAbove =  { fg = 'None', bg = 'None' },
-  LineNrBelow =  { fg = 'None', bg = 'None' },
-  CursorLine =  { fg = 'None', bg = 'None' },
-  CursorColumn =  { bg = 'grey40' },
-  CursorLineNr =  { bold = true, fg = 'lightgreen' },
+  Pmenu                         = { bg = p.none },
+  PmenuSel                      = { bg = p.grey, },
+  PmenuSbar                     = { bg = p.grey },
+  PmenuThumb                    = { bg = p.black },
+  NormalFloat                   = { fg = p.none, bg = p.none },
+  LineNr                        = { fg = p.green, },
+  LineNrAbove                   = { fg = p.none, bg = p.none },
+  LineNrBelow                   = { fg = p.none, bg = p.none },
+  CursorLine                    = { fg = p.none, bg = p.none },
+  CursorColumn                  = { bg = p.grey, },
+  CursorLineNr                  = { bold = true, fg = p.green },
 
   -- status line
-  StatusLineTerm =  { bg = 'lightgreen' },
-  StatusLineTermNC =  { bg = 'lightgreen' },
-  StatusLine =  { bold = true },
-  StatusLineNC =  { reverse = true },
+  StatusLineTerm                = { bg = p.green },
+  StatusLineTermNC              = { bg = p.green },
+  StatusLine                    = { bold = true },
+  StatusLineNC                  = { reverse = true },
 
   -- spelling?
-  SpellBad =  { sp = 'red' },
-  SpellCap =  { sp = 'blue' },
-  SpellRare =  { sp = 'magenta' },
-  SpellLocal =  { sp = 'cyan' },
+  SpellBad                      = { sp = p.red },
+  SpellCap                      = { sp = p.cyan, },
+  SpellRare                     = { sp = p.magenta, },
+  SpellLocal                    = { sp = p.cyan },
 
   -- special
-  SpecialKey =  { fg = 'cyan' },
-  ErrorMsg =  { fg = 'red' },
-  MoreMsg =  { fg = 'seagreen' },
-  ModeMsg =  { bold = true },
-  Question =  { fg = 'green' },
-  Title =  { fg = 'magenta' },
-  WarningMsg =  { fg = 'red' },
-  WildMenu =  { fg = 'yellow' },
-  Folded =  { bg = 'none' },
-  FoldColumn =  { bg = 'grey' },
-  DiffText =  { bg = 'red' },
-  Conceal =  { bg = 'darkgrey' },
-  ColorColumn =  { fg = '' },
-  MatchParen =  { fg = '' },
-  Special =  { fg = 'white' },
-  PreProc =  { fg = '#ff80ff' },
-  Type =  { fg = '#60ff60' },
-  Underlined =  { fg = '#80a0ff' },
-  Ignore =  { fg = '' },
-  Todo =  { bg = 'yellow' },
+  SpecialKey                    = { fg = p.cyan },
+  ErrorMsg                      = { fg = p.red },
+  MoreMsg                       = { fg = p.aqua, },
+  ModeMsg                       = { bold = true },
+  Question                      = { fg = p.green },
+  Title                         = { fg = p.magenta, },
+  WarningMsg                    = { fg = p.red },
+  WildMenu                      = { fg = p.yellow },
+  Folded                        = { bg = p.none },
+  FoldColumn                    = { bg = p.grey },
+  DiffText                      = { bg = p.red },
+  Conceal                       = { bg = p.grey, },
+  ColorColumn                   = { fg = p.none, },
+  MatchParen                    = { fg = p.none, },
+  Special                       = { fg = p.green },
+  PreProc                       = { fg = p.magenta, },
+  Type                          = { fg = p.green, },
+  Underlined                    = { fg = p.magenta, },
+  Ignore                        = { fg = '' },
+  Todo                          = { bg = p.yellow },
 
   -- use TS highlights
-  TSKeyWordFunction =  { bold = true, fg = '#00ffff' },
-  TSMethod =  { bold = true, fg = 'skyblue1' },
-  TSConstructor =  { bold = true, fg = 'skyblue1' },
-  -- TSException =  { fg = '' }, guifg=lightgreen
-  TSConditional =  { bold = false, fg = 'lightgreen' },
-  TSRepeat =  { bold = false, fg = 'lightgreen' },
-  ["@tag"] = { fg = 'lightgreen', bold = true, },
-  ["@tag.attribute"] = { fg = 'green', },
-  ["@constructor"] = { fg = 'lightgreen', bold = true, },
+  TSKeyWordFunction             = { bold = true, fg = p.aqua },
+  TSMethod                      = { bold = true, fg = p.cyan },
+  TSConstructor                 = { bold = true, fg = p.cyan },
+  -- TSException =  { fg = '' }, guifg=green
+  TSConditional                 = { bold = false, fg = p.green },
+  TSRepeat                      = { bold = false, fg = p.green },
+  ["@tag"]                      = { fg = p.green, bold = true, },
+  ["@tag.attribute"]            = { fg = p.green, },
+  ["@constructor"]              = { fg = p.green, bold = true, },
 
   -- Nvim Tree highlights
-  NvimTreeFolderIcon =  { fg = 'cyan' },
-  NvimTreeExecFile =  { bold = true, fg = 'lightgreen' },
+  NvimTreeFolderIcon            = { fg = p.cyan },
+  NvimTreeExecFile              = { bold = true, fg = p.green },
 
   -- git signs
-  SignColumn =  { bg = 'None' },
-  DiffAdd =  { bg = 'None', fg = 'lightgreen' },
-  DiffChange =  { bg = 'None', fg = 'lightblue' },
-  DiffDelete =  { bg = 'None', fg = 'red' },
+  SignColumn                    = { bg = p.none },
+  DiffAdd                       = { bg = p.none, fg = p.green },
+  DiffChange                    = { bg = p.none, fg = p.cyan, },
+  DiffDelete                    = { bg = p.none, fg = p.red },
 
   -- bufferline
-  BufferLineBackground =  { bg = 'None', fg = 'grey' },
-  BufferLineCloseButton =  { bg = 'None', fg = 'grey' },
-  BufferLineCloseButtonSelected =  { bg = 'None', fg = 'white' },
-  BufferLineModified =  { bg = 'None', fg = 'grey' },
-  BufferLineModifiedSelected =  { bg = 'None', fg = 'white' },
-  BufferLineModifiedVisible =  { bg = 'None', fg = 'grey' },
+  BufferLineBackground          = { bg = p.none, fg = p.grey },
+  BufferLineCloseButton         = { bg = p.none, fg = p.grey },
+  BufferLineCloseButtonSelected = { bg = p.none, fg = p.white },
+  BufferLineModified            = { bg = p.none, fg = p.grey },
+  BufferLineModifiedSelected    = { bg = p.none, fg = p.white },
+  BufferLineModifiedVisible     = { bg = p.none, fg = p.grey },
 
   -- Ufo
-  UfoFoldedBg = { bg = 'none' },
-  UfoCursorFoldedLine = { bg = 'none' },
-  UfoPreviewSbar = { bg = 'none' },
-  UfoPreviewCursorLine = { bg = 'none' },
+  UfoFoldedBg                   = { bg = p.none },
+  UfoCursorFoldedLine           = { bg = p.none },
+  UfoPreviewSbar                = { bg = p.none },
+  UfoPreviewCursorLine          = { bg = p.none },
+
+  -- Telescope
+  -- Telescope
+  TelescopeSelectionCaret       = { fg = p.black, bg = p.green, bold = true, },
+  TelescopeSelection            = { fg = p.black, bg = p.green },
+  TelescopeMatching             = { fg = p.black, bold = true, },
 
 }
-
 
 
 local function set_hl(hl_group, highlights)
@@ -129,10 +153,6 @@ local function set_hl(hl_group, highlights)
 end
 
 
-
-
-for group, val in pairs(dark) do
+for group, val in pairs(highlight_groups) do
   set_hl(group, val)
 end
-
-
