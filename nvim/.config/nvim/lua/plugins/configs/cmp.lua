@@ -27,26 +27,40 @@ cmp.setup({
       select = true,
       behavior = cmp.ConfirmBehavior.replace
     }),
+
     ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expandable() then
-        luasnip.expand()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
+      if luasnip.expand_or_jumpable() and luasnip.in_snippet() then
+        luasnip.jump(1)
+      -- elseif luasnip.expandable() then
+      --   luasnip.expand()
       else
         fallback()
       end
-    end, { "i", "s" }),
+    end, { "i", "s", "n" }),
+
     ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
+      if luasnip.jumpable(-1) and luasnip.in_snippet() then
         luasnip.jump(-1)
       else
         fallback()
       end
+    end, { "i", "s", "n" }),
+
+    ['<C-n>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
     end, { "i", "s" }),
+
+    ['<C-p>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end),
   },
   sources = {
     { name = 'nvim_lsp' },
