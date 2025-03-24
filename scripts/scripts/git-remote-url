@@ -9,7 +9,32 @@ import subprocess
 import sys
 
 
-def extract_endpoint(remote: str, https: str, ssh: str):
+PLATFORMS = {
+    "github.com": {
+        "https": "https://github.com/",
+        "ssh": "git@github.com:",
+        "url_fmt": "https://github.com/{endpoint}",
+    },
+    "gitlab.com": {
+        "https": "https://gitlab.com/",
+        "ssh": "git@gitlab.com:",
+        "url_fmt": "https://gitlab.com/{endpoint}",
+    },
+    "codeberg.org": {
+        "https": "https://codeberg.org/",
+        "ssh": "git@codeberg.org:",
+        "url_fmt": "https://codeberg.org/{endpoint}",
+    },
+}
+
+
+def extract_endpoint(remote: str, platform: str):
+    platform_data = PLATFORMS.get(platform)
+    if platform_data is None:
+        raise ValueError(f"[fatal] unknown platform : {platform}")
+    https = platform_data["https"]
+    ssh = platform_data["ssh"]
+
     if remote.startswith(https):
         remote = remote[len(https):]
     if remote.startswith(ssh):
@@ -17,6 +42,14 @@ def extract_endpoint(remote: str, https: str, ssh: str):
     if remote.endswith(".git"):
         remote = remote[:-4]
     return remote
+
+def normalize_remote_url(remote: str) -> str:
+    for host, data in PLATFORMS.items():
+        if host in remote:
+            endpoint = extract_endpoint(remote, host)
+            url_fmt = data["url_fmt"]
+            return url_fmt.format(endpoint=endpoint)
+    raise Exception(f"could not detect platform for {remote}")
 
 def parse_arguments(args):
     parser = argparse.ArgumentParser(
@@ -55,35 +88,14 @@ def main(argv=None):
     for remote in remotes:
         name, remote = remote.split("\t")
         remote = re.sub(r"\s+\(\w+\)$", "", remote)
-        url = None
 
-        if 'github' in remote:
-            HTTPS = 'https://github.com/'
-            SSH = 'git@github.com:'
-            endpoint = extract_endpoint(
-                remote, https=HTTPS, ssh=SSH
-            )
-            url = f'https://github.com/{endpoint}'
-        elif 'codeberg' in remote:
-            HTTPS = 'https://codeberg.org/'
-            SSH = 'git@codeberg.org:'
-            endpoint = extract_endpoint(
-                remote, https=HTTPS, ssh=SSH
-            )
-            url = f'https://codeberg.org/{endpoint}'
-        elif 'gitlab' in remote:
-            HTTPS = 'https://gitlab.com/'
-            SSH = 'git@gitlab.com:'
-            endpoint = extract_endpoint(
-                remote, https=HTTPS, ssh=SSH
-            )
-            url = f'https://codeberg.org/{endpoint}'
-        else:
-            raise Exception(f"could not detect platform for {remote}")
-
-        if remotes_dict.get(name) is None:
-            remotes_dict[name] = url
-
+        try:
+            url = normalize_remote_url(remote)
+            remotes_dict.setdefault(name, url)
+        except Exception as e:
+            # fallback to original remote presentation
+            print(f"[warn] {e}", file=sys.stderr, flush=True)
+            url = remote
 
     if args.get("list") is True:
         max_key_len = max(len(str(k)) for k in remotes_dict)
@@ -102,7 +114,7 @@ def main(argv=None):
 
     if show_remote_url is None:
         print(f"did not find remote : {show_remote_name}", file=sys.stderr, flush=True)
-        return
+        return 1
 
     print(f"{show_remote_url}")
     return 0
