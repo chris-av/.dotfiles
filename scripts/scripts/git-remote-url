@@ -4,7 +4,9 @@
 # link: https://github.com/asottile/scratch/blob/main/python/git-github-url
 
 import argparse
+import re
 import subprocess
+import sys
 
 
 def extract_endpoint(remote: str, https: str, ssh: str, dot_git: str):
@@ -47,20 +49,79 @@ def parse_gitlab_remote(remote):
     url = f'https://codeberg.org/{endpoint}'
     return url
 
-def main(argv=None):
-    parser = argparse.ArgumentParser()
-    parser.parse_args(argv)
+def parse_arguments(args):
+    parser = argparse.ArgumentParser(
+        prog="remote-url",
+        usage="%(prog)s [options]",
+        description="""\
+            Tool to display the remote urls for a given repository
+        """,
+    )
+    parser.add_argument("remote", nargs="?", default=None, help="Name of the remote whose url should be displayed")
+    parser.add_argument("-l", "--list", action="store_true", default=False, help="output list of all remotes and their corresponding urls")
+    namespace = parser.parse_args(args)
+    return vars(namespace)
 
-    cmd = ('git', 'config', 'remote.origin.url')
-    remote = subprocess.check_output(cmd, encoding='UTF-8').strip()
-    if 'github' in remote:
-        print(parse_github_remote(remote))
-    elif 'codeberg' in remote:
-        print(parse_codeberg_remote(remote))
-    elif 'gitlab' in remote:
-        print(parse_gitlab_remote(remote))
-    else:
-        raise Exception(f"could not detect platform for {remote}")
+
+def main(argv=None):
+    args = parse_arguments(argv)
+
+    cmd = ('git', 'remote', '-v')
+    remotes = []
+
+    try:
+        output = subprocess.check_output(cmd, encoding='UTF-8').strip()
+        remotes = output.splitlines()
+    except subprocess.CalledProcessError as e:
+        print(e, file=sys.stderr, flush=True)
+        return 1
+
+
+    if len(remotes) == 0:
+        print("no remotes to show", file=sys.stderr, flush=True)
+        return 1
+
+    remotes_dict = {}
+
+    for remote in remotes:
+        name, remote = remote.split("\t")
+        remote = re.sub(r"\s+\(\w+\)$", "", remote)
+        url = None
+
+        if 'github' in remote:
+            url = parse_github_remote(remote)
+        elif 'codeberg' in remote:
+            url = parse_codeberg_remote(remote)
+        elif 'gitlab' in remote:
+            url = parse_gitlab_remote(remote)
+        else:
+            raise Exception(f"could not detect platform for {remote}")
+
+        if remotes_dict.get(name) is None:
+            remotes_dict[name] = url
+
+
+    if args.get("list") is True:
+        max_key_len = max(len(str(k)) for k in remotes_dict)
+        for key, value in remotes_dict.items():
+            print(f"{str(key):<{max_key_len}} : {value}")
+        return
+
+    all_remotes = list(remotes_dict.keys())
+    show_remote_name = args.get("remote")
+
+    if show_remote_name is None:
+        # user did not supply a remote, find the first valid one
+        show_remote_name = "origin" if "origin" in all_remotes else all_remotes[0]
+
+    show_remote_url = remotes_dict.get(show_remote_name)
+
+    if show_remote_url is None:
+        print(f"did not find remote : {show_remote_name}", file=sys.stderr, flush=True)
+        return
+
+    print(f"{show_remote_url}")
+    return 0
 
 
 if __name__ == '__main__':
