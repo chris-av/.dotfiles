@@ -9,45 +9,14 @@ import subprocess
 import sys
 
 
-def extract_endpoint(remote: str, https: str, ssh: str, dot_git: str):
+def extract_endpoint(remote: str, https: str, ssh: str):
     if remote.startswith(https):
         remote = remote[len(https):]
     if remote.startswith(ssh):
         remote = remote[len(ssh):]
-    if remote.endswith(dot_git):
-        remote = remote[:-1 * len(dot_git)]
+    if remote.endswith(".git"):
+        remote = remote[:-4]
     return remote
-
-
-def parse_github_remote(remote):
-    HTTPS = 'https://github.com/'
-    SSH = 'git@github.com:'
-    DOT_GIT = '.git'
-    endpoint = extract_endpoint(
-        remote, https=HTTPS, ssh=SSH,dot_git=DOT_GIT
-    )
-    url = f'https://github.com/{endpoint}'
-    return url
-
-def parse_codeberg_remote(remote):
-    HTTPS = 'https://codeberg.org/'
-    SSH = 'git@codeberg.org:'
-    DOT_GIT = '.git'
-    endpoint = extract_endpoint(
-        remote, https=HTTPS, ssh=SSH,dot_git=DOT_GIT
-    )
-    url = f'https://codeberg.org/{endpoint}'
-    return url
-
-def parse_gitlab_remote(remote):
-    HTTPS = 'https://gitlab.com/'
-    SSH = 'git@gitlab.com:'
-    DOT_GIT = '.git'
-    endpoint = extract_endpoint(
-        remote, https=HTTPS, ssh=SSH,dot_git=DOT_GIT
-    )
-    url = f'https://codeberg.org/{endpoint}'
-    return url
 
 def parse_arguments(args):
     parser = argparse.ArgumentParser(
@@ -89,11 +58,26 @@ def main(argv=None):
         url = None
 
         if 'github' in remote:
-            url = parse_github_remote(remote)
+            HTTPS = 'https://github.com/'
+            SSH = 'git@github.com:'
+            endpoint = extract_endpoint(
+                remote, https=HTTPS, ssh=SSH
+            )
+            url = f'https://github.com/{endpoint}'
         elif 'codeberg' in remote:
-            url = parse_codeberg_remote(remote)
+            HTTPS = 'https://codeberg.org/'
+            SSH = 'git@codeberg.org:'
+            endpoint = extract_endpoint(
+                remote, https=HTTPS, ssh=SSH
+            )
+            url = f'https://codeberg.org/{endpoint}'
         elif 'gitlab' in remote:
-            url = parse_gitlab_remote(remote)
+            HTTPS = 'https://gitlab.com/'
+            SSH = 'git@gitlab.com:'
+            endpoint = extract_endpoint(
+                remote, https=HTTPS, ssh=SSH
+            )
+            url = f'https://codeberg.org/{endpoint}'
         else:
             raise Exception(f"could not detect platform for {remote}")
 
