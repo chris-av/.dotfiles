@@ -3,8 +3,6 @@
 # inspired by asottile <3
 # link: https://github.com/asottile/scratch/blob/main/python/git-github-url
 
-from __future__ import annotations
-
 import argparse
 import subprocess
 
