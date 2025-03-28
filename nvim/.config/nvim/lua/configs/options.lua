@@ -39,6 +39,7 @@ vim.g.neovide_remember_window = true
 vim.g.neovide_fullscreen = true
 vim.opt.fillchars = { eob = " " }
 vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
+vim.o.winborder = "rounded"
 
 vim.filetype.add({
   extension = {
