@@ -29,3 +29,13 @@ if vim.fn.isdirectory(debugpy_path) == 0 then
 end
 
 require('dap-python').setup("~/.virtualenvs/debugpy/bin/python")
+local dap = require("dap")
+
+-- Add a custom launch config for your app
+table.insert(dap.configurations.python, {
+  type = "python",
+  request = "launch",
+  name = "Run src/app.py",
+  program = "${workspaceFolder}/src/app.py",
+  cwd = "${workspaceFolder}",
+})
