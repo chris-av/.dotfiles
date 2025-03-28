@@ -1,4 +1,5 @@
 require('plugins.configs.nvim-notify')
+require('plugins.configs.mason')
 
 -- core functionality
 -- require('plugins.configs.bufferline')

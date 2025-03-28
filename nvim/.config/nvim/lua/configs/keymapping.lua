@@ -104,4 +104,3 @@ vim.keymap.set("n", "<leader>tl", helpers.neotest_summary, extend(opts, { desc =
 vim.keymap.set("n", "<leader>to", helpers.neotest_output_panel, extend(opts, { desc = "Neotest - show output panel" }))
 vim.keymap.set("n", "<leader>ta", helpers.neotest_attach, extend(opts, { desc = "Neotest - attach" }))
 vim.keymap.set("n", "<leader>tw", helpers.neotest_watch, extend(opts, { desc = "Neotest - attach" }))
-
