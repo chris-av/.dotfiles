@@ -48,6 +48,7 @@ require("rose-pine").setup({
   },
 
   highlight_groups = {
+    CursorLine = { bg = 'none', },
     -- Comment = { fg = "foam" },
     -- VertSplit = { fg = "muted", bg = "muted" },
   },

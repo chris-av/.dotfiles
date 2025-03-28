@@ -32,7 +32,7 @@ local highlight_groups = {
   MoreMsg                 = { fg = p.foreground, },
   NonText                 = { fg = p.foreground, },
   LineNr                  = { fg = p.yellow, },
-  CursorLine              = { fg = '', bg = '' },
+  CursorLine              = { fg = '', bg = 'none' },
   CursorLineNr            = { fg = p.yellow, bold = true, },
   StatusLine              = { fg = p.foreground, },
   StatusLineNC            = { fg = p.foreground, },
