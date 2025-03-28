@@ -6,4 +6,5 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 nvim_lsp['pyright'].setup({
   on_attach = on_attach,
   capabilities = capabilities,
+  root_dir = require("utils.helpers").find_proj_root({ ".git", "requirements.txt" }),
 })
