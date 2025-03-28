@@ -38,3 +38,10 @@ require('lsp.zls')
 require('lsp.java')
 require('lsp.golang')
 -- require('lsp.sql')
+
+vim.lsp.enable({
+  "bashls", "clangd", "cssls", "gopls", "html",
+  "jdtls", "jsonls", "ltex", "lua_ls", "pyright",
+  "r_language_server", "rust_analyzer", "tailwindcss",
+  "ts_ls", "zls",
+})

@@ -1,5 +1,4 @@
 local on_attach = require('lsp.on_attach')
-local nvim_lsp = require('lspconfig')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
@@ -8,7 +7,7 @@ local proj_files = {
   'postcss.config.js', 'postcss.config.ts', 'postcss.config.cjs'
 }
 
-nvim_lsp['tailwindcss'].setup({
+vim.lsp.config.tailwindcss = {
   on_attach = on_attach,
   cmd = { "tailwindcss-language-server", "--stdio" },
   filetypes = {
@@ -43,5 +42,4 @@ nvim_lsp['tailwindcss'].setup({
       validate = true,
     },
   },
-
-})
+}

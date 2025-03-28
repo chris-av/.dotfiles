@@ -1,10 +1,9 @@
 local on_attach = require('lsp.on_attach')
-local nvim_lsp = require('lspconfig')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-nvim_lsp['pyright'].setup({
+vim.lsp.config.pyright = {
   on_attach = on_attach,
   capabilities = capabilities,
   root_dir = require("utils.helpers").find_proj_root({ ".git", "requirements.txt" }),
-})
+}

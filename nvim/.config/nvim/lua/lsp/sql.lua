@@ -1,11 +1,9 @@
 local on_attach = require('lsp.on_attach')
-local nvim_lsp = require('lspconfig')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
 local home = os.getenv('HOME')
 
-nvim_lsp['sqlls'].setup({
+vim.lsp.config.sqlls = {
   on_attach = on_attach,
   cmd = { home .. "/.local/share/nvim/mason/bin/sqls" },
   filetypes = { "sql" },
@@ -22,5 +20,4 @@ nvim_lsp['sqlls'].setup({
       },
     },
   },
-
-})
+}
