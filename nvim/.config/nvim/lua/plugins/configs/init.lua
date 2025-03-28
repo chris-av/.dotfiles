@@ -28,7 +28,7 @@ require('plugins.configs.treesitter')
 require('plugins.configs.luasnip')
 require('plugins.configs.ufo')
 require('plugins.configs.nvim-surround')
-require('plugins.configs.tailwind-sorter')
+-- require('plugins.configs.tailwind-sorter')
 require('plugins.configs.comment')
 require('plugins.configs.nvim-web-devicons')
 
