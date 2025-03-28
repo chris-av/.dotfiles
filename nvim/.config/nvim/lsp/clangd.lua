@@ -1,13 +1,11 @@
-local on_attach = require('lsp.on_attach')
+local on_attach = require('utils.on_attach')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-vim.lsp.config.rust_analyzer = {
+return {
   on_attach = on_attach,
   capabilities = capabilities,
-  cmd = {
-    "rust-analyzer",
-  },
-  filetypes = { "rust" },
-  -- root_dir = { "Cargo.toml", "rust-project.json" },
+  cmd = { 'clangd', },
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+  single_file_support = true,
 }

@@ -1,11 +1,10 @@
-local on_attach = require('lsp.on_attach')
+local on_attach = require('utils.on_attach')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-vim.lsp.config.clangd = {
+return {
   on_attach = on_attach,
   capabilities = capabilities,
-  cmd = { 'clangd', },
-  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
-  single_file_support = true,
+  cmd = { 'vscode-css-language-server', '--stdio' },
+  filetypes = { 'css', 'scss', 'less' },
 }
