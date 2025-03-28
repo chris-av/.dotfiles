@@ -5,15 +5,27 @@ local signs = {
   Info = " ",
 }
 
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-end
-
 -- diagnostics setup
-vim.diagnostic.config ({
+vim.diagnostic.config({
   underline = false,
-  signs = true,
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = signs.Error,
+      [vim.diagnostic.severity.WARN] = signs.Warn,
+      [vim.diagnostic.severity.HINT] = signs.Hint,
+      [vim.diagnostic.severity.INFO] = signs.Info,
+    },
+
+    -- make who line red
+    -- linehl = {
+    --   [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+    -- },
+
+    -- highlight line number on warning
+    -- numhl = {
+    --   [vim.diagnostic.severity.WARN] = 'WarningMsg',
+    -- },
+  },
   severity_sort = true,
   virtual_text = false,
   -- virtual_text = {
