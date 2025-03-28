@@ -102,18 +102,17 @@ update_wallpaper() {
     theme_arr["$key"]="$value"
   done <<< $desktop_theme
 
-  # call swww based on whether we're using an image or flat background color
   if [[ -v theme_arr["wallpaper"] ]]; then
-    # use swwww setting the wallpaper
     echo "this is a wallpaper theme"
     echo "using image $wallpaper"
-    swww img -t wipe --transition-step 190 --transition-duration 1.3 ~/wallpapers/$wallpaper
+    hyprctl hyprpaper reload eDP-1,~/wallpapers/$wallpaper
+    hyprctl hyprpaper reload DP-2,~/wallpapers/$wallpaper
     update_cache $wallpaper $kitty_theme
   else
-    # use swwww setting a flat background image
     echo "this is a flat wallpaper theme"
     echo "using color $background"
-    swww clear $background
+    hyprctl hyprpaper reload eDP-1,~/wallpapers/$wallpaper
+    hyprctl hyprpaper reload DP-2,~/wallpapers/$wallpaper
     update_cache $background $kitty_theme
   fi
 
