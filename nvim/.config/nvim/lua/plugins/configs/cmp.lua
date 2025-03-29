@@ -13,6 +13,11 @@ if not status_ok then
 end
 
 cmp.setup({
+  window = {
+    completion = {
+      scrollbar = false,
+    },
+  },
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body)
