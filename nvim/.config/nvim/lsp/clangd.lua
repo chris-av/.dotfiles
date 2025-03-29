@@ -1,11 +1,10 @@
-local on_attach = require('utils.on_attach')
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
 return {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  cmd = { 'clangd', },
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--clang-tidy",
+    "--log=verbose"
+  },
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
   single_file_support = true,
 }
