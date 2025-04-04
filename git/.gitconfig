@@ -33,7 +33,7 @@
   grep = auto
   ui = auto
 [credential]
-	helper = cache
+  helper = cache
 [push]
   default = current
   autoSetUpRemote = true
@@ -49,6 +49,8 @@
   change-commits = git-change-commits
 
   # regular aliases
+  rdiff = !"git --no-pager diff"
+  hdiff = -c delta.side-by-side=false diff
   whoadded = log --diff-filter=A
   compare = diff ..main --
   ll = branch -vv --sort=-committerdate
