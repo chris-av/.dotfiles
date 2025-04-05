@@ -16,6 +16,8 @@ ghostty/**/tmp/*
 # waybar
 waybar/**/tmp/*
 
+# lazygit
+lazygit/.config/lazygit/**/state.yml
 
 # vim
 vim/**/plugged
