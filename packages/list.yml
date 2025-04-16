@@ -439,6 +439,11 @@ packages:
     description: >
       App launcher, installed with yay. Not sure if I can find it?
 
+  - name: rofimoji
+    repository: extra
+    description: >
+      Nifty rofi launcher to quickly copy or type emoji, or other special characters
+
   - name: rose-pine-hyprcursor
     repository: aur
     description: >
@@ -636,6 +641,12 @@ packages:
     repository: extra
     description: >
       launcher for wlroots-based wayland compositors
+
+  - name: wtype
+    repository: extra
+    description: >
+      Wayland compatible implementation for having a program emit characters in
+      currently active window. I installed this to be used with rofimoji.
 
   - name: xclip
     repository: extra
