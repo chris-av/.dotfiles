@@ -28,8 +28,8 @@ window_z_fg="#c4a7e8"
 window_fmt_fg="#9ccfd8"
 window_fmt_bg="#191724"
 
-client_prefix_bg="#f6c177"
-client_prefix_fg="#000000"
+client_prefix_bg="#191724"
+client_prefix_fg="#F6C197"
 
 left_sep=""
 right_sep=""
