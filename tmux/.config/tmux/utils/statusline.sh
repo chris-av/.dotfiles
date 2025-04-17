@@ -18,7 +18,7 @@ tmux set-option -g message-style "fg=${message_style_fg},bg=${message_style_bg}"
 tmux set-option -g status-style "fg=${status_style_fg},bg=${status_style_bg}"
 
 # Status left
-tmux set-option -g status-left "#[bg=${status_x_bg},fg=${status_x_fg}]#{?client_prefix,#[bg=${client_prefix_bg}],}#{?client_prefix,#[fg=${client_prefix_fg}],} #S "
+tmux set-option -g status-left "#[bg=${status_x_bg},fg=${status_x_fg}]#{?client_prefix,#[bg=${client_prefix_bg}],}#{?client_prefix,#[bold]#[fg=${client_prefix_fg}],} #S "
 
 
 # Status right
@@ -30,7 +30,7 @@ flags="#{?window_flags,#[fg=${flags_fg}]#{window_flags},}"
 current_flags="#{?window_flags,#[fg=${flags_fg}]#{window_flags},}"
 
 # tmux set-window-option -g window-status-current-format "#[fg=${window_x_fg},bg=${window_x_bg}]${left_sep}#[fg=${window_y_fg},bg=${window_y_bg}] #I #[bg=${window_x_bg}] #W${current_flags} #[fg=${window_z_fg},bg=${window_z_bg}]${left_sep}"
-tmux set-window-option -g window-status-current-format "#[fg=${window_x_fg},bg=${window_x_bg},]#{?client_prefix,#[fg=${client_prefix_bg}]#[bg=${client_prefix_bg}],}${left_sep}#[fg=${window_y_fg},bg=${window_y_bg}] #I #[bg=${window_x_bg}] #W${current_flags} #[fg=${window_z_fg},bg=${window_z_bg}]${left_sep}"
+tmux set-window-option -g window-status-current-format "#[fg=${window_x_fg},bg=${window_x_bg},]${left_sep}#[fg=${window_y_fg},bg=${window_y_bg}] #I #[bg=${window_x_bg}] #W${current_flags} #[fg=${window_z_fg},bg=${window_z_bg}]${left_sep}"
 tmux set-window-option -g window-status-format "#[fg=${window_fmt_fg}]#[bg=${window_fmt_bg}] #I #W${flags}"
 tmux set-window-option -g window-status-activity-style "bold"
 tmux set-window-option -g window-status-bell-style "bold"
