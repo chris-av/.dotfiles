@@ -22,7 +22,7 @@ window_y_fg="#191724"
 window_y_bg="#c4a7e7"
 
 # flag symbols
-window_z_bg="#000000"
+window_z_bg="#191724"
 window_z_fg="#c4a7e8"
 
 window_fmt_fg="#9ccfd8"
