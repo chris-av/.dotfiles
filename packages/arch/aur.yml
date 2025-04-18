@@ -1,0 +1,94 @@
+- name: catppuccin-gtk-theme-frappe
+  repository: aur
+  description: >
+    Catppuccin theme, frappe flavor, for gtk
+
+- name: catppuccin-gtk-theme-latte
+  repository: aur
+  description: >
+    Catppuccin theme, latte flavor, for gtk
+
+- name: catppuccin-gtk-theme-macchiato
+  repository: aur
+  description: >
+    Catppuccin theme, macchiato flavor, for gtk
+
+- name: catppuccin-gtk-theme-mocha
+  repository: aur
+  description: >
+    Catppuccin theme, mocha flavor, for gtk
+
+- name: cava
+  repository: aur
+  description: >
+    Console-based audio visualizer for alsa
+
+- name: dracula-gtk-theme
+  repository: aur
+  description: >
+    Install via yay
+
+- name: dracula-icons-git
+  repository: aur
+  description: >
+    Install via yay
+
+- name: google-chrome
+  repository: aur
+  description: >
+    Popular browser, install via yay
+
+- name: hyprpicker-git
+  repository: aur
+  description: >
+    Install via yay?
+
+- name: nvm
+  repository: aur
+  description: >
+    Node version manager. Installed via yay
+
+- name: pokeget
+  repository: aur
+  description: >
+    Display pokemon sprites in the terminal. Installed via yay.
+
+- name: rose-pine-hyprcursor
+  repository: aur
+  description: >
+    Cursor theme, to be used in hyprland as a hyprcursor
+
+- name: rstudio-desktop-bin
+  repository: aur
+  description: >
+    IDE for R dev. Installed via yay.
+
+- name: showmethekey
+  repository: aur
+  description: >
+    Description Wayland compatible key display. Installed via yay.
+
+- name: swaylock-effects
+  repository: aur
+  description: >
+    A fancier screen locker for Wayland.
+
+- name: vesktop-bin
+  repository: aur
+  description: >
+    Cool client for Discord that just works with Wayland. Installed with yay.
+
+- name: wlogout
+  repository: aur
+  description: >
+    Logout menu for wayland. Installed via yay.
+
+- name: yay
+  repository: aur
+  description: >
+    Yet another yogurt. Pacman wrapper and AUR helper.
+
+- name: zen-browser-bin
+  repository: aur
+  description: >
+    Description

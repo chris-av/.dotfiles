@@ -1,0 +1,544 @@
+- name: alsa-utils
+  repository: extra
+  description: >
+    Advanced Linux Sound Architecture - Utilities
+
+- name: at
+  repository: extra
+  description: >
+    AT and batch delayed command scheduling utility and daemon
+
+- name: autoconf-archive
+  repository: extra
+  description: >
+    A collection of freely re-usable Autoconf macros
+
+- name: bat
+  repository: extra
+  description: >
+    Cat clone with syntax highlighting and git integration
+
+- name: bc
+  repository: extra
+  description: >
+    An arbitrary precision calculator language
+
+- name: bluez-utils
+  repository: extra
+  description: >
+    Development and debugging utilities for the bluetooth protocol stack
+
+- name: brightnessctl
+  repository: extra
+  description: >
+    Lightweight brightness control tool
+
+- name: btop
+  repository: extra
+  description: >
+    A monitor of system resources, bpytop ported to C++
+
+- name: cloc
+  repository: extra
+  description: >
+    count lines of code
+
+- name: dhcpcd
+  repository: extra
+  description: >
+    DHCP/ IPv4LL/ IPv6RA/ DHCPv6 client
+
+- name: discord
+  repository: extra
+  description: >
+    All-in-one voice and text chat for gamers. Vesktop is a better client
+    though.
+
+- name: docker
+  repository: extra
+  description: >
+    Pack, ship and run any application as a lightweight container
+
+- name: egl-wayland
+  repository: extra
+  description: >
+    EGLStream-based Wayland external platform
+
+- name: fastfetch
+  repository: extra
+  description: >
+    A feature-rich and performance oriented neofetch like system information
+    tool
+
+- name: fd
+  repository: extra
+  description: >
+    Simple, fast and user-friendly alternative to find
+
+- name: fftw
+  repository: extra
+  description: >
+    A library for computing the discrete Fourier transform (DFT)
+
+- name: fzf
+  repository: extra
+  description: >
+    Command-line fuzzy finder
+
+- name: ghostty-git
+  repository: extra
+  description: >
+    Coolest terminal emulator. Install via yay.
+
+- name: git
+  repository: extra
+  description: >
+    the fast distributed version control system
+
+- name: git-delta
+  repository: extra
+  description: >
+    Syntax-highlighting pager for git and diff output
+
+- name: glow
+  repository: extra
+  description: >
+    Command-line markdown renderer
+
+- name: grim
+  repository: extra
+  description: >
+    Screenshot utility for Wayland
+
+- name: gst-plugin-pipewire
+  repository: extra
+  description: >
+    Multimedia graph framework - pipewire plugin
+
+- name: gvfs
+  repository: extra
+  description: >
+    Virtual filesystem implementation for GIO
+
+- name: htop
+  repository: extra
+  description: >
+    Interactive process viewer
+
+- name: httpie
+  repository: extra
+  description: >
+    human-friendly CLI HTTP client for the API era
+
+- name: hyprland
+  repository: extra
+  description: >
+    a highly customizable dynamic tiling Wayland compositor
+
+- name: intel-media-driver
+  repository: extra
+  description: >
+    Description
+
+- name: intel-ucode
+  repository: extra
+  description: >
+    Microcode update files for Intel CPUs
+
+- name: iwd
+  repository: extra
+  description: >
+    Internet Wireless Daemon
+
+- name: jdk-openjdk
+  repository: extra
+  description: >
+    OpenJDK Java 23 development kit
+
+- name: jq
+  repository: extra
+  description: >
+    Command-line JSON processor
+
+- name: kitty
+  repository: extra
+  description: >
+    A modern, hackable, featureful, OpenGL-based terminal emulator
+
+- name: lazygit
+  repository: extra
+  description: >
+    Simple terminal UI for git commands
+
+- name: ledger
+  repository: extra
+  description: >
+    Double-entry accounting system with a command-line reporting interface
+
+- name: libpulse
+  repository: extra
+  description: >
+    A featureful, general-purpose sound server (client library)
+
+- name: libreoffice-fresh
+  repository: extra
+  description: >
+    LibreOffice branch which contains new features and program enhancements
+
+- name: libva-intel-driver
+  repository: extra
+  description: >
+    VA-API implementation for Intel G45 and HD Graphics family
+
+- name: lsof
+  repository: extra
+  description: >
+    Lists open files for running Unix processes
+
+- name: mako
+  repository: extra
+  description: >
+    Lightweight notification daemon for Wayland
+
+- name: man-db
+  repository: extra
+  description: >
+    A utility for reading man pages
+
+- name: man-pages
+  repository: extra
+  description: >
+    Linux man pages
+
+- name: minisign
+  repository: extra
+  description: >
+    A dead-simple tool to sign files and verify digital signatures
+
+- name: mpd
+  repository: extra
+  description: >
+    Flexible, powerful, server-side application for playing music
+
+- name: mpv
+  repository: extra
+  description: >
+    a free, open source, and cross-platform media player
+
+- name: mupdf
+  repository: extra
+  description: >
+    Lightweight PDF and XPS viewer
+
+- name: neovim
+  repository: extra
+  description: >
+    Fork of Vim aiming to improve user experience, plugins, and GUIs
+
+- name: networkmanager
+  repository: extra
+  description: >
+    Network connection manager and user applications
+
+- name: network-manager-applet
+  repository: extra
+  description: >
+    Applet for managing network connections
+
+- name: nmap
+  repository: extra
+  description: >
+    Utility for network discovery and security auditing
+
+- name: noto-fonts-emoji
+  repository: extra
+  description: >
+    Google Noto emoji fonts
+
+- name: openbsd-netcat
+  repository: extra
+  description: >
+    TCP/IP swiss army knife. OpenBSD variant.
+
+- name: pamixer
+  repository: extra
+  description: >
+    Pulseaudio command-line mixer like amixer
+
+- name: pipewire
+  repository: extra
+  description: >
+    Low-latency audio/video router and processor
+
+- name: pipewire-alsa
+  repository: extra
+  description: >
+    Low-latency audio/video router and processor - ALSA configuration
+
+- name: pipewire-jack
+  repository: extra
+  description: >
+    Low-latency audio/video router and processor - JACK replacement
+
+- name: pipewire-pulse
+  repository: extra
+  description: >
+    Low-latency audio/video router and processor - PulseAudio replacement
+
+- name: polkit-gnome
+  repository: extra
+  description: >
+    Legacy polkit authentication agent for GNOME
+
+- name: postgresql
+  repository: extra
+  description: >
+    Sophisticated object-relational DBMS
+
+- name: python-debugpy
+  repository: extra
+  description: >
+    An implementation of the Debug Adapter Protocol for Python
+
+- name: python-pip
+  repository: extra
+  description: >
+    The PyPA recommended tool for installing Python packages
+
+- name: python-pipx
+  repository: extra
+  description: >
+    Install and Run Python Applications in Isolated Environments
+
+- name: python-requests
+  repository: extra
+  description: >
+    Python HTTP for Humans
+
+- name: r
+  repository: extra
+  description: >
+    Language and environment for statistical computing and graphics
+
+- name: reflector
+  repository: extra
+  description: >
+    A Python 3 module and script to retrieve and filter the latest Pacman
+    mirror list.
+
+- name: ripgrep
+  repository: extra
+  description: >
+    A search tool that combines the usability of ag with the raw speed
+    of grep
+
+- name: rofimoji
+  repository: extra
+  description: >
+    Nifty rofi launcher to quickly copy or type emoji, or other special
+    characters
+
+- name: rustup
+  repository: extra
+  description: >
+    The Rust toolchain installer
+
+- name: sddm
+  repository: extra
+  description: >
+    QML based X11 and Wayland display manager
+
+- name: silicon
+  repository: extra
+  description: >
+    Create beautiful images of your code
+
+- name: slurp
+  repository: extra
+  description: >
+    Select a region in a Wayland compositor
+
+- name: sof-firmware
+  repository: extra
+  description: >
+    Sound Open Firmware
+
+- name: spotify-launcher
+  repository: extra
+  description: >
+    Client for spotify''s apt repository in Rust for Arch Linux
+
+- name: stow
+  repository: extra
+  description: >
+    Manage installation of multiple softwares in the same directory tree
+
+- name: strace
+  repository: extra
+  description: >
+    A diagnostic, debugging and instructional userspace tracer
+
+- name: swappy
+  repository: extra
+  description: >
+    A Wayland native snapshot editing tool
+
+- name: swww
+  repository: extra
+  description: >
+    A Solution to your Wayland Wallpaper Woes
+
+- name: tcpdump
+  repository: extra
+  description: >
+    Powerful command-line packet analyzer
+
+- name: thunar
+  repository: extra
+  description: >
+    Modern, fast and easy-to-use file manager for Xfce
+
+- name: tmux
+  repository: extra
+  description: >
+    Terminal multiplexer
+
+- name: tree
+  repository: extra
+  description: >
+    A directory listing program displaying a depth indented list of files
+
+- name: ttf-anonymouspro-nerd
+  repository: extra
+  description: >
+    Patched font Anonymous Pro (Anonymice) from nerd fonts library
+
+- name: ttf-hack-nerd
+  repository: extra
+  description: >
+    Patched font Hack from nerd fonts library
+
+- name: ttf-ibmplex-mono-nerd
+  repository: extra
+  description: >
+    Patched font IBM Plex Mono (Blex) from nerd fonts library
+
+- name: ttf-jetbrains-mono-nerd
+  repository: extra
+  description: >
+    Patched font JetBrains Mono from nerd fonts library
+
+- name: ttf-nerd-fonts-symbols
+  repository: extra
+  description: >
+    High number of extra glyphs from popular ''iconic fonts''
+
+- name: ttf-nerd-fonts-symbols-mono
+  repository: extra
+  description: >
+    High number of extra glyphs from popular ''iconic fonts'' (monospace)
+
+- name: vim
+  repository: extra
+  description: >
+    Vi Improved, a highly configurable, improved version of the vi text
+    editor
+
+- name: visidata
+  repository: extra
+  description: >
+    Terminal spreadsheet multitool for discovering and arranging data
+
+- name: waybar
+  repository: extra
+  description: >
+    Highly customizable Wayland bar for Sway and Wlroots based compositors
+
+- name: wev
+  repository: extra
+  description: >
+    A tool for debugging wayland events on a Wayland window, analagous
+    to the X11 tool xev
+
+- name: wf-recorder
+  repository: extra
+  description: >
+    Screen recorder for wlroots-based compositors such as sway
+
+- name: wget
+  repository: extra
+  description: >
+    Network utility to retrieve files from the Web
+
+- name: whois
+  repository: extra
+  description: >
+    Intelligent WHOIS client
+
+- name: wireless_tools
+  repository: extra
+  description: >
+    Tools allowing to manipulate the Wireless Extensions
+
+- name: wl-clipboard
+  repository: extra
+  description: >
+    Command-line copy/paste utilities for Wayland
+
+- name: wofi
+  repository: extra
+  description: >
+    launcher for wlroots-based wayland compositors
+
+- name: wtype
+  repository: extra
+  description: >
+    Wayland compatible implementation for having a program emit characters
+    in currently active window. I installed this to be used with rofimoji.
+
+- name: xclip
+  repository: extra
+  description: >
+    Command line interface to the X11 clipboard
+
+- name: xdg-desktop-portal-hyprland
+  repository: extra
+  description: >
+    desktop portal for hyprland
+
+- name: xdg-desktop-portal
+  repository: extra
+  description: >
+    Another util for hyprland desktop portals
+
+- name: xdg-utils
+  repository: extra
+  description: >
+    Command line tools that assist applications with a variety of desktop
+    integration tasks
+
+- name: xfce4-settings
+  repository: extra
+  description: >
+    Config for xfce. Not sure why I have this.
+
+- name: yq
+  repository: extra
+  description: >
+    Like jq, but for yaml.
+
+- name: yt-dlp
+  repository: extra
+  description: >
+    A youtube-dl fork with additional features and fixes
+
+- name: zig
+  repository: extra
+  description: >
+    a general-purpose programming language and toolchain for maintaining
+    robust, optimal, and reusable software
+
+- name: zsh
+  repository: extra
+  description: >
+    A very advanced and programmable command interpreter (shell) for UNIX
