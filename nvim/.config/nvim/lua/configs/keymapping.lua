@@ -24,6 +24,9 @@ vim.keymap.set('n', '<C-g>', helpers.copyFilePath, extend(opts, { desc = "copy f
 vim.keymap.set('n', '<leader>md', ':delmark<CR>', extend(opts, { desc = "Delete mark on current line" }))
 vim.keymap.set('n', '<leader>m', ':delm! | delm A-Z0-9<CR>>', extend(opts, { desc = "Delete all marks" }))
 
+-- motions
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- nvim tree key bindings
 vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', extend(opts, { desc = "toggle nvim tree" }))
