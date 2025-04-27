@@ -1,0 +1,24 @@
+#! /usr/bin/env bash
+
+if [ -n "$TMUX" ]; then
+  ATTACH_CMD="tmux switch-client -t "
+else
+  ATTACH_CMD="tmux attach-session -t "
+fi
+
+TMUX_SESSIONS_CMD="tmux list-sessions -F '#S'"
+INITIAL_QUERY="${*:-}"
+
+selected_session=$(fzf --ansi \
+    --layout=reverse \
+    --query "$INITIAL_QUERY" \
+    --bind "start:reload:$TMUX_SESSIONS_CMD" \
+    --bind "change:reload:sleep 0.1; $TMUX_SESSIONS_CMD || true" \
+    --preview 'tmux display-message -p -t {1} "#{session_name}: #{session_windows} windows"' \
+    --preview-window 'up,30%,border-bottom' \
+    --height=40% --border
+)
+
+if [[ -n "$selected_session" ]]; then
+  $ATTACH_CMD "$selected_session"
+fi
