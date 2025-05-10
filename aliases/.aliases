@@ -3,6 +3,9 @@ alias ls='ls -GA --color=auto --group-directories-first'
 alias l='ls -GAhlo --time-style=long-iso --color=auto --group-directories-first'
 alias lsd='ls -GA --color=auto --group-directories-first --directory *(D/)'
 
+alias listusers='cut -d: -f1 /etc/passwd | sort | uniq | pr -t -4'
+alias listgroups='cut -d: -f1 /etc/group | sort | uniq | pr -t -4'
+
 if command -v fd 2>&1 >/dev/null; then
   # show hidden files
   # dont use gitignore to determine what's shown by fd
