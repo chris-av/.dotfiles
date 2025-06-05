@@ -79,3 +79,7 @@ if command -v pyenv > /dev/null 2>&1; then
   [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init - zsh)"
 fi
+
+if [ -d ~/go ]; then
+  export PATH="$PATH:$HOME/go/bin"
+fi
