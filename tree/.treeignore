@@ -1,0 +1,13 @@
+# files that will be ignored by the tree command
+
+# git
+.git
+
+# packages
+node_modules
+venv
+
+# cache
+__pycache__
+
+# build
