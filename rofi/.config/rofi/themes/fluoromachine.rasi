@@ -37,7 +37,8 @@ element {
 }
 
 element selected {
-	background-color: #200933;
+	background-color: #F2F1B8;
+  color: #200933;
 }
 
 element-text {
