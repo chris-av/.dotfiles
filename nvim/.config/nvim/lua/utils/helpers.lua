@@ -142,4 +142,19 @@ M.find_proj_root = function(patterns)
   return vim.fs.root(0, patterns)
 end
 
+local function mkdir_p(path, mode)
+  mode = mode or tonumber("755", 8)
+  local stat = vim.uv.fs_stat(path)
+  if stat then return true end  -- Already exists
+
+  local parent = vim.fs.dirname(path)
+  if parent ~= nil and parent ~= path then
+    mkdir_p(parent, mode)
+  end
+
+  return vim.uv.fs_mkdir(path, mode)
+end
+
+M.mkdir_p = mkdir_p
+
 return M
