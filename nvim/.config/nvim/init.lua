@@ -1,7 +1,6 @@
 require('configs')
 require('plugins')
 require('lsp')
-require('debuggers')
 
 vim.lsp.enable({
   "bashls", "clangd", "cssls", "gopls", "html",

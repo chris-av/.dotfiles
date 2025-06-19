@@ -7,6 +7,41 @@ local neotest = require("neotest")
 
 local M = {}
 
+M.prepare_pyenv = function()
+  local virtual_env = vim.fn.expand("~/.virtualenvs")
+  local debugpy_path = virtual_env .. "/debugpy"
+
+  if vim.fn.isdirectory(virtual_env) == 0 then
+    vim.notify("could not find ~/.virtualenvs, creating it now", vim.log.levels.INFO, {
+      title = "dap",
+    })
+    vim.fn.mkdir(virtual_env)
+  end
+
+  if vim.fn.isdirectory(debugpy_path) == 0 then
+    vim.notify("could not find ~/.virtualenvs/debugpy, creating it now", vim.log.levels.INFO, {
+      title = "dap",
+    })
+    -- run this in the background
+    vim.fn.jobstart(
+      "python -m venv ~/.virtualenvs/debugpy;~/.virtualenvs/debugpy/bin/python -m pip install debugpy",
+      {
+        cwd = "",
+        on_exit = function()
+          print("finished creating virtual environment for debugpy")
+        end,
+        -- on_stdout = function(out)
+        --   print(out)
+        -- end,
+        on_stderr = function(err)
+          print("something went wrong creating the virtual env for debugpy")
+          print(err)
+        end,
+      }
+    )
+  end
+end
+
 M.resourceConfig = function()
   local myvimrc = os.getenv("MYVIMRC")
   print("resourcing config at : " .. myvimrc)
@@ -145,7 +180,7 @@ end
 local function mkdir_p(path, mode)
   mode = mode or tonumber("755", 8)
   local stat = vim.uv.fs_stat(path)
-  if stat then return true end  -- Already exists
+  if stat then return true end -- Already exists
 
   local parent = vim.fs.dirname(path)
   if parent ~= nil and parent ~= path then

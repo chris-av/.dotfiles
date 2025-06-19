@@ -1,15 +1,9 @@
-local dap = require("dap")
-local telescope = require("telescope")
 local builtins = require("telescope.builtin")
 local helpers = require("utils.helpers")
 local opts = { }
 local extend = function (tbl, desc)
   return vim.tbl_extend("error", tbl, desc)
 end
-
-
-local debuggers = require('debuggers.node')
-local dapui_widgets = require('dap.ui.widgets')
 
 
 -- reserve space for leader
@@ -65,26 +59,8 @@ vim.keymap.set('n', '<leader>ll', require("harpoon.ui").toggle_quick_menu, exten
 vim.keymap.set('n', '<leader>lg', ':FloatermNew lazygit<CR>', extend(opts, { desc = "launch lazy git" }))
 vim.keymap.set('n', '<leader>gs', ':Telescope git_status<CR>', extend(opts, { desc = "git status" }))
 
--- for debugger
-vim.keymap.set('n', '<F12>', dap.step_out, extend(opts, { desc = "Debugger (DAP) - step out" }))
-vim.keymap.set('n', '<F11>', dap.step_into, extend(opts, { desc = "Debugger (DAP) - step into" }))
-vim.keymap.set('n', '<F10>', dap.step_over, extend(opts, { desc = "Debugger (DAP) - step over" }))
-vim.keymap.set('n', '<F5>', dap.continue, extend(opts, { desc = "Debugger (DAP) - continue" }))
-vim.keymap.set('n', '<F1>', dap.toggle_breakpoint, extend(opts, { desc = "Debugger (DAP) - toggle breakpoint" }))
-vim.keymap.set('n', '<F2>', helpers.toggle_cond_breakpoint, extend(opts, { desc = "Debugger (DAP) - toggle conditional breakpoint" }))
-vim.keymap.set('n', '<leader>daa', debuggers.attach, extend(opts, { desc = "Debugger (DAP) - attach" }))
-vim.keymap.set('n', '<leader>dar', debuggers.attachToRemote, extend(opts, { desc = "Debugger (DAP) - attach to remote" }))
-vim.keymap.set('n', '<F3>', dap.terminate, extend(opts, { desc = "Debugger (DAP) - terminate" }))
-vim.keymap.set('n', '<leader>dh', dapui_widgets.hover, extend(opts, { desc = "DAP - widget hover" }))
-vim.keymap.set('n', '<leader>dr', helpers.dap_ui_hover, extend(opts, { desc = "DAP - center widgets" }))
-
 
 -- telescope-dap
-local exts = telescope.extensions
-vim.keymap.set('n', '<leader>dc', exts.dap.configurations, extend(opts, { desc = "DAP - see configurations" }))
-vim.keymap.set('n', '<leader>dd', dap.clear_breakpoints, extend(opts, { desc = "DAP - clear breakpoints" }))
-vim.keymap.set('n', '<leader>dl', exts.dap.list_breakpoints, extend(opts, { desc = "DAP -  list breakpoints" }))
-vim.keymap.set('n', '<leader>df', exts.dap.frames, extend(opts, { desc = "DAP - open frames" }))
 
 -- silicon
 vim.keymap.set('n', '<leader>s', helpers.exec_silicon, extend(opts, { desc = "Silicon - save contents of buffer" }))
@@ -92,7 +68,6 @@ vim.keymap.set('v', '<leader>s', helpers.exec_silicon_visual, extend(opts, { des
 
 -- re-source files
 vim.keymap.set("n", "<leader>ss", helpers.resourceConfig, extend(opts, { desc = "source the lua config again" }))
-
 
 
 -- expand window
