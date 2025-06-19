@@ -359,5 +359,7 @@ return {
         update_delay = 300,
       },
     })
+
+    vim.keymap.set('n', '<leader>a', "<cmd>AerialToggle!<CR>", { desc = "Open Aerial" })
   end
 }

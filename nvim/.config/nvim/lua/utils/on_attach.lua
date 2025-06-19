@@ -12,9 +12,6 @@ return function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_set_option_value('omnifunc', 'v:lua.vim.lsp.omnifunc', { buf = bufnr })
 
-  -- aerial
-  vim.keymap.set('n', '<leader>a', "<cmd>AerialToggle!<CR>", extend(opts, { desc = "Open Aerial" }))
-
   -- Mappings.
   vim.keymap.set('n', 'gD', buf.declaration, extend(opts, { desc = "Buffer declarations" }))
   vim.keymap.set('n', 'gd', buf.definition, extend(opts, { desc = "Go to definition" }))
