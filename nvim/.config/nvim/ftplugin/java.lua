@@ -1,7 +1,6 @@
 local jdtls = require("jdtls")
 local helpers = require("utils.helpers")
 
-local on_attach = require("utils.on_attach")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
@@ -95,7 +94,6 @@ jdtls.start_or_attach({
   -- vim.fs.root requires Neovim 0.10.
   -- If you're using an earlier version, use: require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'}),
   root_dir = vim.fs.root(0, { ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }),
-  on_attach = on_attach,
   capabilities = capabilities,
 
   -- Here you can configure eclipse.jdt.ls specific settings
