@@ -1,3 +1,4 @@
+local notify = require("utils.notifications")
 local datapath = vim.fn.stdpath("data")
 
 local lazydir = vim.fs.joinpath(datapath, "lazy")
@@ -12,7 +13,7 @@ for _, dir in ipairs({ lazydir, devdir }) do
 end
 
 if not vim.loop.fs_stat(lazypath) then
-  print("did not find lazy in runtimepath (rtp), cloning it to : " .. lazypath)
+  notify.notify_warn("Lazy", "did not find lazy in runtimepath, cloing it to : " .. lazypath)
   vim.fn.system({
     "git",
     "clone",

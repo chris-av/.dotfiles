@@ -1,5 +1,6 @@
 local jdtls = require("jdtls")
 local helpers = require("utils.helpers")
+local notify = require("utils.notifications")
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
@@ -9,13 +10,9 @@ local workspace_path = vim.fs.joinpath(home, ".local/share/java/workspaces/")
 local config
 
 if vim.fn.isdirectory(workspace_path) == 0 then
-  vim.notify("did not detect java workspace dir : " .. workspace_path, vim.log.levels.WARN, {
-    title = "jdtls",
-  })
+  notify.notify_warn("jdtls", "did not detect java workspace dir : " .. workspace_path)
   helpers.mkdir_p(workspace_path)
-  vim.notify("created dir : " .. workspace_path, vim.log.levels.INFO, {
-    title = "jdtls",
-  })
+  notify.notify_info("jdtls", "did not detect java workspace dir : " .. workspace_path)
 end
 
 if vim.fn.has("mac") == 1 then
@@ -23,9 +20,7 @@ if vim.fn.has("mac") == 1 then
 elseif vim.fn.has("unix") == 1 then
   config = "linux"
 else
-  vim.notify("unsupported system", vim.log.levels.ERROR, {
-    title = "jdtls",
-  })
+  notify.notify_err("jdtls", "did not detect java workspace dir : " .. workspace_path)
   return
 end
 
@@ -34,9 +29,7 @@ local mason_dir = vim.fs.joinpath(home, ".local/share/nvim/mason")
 local root_markers = { ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }
 local root_dir = require("jdtls.setup").find_root(root_markers)
 if root_dir == "" then
-  vim.notify("could not resolve a root_dir", vim.log.levels.ERROR, {
-    title = "jdtls",
-  })
+  notify.notify_err("jdtls", "could not resolve a root_dir")
   return
 end
 

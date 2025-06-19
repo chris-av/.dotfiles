@@ -1,3 +1,4 @@
+local notify = require("utils.notifications")
 local home = os.getenv("HOME")
 local nodeAdapterPath = vim.fs.joinpath(home, "/.local/share/nvim/mason/packages/node-debug2-adapter/out/src/nodeDebug.js")
 
@@ -31,9 +32,7 @@ return {
   runners = {
     attachGeneric = function()
       local dap = require("dap")
-      vim.notify("attaching to node adapter", vim.log.levels.INFO, {
-        title = "dap"
-      })
+      notify.notify_info("DAP", "attaching to node adapter")
       dap.run({
         type = "node",
         request = "attach",
@@ -46,9 +45,7 @@ return {
     end,
     attachToRemote = function()
       local dap = require("dap")
-      vim.notify("attaching to remote adapter", vim.log.levels.INFO, {
-        title = "dap"
-      })
+      notify.notify_info("DAP", "attaching to remote adapter")
       dap.run({
         type = 'node',
         request = "attach",

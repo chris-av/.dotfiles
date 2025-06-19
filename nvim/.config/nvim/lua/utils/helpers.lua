@@ -6,7 +6,7 @@ M.prepare_pyenv = function()
 
   if vim.fn.isdirectory(virtual_env) == 0 then
     vim.notify("could not find ~/.virtualenvs, creating it now", vim.log.levels.INFO, {
-      title = "dap",
+      title = "DAP",
     })
     vim.fn.mkdir(virtual_env)
   end

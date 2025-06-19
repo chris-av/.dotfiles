@@ -4,12 +4,13 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     local silicon = require('silicon')
+    local notify = require("utils.notifications")
 
     -- create folder that will contain the silicon screenshots
     local dir = vim.fn.expand("~/Desktop/silicon/")
     if vim.fn.isdirectory(dir) == 0 then
-      vim.notify("did not find " .. dir, vim.log.levels.ERROR)
-      vim.notify("creating dir " .. dir, vim.log.levels.INFO)
+      notify.notify_err("silicon", "did not find " .. dir)
+      notify.notify_info("silicon", "creating dir " .. dir)
       vim.fn.mkdir(dir)
     end
 

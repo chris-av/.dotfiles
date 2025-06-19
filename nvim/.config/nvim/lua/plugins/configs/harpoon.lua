@@ -6,6 +6,7 @@ return {
     local harpoon = require("harpoon")
     local harpoonui = require("harpoon.ui")
     local harpoon_mark = require("harpoon.mark")
+    local notify = require("utils.notifications")
 
     local calculateWindowSize = function()
       local win_width = vim.api.nvim_win_get_width(0)
@@ -44,7 +45,7 @@ return {
     local harpoon_add = function()
       harpoon_mark.add_file()
       local curr_buff = vim.api.nvim_buf_get_name(0)
-      print("added " .. curr_buff .. " to harpoon")
+      notify.notify_info("harpoon", "added " .. curr_buff .. " to harpoon")
     end
 
 

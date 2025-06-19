@@ -1,3 +1,4 @@
+local notify = require("utils.notifications")
 local toggleWrap = function()
   local curr_wrap = vim.wo.wrap
   local new_wrap = not curr_wrap
@@ -9,10 +10,7 @@ local copyFilePath = function()
   local home = os.getenv("HOME")
   local filepath = vim.fn.expand("%:p"):gsub(home, "~")
   vim.fn.setreg("+", filepath)
-  vim.notify(filepath, vim.log.levels.INFO, {
-    title = " Copied path",
-    timeout = 4000,
-  })
+  notify.notify_info("sys", "Copied path")
 end
 
 local resourceConfig = function()
