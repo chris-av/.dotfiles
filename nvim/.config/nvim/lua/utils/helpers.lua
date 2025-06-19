@@ -38,22 +38,6 @@ M.prepare_pyenv = function()
   end
 end
 
-M.resourceConfig = function()
-  local myvimrc = os.getenv("MYVIMRC")
-  print("resourcing config at : " .. myvimrc)
-  vim.api.nvim_command("source " .. myvimrc)
-end
-
-M.copyFilePath = function()
-  local home = os.getenv("HOME")
-  local filepath = vim.fn.expand("%:p"):gsub(home, "~")
-  vim.fn.setreg("+", filepath)
-  vim.notify(filepath, vim.log.levels.INFO, {
-    title = " Copied path",
-    timeout = 4000,
-  })
-end
-
 M.ls_ws_folders = function()
   print(vim.inspect(buf.list_workspace_folders()))
 end
@@ -87,13 +71,6 @@ M.manage_loclist = function()
   local window = vim.api.nvim_get_current_win()
   vim.cmd.lwindow()                           -- open+focus loclist if has entries, else close -- this is the magic toggle command
   vim.api.nvim_set_current_win(window)        -- restore focus to window you were editing (delete this if you want to stay in loclist)
-end
-
-M.toggleWrap = function()
-  local curr_wrap = vim.wo.wrap
-  local new_wrap = not curr_wrap
-  print("setting wrap to " .. tostring(new_wrap))
-  vim.wo.wrap = new_wrap
 end
 
 M.toggle_cond_breakpoint = function()

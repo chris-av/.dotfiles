@@ -1,12 +1,33 @@
-local helpers = require("utils.helpers")
+local toggleWrap = function()
+  local curr_wrap = vim.wo.wrap
+  local new_wrap = not curr_wrap
+  print("setting wrap to " .. tostring(new_wrap))
+  vim.wo.wrap = new_wrap
+end
+
+local copyFilePath = function()
+  local home = os.getenv("HOME")
+  local filepath = vim.fn.expand("%:p"):gsub(home, "~")
+  vim.fn.setreg("+", filepath)
+  vim.notify(filepath, vim.log.levels.INFO, {
+    title = " Copied path",
+    timeout = 4000,
+  })
+end
+
+local resourceConfig = function()
+  local myvimrc = os.getenv("MYVIMRC")
+  print("resourcing config at : " .. myvimrc)
+  vim.api.nvim_command("source " .. myvimrc)
+end
 
 -- reserve space for leader
 vim.keymap.set("", "<Space>", "<Nop>", { desc = "reserve space for leader" })
 
 -- general
 vim.keymap.set('n', '<esc><esc>', '<cmd>nohlsearch<CR>', { desc = "stop incremental search" })
-vim.keymap.set('n', '<leader>w', helpers.toggleWrap, { desc = "toggle wrap for the current buffer" })
-vim.keymap.set('n', '<C-g>', helpers.copyFilePath, { desc = "copy filepath" })
+vim.keymap.set('n', '<leader>w', toggleWrap, { desc = "toggle wrap for the current buffer" })
+vim.keymap.set('n', '<C-g>', copyFilePath, { desc = "copy filepath" })
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = "cross to left buffer", })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = "cross to bottom buffer", })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = "cross to upper buffer", })
@@ -26,7 +47,7 @@ vim.keymap.set('n', '<leader>lg', ':FloatermNew lazygit<CR>', { desc = "launch l
 vim.keymap.set('n', '<leader>gs', ':Telescope git_status<CR>', { desc = "git status" })
 
 -- re-source files
-vim.keymap.set("n", "<leader>ss", helpers.resourceConfig, { desc = "source the lua config again" })
+vim.keymap.set("n", "<leader>ss", resourceConfig, { desc = "source the lua config again" })
 
 
 -- expand window
