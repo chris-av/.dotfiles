@@ -55,18 +55,6 @@ require("lazy").setup({
     -- "B4mbus/oxocarbon-lua.nvim"
     "nyoom-engineering/oxocarbon.nvim",
     { "morhetz/gruvbox", name = "gruvbox" },
-    -- debugger
-    "mfussenegger/nvim-dap",
-    "nvim-telescope/telescope-dap.nvim",
-    "theHamsta/nvim-dap-virtual-text",
-    "mfussenegger/nvim-dap-python",
-    {
-      "rcarriga/nvim-dap-ui",
-      dependencies = {
-        "mfussenegger/nvim-dap",
-        "nvim-neotest/nvim-nio",
-      },
-    },
     -- jsx
     "maxmellon/vim-jsx-pretty",
 
