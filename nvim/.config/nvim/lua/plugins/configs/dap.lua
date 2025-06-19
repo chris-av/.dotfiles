@@ -118,6 +118,19 @@ return {
     local python_config = require("debuggers.python")
     dap.configurations.python = python_config.configurations
 
+    local toggle_cond_breakpoint = function()
+      -- dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+      local condition = vim.fn.input({ prompt = 'Breakpoint Condition: ' })
+      if condition then
+        dap.toggle_breakpoint(condition, nil, nil, true)
+      end
+    end
+
+    local dap_ui_hover = function()
+      local widgets = require 'dap.ui.widgets'
+      widgets.centered_float(widgets.scopes)
+    end
+
     -- runners
     vim.keymap.set("n", "<leader>daa", node_config.runners.attachGeneric, { desc = "Debugger (DAP) - attach" })
     vim.keymap.set("n", "<leader>dar", node_config.runners.attachToRemote, { desc = "Debugger (DAP) - attach to remote" })
@@ -129,10 +142,10 @@ return {
     vim.keymap.set('n', '<F10>', dap.step_over, { desc = "Debugger (DAP) - step over" })
     vim.keymap.set('n', '<F5>', dap.continue, { desc = "Debugger (DAP) - continue" })
     vim.keymap.set('n', '<F1>', dap.toggle_breakpoint, { desc = "Debugger (DAP) - toggle breakpoint" })
-    vim.keymap.set('n', '<F2>', helpers.toggle_cond_breakpoint,
+    vim.keymap.set('n', '<F2>', toggle_cond_breakpoint,
       { desc = "Debugger (DAP) - toggle conditional breakpoint" })
     vim.keymap.set('n', '<F3>', dap.terminate, { desc = "Debugger (DAP) - terminate" })
-    vim.keymap.set('n', '<leader>dr', helpers.dap_ui_hover, { desc = "DAP - center widgets" })
+    vim.keymap.set('n', '<leader>dr', dap_ui_hover, { desc = "DAP - center widgets" })
 
     local exts = telescope.extensions
     vim.keymap.set('n', '<leader>dc', exts.dap.configurations, { desc = "DAP - see configurations" })

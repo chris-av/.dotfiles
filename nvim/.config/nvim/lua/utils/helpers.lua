@@ -1,6 +1,3 @@
-local dap = require('dap')
-local buf = vim.lsp.buf
-
 local M = {}
 
 M.prepare_pyenv = function()
@@ -37,21 +34,6 @@ M.prepare_pyenv = function()
     )
   end
 end
-
-M.toggle_cond_breakpoint = function()
-  -- dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
-  local condition = vim.fn.input({ prompt = 'Breakpoint Condition: ' })
-  if condition then
-    dap.toggle_breakpoint(condition, nil, nil, true)
-  end
-end
-
-
-M.dap_ui_hover = function()
-  local widgets = require 'dap.ui.widgets'
-  widgets.centered_float(widgets.scopes)
-end
-
 
 M.find_git_ancestor = function()
   local results = vim.fs.find(".git", {
