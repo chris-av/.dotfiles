@@ -131,26 +131,6 @@ M.dap_ui_hover = function()
 end
 
 
-M.neotest_summary = function()
-  neotest.summary.toggle()
-end
-
-M.neotest_run_curr_file = function()
-  neotest.run.run(vim.fn.expand("%"))
-end
-
-M.neotest_output_panel = function()
-  neotest.output_panel.toggle()
-end
-
-M.neotest_watch = function()
-  neotest.watch.toggle(vim.fn.expand("%"))
-end
-
-M.neotest_attach = function()
-  neotest.run.attach()
-end
-
 M.find_git_ancestor = function()
   local results = vim.fs.find(".git", {
     upward = true,
