@@ -8,6 +8,27 @@ return {
   config = function()
     local telescope = require("telescope")
     local actions = require('telescope.actions')
+    local builtins = require("telescope.builtin")
+
+    local preview_colorschemes = function()
+      builtins.colorscheme({ enable_preview = true, })
+    end
+    local curr_buff_srch = function()
+      local themes = require('telescope.themes')
+      local previewer = themes.get_dropdown({ previewer = false })
+      builtins.current_buffer_fuzzy_find(previewer)
+    end
+
+    vim.keymap.set('n', '<leader>km', builtins.keymaps, { desc = "list keymappings" })
+    vim.keymap.set('n', '<leader>co', preview_colorschemes, { desc = "list colorschemes" })
+    vim.keymap.set('n', '<leader>hi', builtins.highlights, { desc = "list highlights" })
+    vim.keymap.set('n', 'ff', builtins.find_files, { desc = "find files" })
+    vim.keymap.set('n', '<leader>gg', builtins.git_commits, { desc = "list git commits" })
+    vim.keymap.set('n', '<leader>/', curr_buff_srch, { desc = "find in current buffer" })
+    vim.keymap.set('n', 'fg', builtins.live_grep, { desc = "live grep" })
+    vim.keymap.set('n', '<leader>lb', builtins.buffers, { desc = "list buffers" })
+    vim.keymap.set('n', '<leader>?', builtins.help_tags, { desc = "help tags" })
+    vim.keymap.set('n', '<leader>ml', builtins.marks, { desc = "list marks" })
 
     telescope.setup({
       defaults = {

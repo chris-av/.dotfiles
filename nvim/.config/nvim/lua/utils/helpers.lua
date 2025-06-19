@@ -93,16 +93,6 @@ M.manage_loclist = function()
   vim.api.nvim_set_current_win(window)        -- restore focus to window you were editing (delete this if you want to stay in loclist)
 end
 
-M.curr_buff_srch = function()
-  local themes = require('telescope.themes')
-  local previewer = themes.get_dropdown({ previewer = false })
-  telebuiltins.current_buffer_fuzzy_find(previewer)
-end
-
-M.preview_colorschemes = function()
-  telebuiltins.colorscheme({ enable_preview = true, })
-end
-
 M.toggleWrap = function()
   local curr_wrap = vim.wo.wrap
   local new_wrap = not curr_wrap

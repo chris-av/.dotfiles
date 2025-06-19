@@ -1,4 +1,3 @@
-local builtins = require("telescope.builtin")
 local helpers = require("utils.helpers")
 
 -- reserve space for leader
@@ -20,25 +19,6 @@ vim.keymap.set('n', '<leader>m', ':delm! | delm A-Z0-9<CR>>', { desc = "Delete a
 -- motions
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
--- telescope
-vim.keymap.set('n', '<leader>km', builtins.keymaps, { desc = "list keymappings" })
-vim.keymap.set('n', '<leader>co', helpers.preview_colorschemes, { desc = "list colorschemes" })
-vim.keymap.set('n', '<leader>hi', builtins.highlights, { desc = "list highlights" })
-vim.keymap.set('n', 'ff', builtins.find_files, { desc = "find files" })
-vim.keymap.set('n', '<leader>gg', builtins.git_commits, { desc = "list git commits" })
-vim.keymap.set('n', '<leader>/', helpers.curr_buff_srch, { desc = "find in current buffer" })
-vim.keymap.set('n', 'fg', builtins.live_grep, { desc = "live grep" })
-vim.keymap.set('n', '<leader>lb', builtins.buffers, { desc = "list buffers" })
-vim.keymap.set('n', '<leader>?', builtins.help_tags, { desc = "help tags" })
-vim.keymap.set('n', '<leader>ml', builtins.marks, { desc = "list marks" })
-
-
--- bufferline
-vim.keymap.set('n', 'Q', '<cmd>Bdelete!<CR>', { desc = "delete buffer" })
-vim.keymap.set('n', 'tl', '<cmd>:tabnext<CR>', { desc = "next tab" })
-vim.keymap.set('n', 'th', '<cmd>:tabprev<CR>', { desc = "previous tab" })
-vim.keymap.set('n', 'ti', '<cmd>:tabnew<CR>', { desc = "new tab" })
 
 
 -- harpoon
