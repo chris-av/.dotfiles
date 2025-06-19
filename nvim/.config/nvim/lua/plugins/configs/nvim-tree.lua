@@ -210,11 +210,10 @@ return {
     })
 
     -- to ensure easy navigation
-    vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
-    vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
-    vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
-    vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
-    vim.api.nvim_set_keymap('n', '<C-r>', ':mod<CR>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<C-r>', ':mod<CR>', {})
+    vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', { desc = "toggle nvim tree" })
+    vim.keymap.set('n', '<leader>r', '<cmd>NvimTreeRefresh<CR>', { desc = "refresh nvim tree" })
+    vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>', { desc = "find file within nvim tree" })
 
     -- auto close
     -- courtesy of @ppwwyyxx <3
