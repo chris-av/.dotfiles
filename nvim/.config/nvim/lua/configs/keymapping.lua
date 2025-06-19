@@ -21,19 +21,10 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 
--- harpoon
-vim.keymap.set('n', '<S-l>', require("harpoon.ui").nav_next, { desc = "next buffer" })
-vim.keymap.set('n', '<S-h>', require("harpoon.ui").nav_prev, { desc = "previous buffer" })
-vim.keymap.set('n', '<leader>i', helpers.harpoon_add, { desc = "add file to harpoon" })
-vim.keymap.set('n', '<leader>ll', require("harpoon.ui").toggle_quick_menu, { desc = "open harpoon window" })
-
-
 -- lazygit
 vim.keymap.set('n', '<leader>lg', ':FloatermNew lazygit<CR>', { desc = "launch lazy git" })
 vim.keymap.set('n', '<leader>gs', ':Telescope git_status<CR>', { desc = "git status" })
 
-
--- telescope-dap
 
 -- silicon
 vim.keymap.set('n', '<leader>s', helpers.exec_silicon, { desc = "Silicon - save contents of buffer" })

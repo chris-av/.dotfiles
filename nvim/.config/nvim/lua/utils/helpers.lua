@@ -1,9 +1,6 @@
 local silicon = require("silicon")
 local dap = require('dap')
-local telebuiltins = require("telescope.builtin")
-local harpoon_mark = require("harpoon.mark")
 local buf = vim.lsp.buf
-local neotest = require("neotest")
 
 local M = {}
 
@@ -118,12 +115,6 @@ M.toggle_cond_breakpoint = function()
   end
 end
 
-
-M.harpoon_add = function()
-  harpoon_mark.add_file()
-  local curr_buff = vim.api.nvim_buf_get_name(0)
-  print("added " .. curr_buff .. " to harpoon")
-end
 
 M.dap_ui_hover = function()
   local widgets = require 'dap.ui.widgets'

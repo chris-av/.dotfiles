@@ -3,6 +3,9 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     require("telescope").load_extension("harpoon")
+    local harpoon = require("harpoon")
+    local harpoonui = require("harpoon.ui")
+    local harpoon_mark = require("harpoon.mark")
 
     local calculateWindowSize = function()
       local win_width = vim.api.nvim_win_get_width(0)
@@ -10,7 +13,7 @@ return {
       return result
     end
 
-    require("harpoon").setup({
+    harpoon.setup({
       -- sets the marks upon calling `toggle` on the ui, instead of require `:w`.
       save_on_toggle = false,
 
@@ -37,5 +40,18 @@ return {
         width = calculateWindowSize(),
       },
     })
+
+    local harpoon_add = function()
+      harpoon_mark.add_file()
+      local curr_buff = vim.api.nvim_buf_get_name(0)
+      print("added " .. curr_buff .. " to harpoon")
+    end
+
+
+    vim.keymap.set('n', '<S-l>', harpoonui.nav_next, { desc = "next buffer" })
+    vim.keymap.set('n', '<S-h>', harpoonui.nav_prev, { desc = "previous buffer" })
+    vim.keymap.set('n', '<leader>i', harpoon_add, { desc = "add file to harpoon" })
+    vim.keymap.set('n', '<leader>ll', harpoonui.toggle_quick_menu, { desc = "open harpoon window" })
+
   end
 }
