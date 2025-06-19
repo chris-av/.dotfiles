@@ -1,4 +1,3 @@
-local silicon = require("silicon")
 local dap = require('dap')
 local buf = vim.lsp.buf
 
@@ -95,16 +94,6 @@ M.toggleWrap = function()
   local new_wrap = not curr_wrap
   print("setting wrap to " .. tostring(new_wrap))
   vim.wo.wrap = new_wrap
-end
-
-M.exec_silicon = function()
-  local opts = { to_clip = false, show_buf = true, }
-  silicon.visualise_api(opts)
-end
-
-M.exec_silicon_visual = function()
-  local opts = { to_clip = false, }
-  silicon.visualise_api(opts)
 end
 
 M.toggle_cond_breakpoint = function()

@@ -37,5 +37,19 @@ return {
       gobble = false, -- enable lsautogobble like feature
       debug = false, -- enable debug output
     })
+
+    local exec_silicon = function()
+      local opts = { to_clip = false, show_buf = true, }
+      silicon.visualise_api(opts)
+    end
+
+    local exec_silicon_visual = function()
+      local opts = { to_clip = false, }
+      silicon.visualise_api(opts)
+    end
+
+    vim.keymap.set('n', '<leader>s', exec_silicon, { desc = "Silicon - save contents of buffer" })
+    vim.keymap.set('v', '<leader>s', exec_silicon_visual, { desc = "Silicon - save visual selected lines" })
+
   end
 }

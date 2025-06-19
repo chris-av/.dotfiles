@@ -25,11 +25,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set('n', '<leader>lg', ':FloatermNew lazygit<CR>', { desc = "launch lazy git" })
 vim.keymap.set('n', '<leader>gs', ':Telescope git_status<CR>', { desc = "git status" })
 
-
--- silicon
-vim.keymap.set('n', '<leader>s', helpers.exec_silicon, { desc = "Silicon - save contents of buffer" })
-vim.keymap.set('v', '<leader>s', helpers.exec_silicon_visual, { desc = "Silicon - save visual selected lines" })
-
 -- re-source files
 vim.keymap.set("n", "<leader>ss", helpers.resourceConfig, { desc = "source the lua config again" })
 
