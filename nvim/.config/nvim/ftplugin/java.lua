@@ -12,7 +12,6 @@ if vim.fn.isdirectory(workspace_path) == 0 then
   vim.notify("did not detect java workspace dir : " .. workspace_path, vim.log.levels.WARN, {
     title = "jdtls",
   })
-  print("hello???")
   helpers.mkdir_p(workspace_path)
   vim.notify("created dir : " .. workspace_path, vim.log.levels.INFO, {
     title = "jdtls",
