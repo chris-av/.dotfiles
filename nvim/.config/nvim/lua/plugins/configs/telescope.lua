@@ -54,6 +54,14 @@ return {
             },
           },
         },
+        marks = {
+          attach_mappings = function(bufnr, map)
+            map("i", "<C-d>", function()
+              require("telescope.actions").delete_mark(bufnr)
+            end)
+            return true
+          end,
+        },
         colorscheme = {
           enable_preview = true,
         },
