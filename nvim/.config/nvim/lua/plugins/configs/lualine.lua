@@ -8,18 +8,24 @@ return {
   config = function()
     local navic = require("nvim-navic")
     local lualine = require("lualine")
-    local colorutils = require("utils.colorutils")
+    local themes = require("_themes")
 
     -- use env var
     local theme_name = os.getenv("TERM_PROFILE") or os.getenv("ITERM_PROFILE")
     if (theme_name == nil) then
-      print("getting defaults ... ")
       theme_name = "habamin"
     end
 
     -- get the lualine config based on current theme
-    local theme = colorutils.get_lualine_config(theme_name)
-    local lualine_theme = theme.lualine_theme
+    local theme = themes[theme_name]
+    local lualine_config
+    local default_theme = require("_themes._defaults")
+
+    if theme == nil then
+      lualine_config = default_theme.lualine
+    else
+      lualine_config = theme.lualine
+    end
 
     navic.setup({
       icons = {
@@ -52,14 +58,13 @@ return {
       }
     })
 
-
     -- now call lualine, and extend it with gps
     lualine.setup({
       options = {
-        theme = lualine_theme.theme,
+        theme = lualine_config.theme,
         component_separators = { left = ' ', right = '  ' },
       },
-      sections = lualine_theme.components,
+      sections = lualine_config.components,
       inactive_sections = {
         lualine_a = {},
         lualine_b = {},
