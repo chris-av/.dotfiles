@@ -1,4 +1,5 @@
-return {
+local M = {}
+M.lualine = {
   theme = "auto",
   components = {
     lualine_a = { "mode" },
@@ -7,5 +8,7 @@ return {
     lualine_x = { "encoding", "fileformat", "filetype" },
     lualine_y = {},
     lualine_z = { "location" }
-  }
+  },
 }
+
+return M

@@ -10,22 +10,16 @@ return {
     local lualine = require("lualine")
     local colorutils = require("utils.colorutils")
 
-    local theme_path = colorutils.get_lualine_theme_path()
-    local lualine_theme, lualine_components
-    if theme_path == "auto" then
-      lualine_theme = "auto"
-      lualine_components = require("utils.lualine-themes.auto").components
-    else
-      if string.match(theme_path, "lualine%-themes") then
-        -- using custom theme, I have a theme key
-        lualine_theme = require(theme_path).theme
-      else
-        -- using out of the box theme from lualine
-        lualine_theme = require(theme_path)
-      end
-      lualine_components = require(theme_path).components
+    -- use env var
+    local theme_name = os.getenv("TERM_PROFILE") or os.getenv("ITERM_PROFILE")
+    if (theme_name == nil) then
+      print("getting defaults ... ")
+      theme_name = "habamin"
     end
 
+    -- get the lualine config based on current theme
+    local theme = colorutils.get_lualine_config(theme_name)
+    local lualine_theme = theme.lualine_theme
 
     navic.setup({
       icons = {
@@ -62,10 +56,10 @@ return {
     -- now call lualine, and extend it with gps
     lualine.setup({
       options = {
-        theme = lualine_theme,
+        theme = lualine_theme.theme,
         component_separators = { left = ' ', right = '  ' },
       },
-      sections = lualine_components,
+      sections = lualine_theme.components,
       inactive_sections = {
         lualine_a = {},
         lualine_b = {},
