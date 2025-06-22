@@ -131,3 +131,4 @@ M.lualine = {
 }
 
 return M
+
