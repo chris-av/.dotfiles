@@ -34,7 +34,6 @@ M.set_colorscheme = function()
       return
     end
     local colorscheme = theme.colorscheme
-    print("setting colorscheme : " .. colorscheme)
     vim.cmd("colorscheme " .. colorscheme)
     return
   end
