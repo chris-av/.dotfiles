@@ -1,0 +1,94 @@
+/* Habamin */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "FreeMono";
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    color: #bcbcbc;
+    background: #1c1c1c;
+}
+
+tooltip {
+    background: #1c1c1c;
+    border-style: solid;
+    color: #bcbcbc;
+}
+
+#workspaces button {
+    color: #bcbcbc;
+    padding: 5px 10px;
+}
+
+#workspaces button.active {
+    color: #000000;
+    background: #5faf5f;
+}
+
+/* #workspaces button.focused { */
+/* } */
+
+/* #workspaces button.urgent { */
+/* } */
+
+#workspaces button:hover {
+    color: #87d787;
+}
+
+#custom-power_profile,
+#custom-weather,
+#custom-recorder,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#temperature,
+#workspaces,
+#tray,
+#backlight,
+#keyboard-state {
+    opacity: 0.8;
+    padding: 0px 10px;
+    margin: 3px 0px;
+    border: 1px solid #585858;
+}
+
+#temperature {
+    border-radius: 0px 0px 0px 0px;
+}
+
+#temperature.critical {
+    color: #ff00af;
+}
+
+#workspaces {
+    border-radius: 0px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#bluetooth {
+    margin-right: 10px
+}
+
+#pulseaudio.microphone {
+    margin-right: 10px;
+}
+
+#battery {
+    margin-right: 10px;
+}
+
+#custom-recorder {
+    margin-right: 10px;
+}
+
+#custom-recorder.enabled {
+    color: red;
+}
