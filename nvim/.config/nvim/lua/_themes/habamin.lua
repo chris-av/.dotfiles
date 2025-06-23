@@ -16,6 +16,7 @@ M.palette = {
 
   -- Accent colors (cool)
   teal         = "#5f8787", -- muted teal (types, attributes)
+  teal_low     = "#87afaf",  -- muted teal
   blue         = "#5f87af", -- dusty blue
   cyan         = "#5fafd7", -- soft cyan
   aqua         = "#87afaf", -- pale aqua
@@ -112,6 +113,7 @@ M.highlight_groups = {
   ErrorMsg = { fg = M.palette.red, bg = M.palette.bg0, reverse = true, },
   FoldColumn = { fg = M.palette.gray, bg = M.palette.none, },
   Folded = { fg = M.palette.gray_soft, bg = "#262626", },
+  Function = { fg=  M.palette.teal_low, },
   Identifier = { fg = M.palette.aqua, bg = M.palette.none, },
   Ignore = { fg = M.palette.none, bg = M.palette.none, },
   IncSearch = { fg = M.palette.yellow, bg = M.palette.bg0, reverse = true, },
@@ -122,7 +124,7 @@ M.highlight_groups = {
   ModeMsg = { fg = M.palette.none, bg = M.palette.none, bold = true, ctermbg = M.palette.none, },
   MoreMsg = { fg = M.palette.green, bg = M.palette.none, },
   NonText = { fg = M.palette.gray, bg = M.palette.none, },
-  Normal = { fg = M.palette.gray_bright, bg = M.palette.bg0, },
+  Normal = { fg = M.palette.teal_low, bg = M.palette.bg0, },
   NormalFloat = { bg = M.palette.bg0, },
   Pmenu = { fg = M.palette.none, bg = M.palette.bg3, },
   PmenuExtra = { fg = M.palette.gray_light, bg = M.palette.bg3, },
@@ -140,7 +142,7 @@ M.highlight_groups = {
   Removed = { fg = M.palette.red_bright, bg = M.palette.none, },
   Search = { fg = M.palette.cyan, bg = M.palette.bg0, reverse = true, },
   SignColumn = { fg = M.palette.none, bg = M.palette.none, },
-  Special = { fg = M.palette.teal, bg = M.palette.none, },
+  Special = { fg = M.palette.blue, bg = M.palette.none, },
   SpecialKey = { fg = M.palette.gray, bg = M.palette.none, },
   SpellBad = { fg = M.palette.none, bg = M.palette.none, sp = M.palette.red_bright, ctermbg = M.palette.none, },
   SpellCap = { fg = M.palette.none, bg = M.palette.none, sp = M.palette.yellow, ctermbg = M.palette.none, },
@@ -160,7 +162,7 @@ M.highlight_groups = {
   Type = { fg = M.palette.blue, bg = M.palette.none, },
   Underlined = { fg = M.palette.none, bg = M.palette.none, },
   VertSplit = { fg = M.palette.gray_light, bg = M.palette.gray_light, },
-  Visual = { fg = M.palette.brown_gray, bg = M.palette.bg0, reverse = true, bold = true, },
+  Visual = { fg = M.palette.bg2, bg = M.palette.gray_soft, },
   VisualNOS = { fg = M.palette.bg0, bg = M.palette.teal, },
   WarningMsg = { fg = M.palette.pink_soft, bg = M.palette.none, },
   WildMenu = { fg = M.palette.bg0, bg = M.palette.orange, bold = true, },
@@ -172,6 +174,8 @@ M.highlight_groups = {
   WinBarNC = { fg = M.palette.gray_bright, bg = M.palette.bg0, bold = true, },
 
   TelescopeSelection = { fg = M.palette.none, bg = M.palette.none, },
+
+  ["@variable"] = { fg = M.palette.teal_low, },
 
 }
 
