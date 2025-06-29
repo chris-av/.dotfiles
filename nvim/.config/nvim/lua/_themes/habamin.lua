@@ -207,7 +207,7 @@ M.lualine = {
       c = { bg = M.palette.bg0, fg = M.palette.white },
     },
     inactive = {
-      a = { bg = M.palette.darkgray, fg = M.palette.gray, gui = "bold" },
+      a = { bg = M.palette.bg0, fg = M.palette.gray, gui = "bold" },
       b = { bg = M.palette.bg0, fg = M.palette.gray },
       c = { bg = M.palette.bg0, fg = M.palette.gray },
     },
