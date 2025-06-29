@@ -5,18 +5,90 @@ M.palette = {
   grey = "#cccccc"
 }
 
+M.kitty = {
+  -- UI
+  foreground = M.palette,
+  background = M.palette,
+  selection_foreground = M.palette,
+  selection_background = M.palette,
+  cursor = M.palette,
+  cursor_text_color = M.palette,
+  active_border_color = M.palette,
+  inactive_border_color = M.palette,
+
+  -- black
+  color0 = M.palette.black,
+  color8 = M.palette.grey,
+
+  -- red
+  color1 = M.palette.grey,
+  color9 = M.palette.grey,
+
+  -- green
+  color2 = M.palette.grey,
+  color10 = M.palette.grey,
+
+  -- yellow
+  color3 = M.palette.grey,
+  color11 = M.palette.grey,
+
+  -- blue
+  color4 = M.palette.grey,
+  color12 = M.palette.grey,
+
+  -- magenta
+  color5 = M.palette.grey,
+  color13 = M.palette.grey,
+
+  -- cyan
+  color6 = M.palette.grey,
+  color14 = M.palette.grey,
+
+  -- white
+  color7 = M.palette.grey,
+  color15 = M.palette.grey,
+}
+
 M.theme = {
-  foreground = M.grey,
-  background = M.black,
-  selection_fg = M.black,
-  selection_bg = M.grey,
+  foreground = M.palette.grey,
+  background = M.palette.black,
+
+  primary_fg = M.palette.grey,
+  primary_bg = M.palette.black,
+  secondary_fg = M.palette.grey,
+  secondary_bg = M.palette.black,
+
+  success = M.palette.grey,
+  warn = M.palette.grey,
+  info = M.palette.grey,
+  hint = M.palette.grey,
+  error = M.palette.grey,
+
+  active = M.palette.grey,
+  inactive = M.palette.grey,
+
+  selected_fg = M.palette.black,
+  selected_bg = M.palette.grey,
+
+  border = M.palette.grey,
+  popup_fg = M.palette.grey,
+  popup_bg = M.palette.black,
+  icon = M.palette.grey,
+
+  add = M.palette.grey,
+  remove = M.palette.grey,
+  modified = M.palette.grey,
+
+  folded_fg = M.palette.grey,
+  folded_bg = M.palette.black,
+
 }
 
 M.highlight_groups = {
   Normal = { fg = M.theme.foreground, },
   NormalFloat = { fg = M.theme.foreground, bg = M.theme.background, },
 
-  Visual = { fg = M.theme.selection_fg, bg = M.theme.selection_bg, reverse = true, },
+  Visual = { fg = M.theme.selected_fg, bg = M.theme.selected_bg, reverse = true, },
 
   Directory = { fg = M.theme.foreground, },
 

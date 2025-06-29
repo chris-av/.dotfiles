@@ -5,18 +5,97 @@ M.palette = {
   white = "#ffffff",
   grey = "#676767",
   darkgrey = "#262626",
-  lightgrey = "#d0d0d0",
+  lightgrey = "#c7c7c7",
   green = "#5af78d",
   yellow = "#eeff03",
   red = "#ff5b56",
   orange = "#ffaf00",
   cyan = "#9aecfe",
+  blue = "#57c7fe",
+  lightblue = "#c1ddff",
   aqua = "#00ffff",
   magenta = "#ff76ff",
   none = "none",
 }
 
-M.theme = {}
+M.kitty = {
+  -- UI
+  foreground = M.palette.white,
+  background = M.palette.black,
+  selection_foreground = M.palette.black,
+  selection_background = M.palette.white,
+  cursor = M.palette.lightgrey,
+  cursor_text_color = M.palette.black,
+  active_border_color = M.palette.green,
+  inactive_border_color = M.palette.lightgrey,
+
+  -- black
+  color0 = M.palette.black,
+  color8 = M.palette.grey,
+
+  -- red
+  color1 = M.palette.red,
+  color9 = M.palette.red,
+
+  -- green
+  color2 = M.palette.green,
+  color10 = M.palette.green,
+
+  -- yellow
+  color3 = M.palette.yellow,
+  color11 = M.palette.yellow,
+
+  -- blue
+  color4 = M.palette.blue,
+  color12 = M.palette.blue,
+
+  -- magenta
+  color5 = M.palette.magenta,
+  color13 = M.palette.magenta,
+
+  -- cyan
+  color6 = M.palette.cyan,
+  color14 = M.palette.cyan,
+
+  -- white
+  color7 = M.palette.white,
+  color15 = M.palette.white,
+}
+
+M.theme = {
+  foreground = M.palette.white,
+  background = M.palette.black,
+
+  primary_fg = M.palette.white,
+  primary_bg = M.palette.black,
+  secondary_fg = M.palette.white,
+  secondary_bg = M.palette.black,
+
+  success = M.palette.green,
+  warn = M.palette.yellow,
+  info = M.palette.blue,
+  hint = M.palette.blue,
+  error = M.palette.red,
+
+  active = M.palette.green,
+  inactive = M.palette.lightgrey,
+
+  selected_fg = M.palette.black,
+  selected_bg = M.palette.lightblue,
+
+  border = M.palette.lightgrey,
+  popup_fg = M.palette.white,
+  popup_bg = M.palette.black,
+  icon = M.palette.green,
+
+  add = M.palette.green,
+  remove = M.palette.red,
+  modified = M.palette.yellow,
+
+  folded_fg = M.palette.green,
+  folded_bg = M.palette.black,
+
+}
 
 M.highlight_groups = {
   Normal      = { fg = M.palette.white },

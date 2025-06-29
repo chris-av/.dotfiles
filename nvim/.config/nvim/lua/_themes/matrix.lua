@@ -2,16 +2,95 @@ local M = {}
 M.palette = {
   none = "none",
   black = "#000000",
-  green = "LightGreen",
-  green_dull = "Yellow4",
-  red = "red",
-  blue = "blue",
-  yellow = "yellow",
-  cyan = "cyan",
+  green = "#90ee90",
+  green_dull = "#878700",
+  red = "#ff0000",
+  blue = "#0000ff",
+  yellow = "#ffff00",
+  cyan = "#00ffff",
   purple = "#5f00af",
   navy = "#00005f",
 }
-M.theme = {}
+
+M.kitty = {
+  -- UI
+  foreground = M.palette.green,
+  background = M.palette.black,
+  selection_foreground = M.palette.black,
+  selection_background = M.palette.green,
+  cursor = M.palette.green,
+  cursor_text_color = M.palette.black,
+  active_border_color = M.palette.green,
+  inactive_border_color = M.palette.black,
+
+  -- black
+  color0 = M.palette.black,
+  color8 = M.palette.black,
+
+  -- red
+  color1 = M.palette.green,
+  color9 = M.palette.green,
+
+  -- green
+  color2 = M.palette.green,
+  color10 = M.palette.green,
+
+  -- yellow
+  color3 = M.palette.green,
+  color11 = M.palette.green,
+
+  -- blue
+  color4 = M.palette.green,
+  color12 = M.palette.green,
+
+  -- magenta
+  color5 = M.palette.green,
+  color13 = M.palette.green,
+
+  -- purple
+  color6 = M.palette.green,
+  color14 = M.palette.green,
+
+  -- white
+  color7 = M.palette.green,
+  color15 = M.palette.green,
+}
+
+M.theme = {
+  foreground = M.palette.green,
+  background = M.palette.black,
+
+  primary_fg = M.palette.green,
+  primary_bg = M.palette.green,
+  secondary_fg = M.palette.green,
+  secondary_bg = M.palette.green,
+
+  success = M.palette.green,
+  warn = M.palette.green,
+  info = M.palette.green,
+  hint = M.palette.green,
+  error = M.palette.red,
+
+  active = M.palette.green,
+  inactive = M.palette.green,
+
+  selected_fg = M.palette.black,
+  selected_bg = M.palette.green,
+
+  border = M.palette.green,
+  popup_fg = M.palette.green,
+  popup_bg = M.palette.black,
+  icon = M.palette.green,
+
+  add = M.palette.green,
+  remove = M.palette.green,
+  modified = M.palette.green,
+
+  folded_fg = M.palette.green,
+  folded_bg = M.palette.black,
+
+}
+
 M.highlight_groups = {
   Pmenu                            = { fg = M.palette.black, bg = M.palette.green },
   PmenuSel                         = { fg = M.palette.black, bg = M.palette.green, bold = true, },
@@ -42,9 +121,9 @@ M.highlight_groups = {
   DiagnosticWarn                   = { fg = M.palette.yellow, bold = true },
   DiagnosticHint                   = { fg = M.palette.green, bold = true },
   DiffText                         = { fg = M.palette.green, bg = M.palette.none, },
-  DiffAdd                          = { fg = "white", bg = M.palette.navy, },
+  DiffAdd                          = { fg = M.palette.green, bg = M.palette.navy, },
   DiffDelete                       = { fg = M.palette.black, bg = M.palette.red, bold = true, },
-  DiffChange                       = { fg = "#ffff00", bg = M.palette.none, bold = true, },
+  DiffChange                       = { fg = M.palette.green, bg = M.palette.none, bold = true, },
 
   -- telescope
   TelescopeMatching                = { fg = M.palette.black, bg = M.palette.green, bold = true, },
