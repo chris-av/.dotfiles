@@ -177,6 +177,16 @@ M.highlight_groups = {
 
   ["@variable"] = { fg = M.palette.teal_low, },
 
+  NeotreeGitAdded = { fg = M.theme.diff_add, },
+  NeotreeGitModified = { fg = M.theme.diff_change, },
+  NeotreeGitDeleted = { fg = M.theme.diff_delete, },
+  NeotreeGitRenamed = { fg = M.palette.orange, },
+  NeotreeGitUntracked = { fg = M.palette.orange, },
+  NeotreeGitUnstaged = { fg = M.palette.red, },
+  NeotreeGitStaged = { fg = M.palette.green, },
+  NeotreeGitIgnored = { fg = M.palette.brown_gray, },
+  NeotreeGitConflict = { fg = M.palette.pink_soft, },
+
 }
 
 M.lualine = {
