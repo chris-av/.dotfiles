@@ -10,6 +10,8 @@ return {
       overrides = function()
         return {
           CursorLine = { bg = 'none' },
+          NeoTreeFloatBorder = { bg = "#100519", fg = "#8C57C7", },
+          NeoTreeTitleBar = { bg = "#8C57C7", fg = "#000000", },
         }
       end
     })
