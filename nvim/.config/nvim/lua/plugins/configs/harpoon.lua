@@ -1,58 +1,33 @@
 return {
   "ThePrimeagen/harpoon",
+  branch = "harpoon2",
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     require("telescope").load_extension("harpoon")
     local harpoon = require("harpoon")
-    local harpoonui = require("harpoon.ui")
-    local harpoon_mark = require("harpoon.mark")
     local notify = require("utils.notifications")
 
-    local calculateWindowSize = function()
-      local win_width = vim.api.nvim_win_get_width(0)
-      local result = math.ceil(.65 * win_width)
-      return result
-    end
-
-    harpoon.setup({
-      -- sets the marks upon calling `toggle` on the ui, instead of require `:w`.
-      save_on_toggle = false,
-
-      -- saves the harpoon file upon every change. disabling is unrecommended.
-      save_on_change = true,
-
-      -- sets harpoon to run the command immediately as it's passed to the terminal when calling `sendCommand`.
-      enter_on_sendcmd = false,
-
-      -- closes any tmux windows harpoon that harpoon creates when you close Neovim.
-      tmux_autoclose_windows = false,
-
-      -- filetypes that you want to prevent from adding to the harpoon list menu.
-      excluded_filetypes = { "harpoon" },
-
-      -- set marks specific to each git branch inside git repository
-      mark_branch = false,
-
-      -- enable tabline with harpoon marks
-      tabline = false,
-      tabline_prefix = "   ",
-      tabline_suffix = "   ",
-      menu = {
-        width = calculateWindowSize(),
-      },
-    })
+    harpoon:setup({})
 
     local harpoon_add = function()
-      harpoon_mark.add_file()
       local curr_buff = vim.api.nvim_buf_get_name(0)
-      notify.notify_info("harpoon", "added " .. curr_buff .. " to harpoon")
+      local show_file_path = vim.fn.fnamemodify(curr_buff, ":.")
+      harpoon:list():add()
+      notify.notify_info("harpoon", "added " .. show_file_path .. " to harpoon")
     end
 
+    local toggle_opts = {
+      border = "rounded",
+      title_pos = "center",
+      title = "Harpoon",
+      ui_max_width = 65
+    }
 
-    vim.keymap.set('n', '<S-l>', harpoonui.nav_next, { desc = "next buffer" })
-    vim.keymap.set('n', '<S-h>', harpoonui.nav_prev, { desc = "previous buffer" })
+    vim.keymap.set('n', '<S-l>', function() harpoon:list():next() end, { desc = "next buffer" })
+    vim.keymap.set('n', '<S-h>', function() harpoon:list():prev() end, { desc = "previous buffer" })
     vim.keymap.set('n', '<leader>i', harpoon_add, { desc = "add file to harpoon" })
-    vim.keymap.set('n', '<leader>ll', harpoonui.toggle_quick_menu, { desc = "open harpoon window" })
-
+    vim.keymap.set('n', '<leader>ll', function()
+      harpoon.ui:toggle_quick_menu(harpoon:list(), toggle_opts)
+    end, { desc = "open harpoon window" })
   end
 }
