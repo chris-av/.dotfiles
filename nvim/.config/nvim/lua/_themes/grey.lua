@@ -88,7 +88,7 @@ M.highlight_groups = {
   Normal = { fg = M.theme.foreground, },
   NormalFloat = { fg = M.theme.foreground, bg = M.theme.background, },
 
-  Visual = { fg = M.theme.selected_fg, bg = M.theme.selected_bg, reverse = true, },
+  Visual = { fg = M.theme.foreground, bg = M.theme.background, reverse = true, },
 
   Directory = { fg = M.theme.foreground, },
 
@@ -345,10 +345,10 @@ M.lualine = {
       {
         "diagnostics",
         diagnostics_color = {
-          error = { fg = M.palette.black, bg = M.palette.grey },
-          warn = { fg = M.palette.black, bg = M.palette.grey },
-          info = { fg = M.palette.black, bg = M.palette.grey },
-          hint = { fg = M.palette.black, bg = M.palette.grey },
+          error = { fg = M.palette.grey, bg = M.palette.black, },
+          warn = { fg = M.palette.grey, bg = M.palette.black, },
+          info = { fg = M.palette.grey, bg = M.palette.black, },
+          hint = { fg = M.palette.grey, bg = M.palette.black, },
         },
       },
     },
