@@ -7,14 +7,14 @@ M.palette = {
 
 M.kitty = {
   -- UI
-  foreground = M.palette,
-  background = M.palette,
-  selection_foreground = M.palette,
-  selection_background = M.palette,
-  cursor = M.palette,
-  cursor_text_color = M.palette,
-  active_border_color = M.palette,
-  inactive_border_color = M.palette,
+  foreground = M.palette.grey,
+  background = M.palette.black,
+  selection_foreground = M.palette.black,
+  selection_background = M.palette.grey,
+  cursor = M.palette.grey,
+  cursor_text_color = M.palette.black,
+  active_border_color = M.palette.grey,
+  inactive_border_color = M.palette.grey,
 
   -- black
   color0 = M.palette.black,
