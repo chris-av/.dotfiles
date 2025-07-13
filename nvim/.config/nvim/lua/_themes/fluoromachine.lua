@@ -18,15 +18,28 @@ M.palette = {
   bluelavender = "#495495",
   darkviolet = "#463465",
   lightviolet = "#8C57C7",
+
+  -- my colors
+  space_purple = "#100519",
+  white = "#F8F8F8",
+  full_white = "#ffffff",
+  red_flat = "#FE6973",
+  pine_green = "#39795C",
+  bright_yellow = "#FFD633",
+  pastel_purple = "#BF8AFA",
+  magenta = "#FF7EDE",
+  magenta2 = "#FF98e2",
+  cyan2 = "#81E8FF",
+
 }
 
 
 M.kitty = {
   -- UI
   foreground = M.palette.teal,
-  background = M.palette.indigo,
-  selection_foreground = M.palette.indigo,
-  selection_background = M.palette.teal,
+  background = M.palette.space_purple,
+  selection_foreground = M.palette.white,
+  selection_background = M.palette.darkviolet,
   cursor = M.palette.teal,
   cursor_text_color = M.palette.navy,
   active_border_color = M.palette.teal,
@@ -66,37 +79,38 @@ M.kitty = {
 }
 
 M.theme = {
-  foreground = M.palette,
-  background = M.palette,
+  opacity = "0.90",
+  foreground = M.palette.teal,
+  background = M.palette.space_purple,
 
-  primary_fg = M.palette,
-  primary_bg = M.palette,
-  secondary_fg = M.palette,
-  secondary_bg = M.palette,
+  primary_fg = M.palette.teal,
+  primary_bg = M.palette.space_purple,
+  secondary_fg = M.palette.teal,
+  secondary_bg = M.palette.space_purple,
 
-  success = M.palette,
-  warn = M.palette,
-  info = M.palette,
-  hint = M.palette,
-  error = M.palette,
+  success = M.palette.green,
+  warn = M.palette.yellow,
+  info = M.palette.purple,
+  hint = M.palette.purple,
+  error = M.palette.red,
 
-  active = M.palette,
-  inactive = M.palette,
+  active = M.palette.green,
+  inactive = M.palette.darkviolet,
 
-  selected_fg = M.palette,
-  selected_bg = M.palette,
+  selected_fg = M.palette.white,
+  selected_bg = M.palette.darkviolet,
 
-  border = M.palette,
-  popup_fg = M.palette,
-  popup_bg = M.palette,
-  icon = M.palette,
+  border = M.palette.bluelavender,
+  popup_fg = M.palette.teal,
+  popup_bg = M.palette.space_purple,
+  icon = M.palette.bluelavender,
 
-  add = M.palette,
-  remove = M.palette,
-  modified = M.palette,
+  add = M.palette.green,
+  remove = M.palette.red,
+  modified = M.palette.bluelavender,
 
-  folded_fg = M.palette,
-  folded_bg = M.palette,
+  folded_fg = M.palette.teal,
+  folded_bg = M.palette.bluelavender,
 }
 
 M.lualine = {
