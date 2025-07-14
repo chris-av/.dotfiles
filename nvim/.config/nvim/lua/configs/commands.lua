@@ -1,11 +1,9 @@
 local launch_bashserver = function()
-  local config = {
-    cmd = { 'bash-language-server', 'start' },
-  }
-  local client_id = vim.lsp.start_client(config)
-  if client_id then
-    vim.lsp.buf_attach_client(0, client_id)
-  end
+  vim.lsp.start({
+    name = "bash-language-server",
+    cmd = { "bash-language-server", "start", },
+    root_dir = vim.fs.root(0, { ".git" })
+  })
 end
 
 
