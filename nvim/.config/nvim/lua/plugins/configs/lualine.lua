@@ -3,7 +3,6 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
     "SmiteshP/nvim-navic",
-    "neovim/nvim-lspconfig",
   },
   config = function()
     local navic = require("nvim-navic")
