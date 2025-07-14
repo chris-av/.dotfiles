@@ -39,6 +39,15 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 local lsp_maps = vim.api.nvim_create_augroup("LspKeymaps", { clear = true })
+
+vim.api.nvim_create_user_command(
+  "LspInfo",
+  function()
+    vim.cmd("checkhealth vim.lsp")
+  end,
+  { desc = "Show lsp information in the current buffer" }
+)
+
 vim.api.nvim_create_autocmd('LspAttach', {
   group = lsp_maps,
   desc = "LSP-specific keymaps",
