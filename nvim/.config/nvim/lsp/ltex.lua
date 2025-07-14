@@ -1,4 +1,9 @@
 return {
-  cmd = { 'ltex-ls' },
-  filetypes = { 'bib', 'org', 'plaintex', 'rst', 'rnoweb', 'tex' },
+  cmd = { "ltex-ls" },
+  filetypes = { "bib", "tex", "latex" },
+  settings = {
+    ltex = {
+      enabled = { "bibtex", "tex", "latex", },
+    },
+  },
 }
