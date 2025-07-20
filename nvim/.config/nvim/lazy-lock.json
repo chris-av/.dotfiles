@@ -12,7 +12,6 @@
   "cmp-r": { "branch": "main", "commit": "602f399c4efde01147cadfebcc884b7aa154f8b7" },
   "cmp_luasnip": { "branch": "master", "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90" },
   "dressing.nvim": { "branch": "master", "commit": "2d7c2db2507fa3c4956142ee607431ddb2828639" },
-  "embark": { "branch": "main", "commit": "17c501c1f69d736f21959a66702cd6590f415a97" },
   "fd": { "branch": "master", "commit": "ba35c5ea67d995dfd12001678af7d4533c7d5458" },
   "fluoromachine.nvim": { "branch": "main", "commit": "d638ea221b4c6636978f49c1987d10ff2733c23d" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
