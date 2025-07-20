@@ -47,8 +47,8 @@ return {
           ["<cr>"] = "open",
           ["<esc>"] = "cancel",
           -- opening files
-          ["s"] = "open_split",
-          ["v"] = "open_vsplit",
+          ["<C-x>"] = "open_split",
+          ["<C-v>"] = "open_vsplit",
           -- file system management
           ["a"] = "add",               -- add file
           ["x"] = "delete",            -- delete file
