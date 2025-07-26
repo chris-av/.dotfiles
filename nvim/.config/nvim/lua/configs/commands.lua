@@ -49,7 +49,7 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_autocmd('LspAttach', {
   group = lsp_maps,
   desc = "LSP-specific keymaps",
-  callback = function()
+  callback = function(ev)
     local buf = vim.lsp.buf
 
     vim.keymap.set('n', 'gD', buf.declaration, { desc = "Buffer declarations" })
@@ -91,6 +91,21 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<space>f', function()
       vim.lsp.buf.format({ async = true, })
     end, { desc = "Format file" })
+
+    -- nvim navic
+    local bufnr = ev.buf
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if not client then
+      print("no client id found")
+      return
+    end
+
+    local navic = require("nvim-navic")
+
+    if client.server_capabilities.documentSymbolProvider then
+      navic.attach(client, bufnr)
+    end
+
   end,
 })
 
