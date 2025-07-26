@@ -108,35 +108,47 @@ M.theme = {
 M.lualine = {
   theme = {
     normal = {
-      a = { bg = M.palette.astral1, fg = M.palette.space1, gui = "bold" },
-      b = { bg = M.palette.space4, fg = M.palette.cyan },
-      c = { bg = M.palette.space1, fg = M.palette.astral1 }
+      a = { bg = M.palette.astral1, fg = M.palette.space1, gui = "bold", },
+      b = { bg = M.palette.space4, fg = M.palette.astral1, },
+      c = { bg = M.palette.space2, fg = M.palette.astral0, },
+      x = { bg = M.palette.space2, fg = M.palette.astral1, },
+      y = { bg = M.palette.space2, fg = M.palette.astral1, },
     },
     insert = {
-      a = { bg = M.palette.dark_blue, fg = M.palette.space1, gui = "bold" },
-      b = { bg = M.palette.space1, fg = M.palette.astral1 },
-      c = { bg = M.palette.space1, fg = M.palette.astral1 }
+      a = { bg = M.palette.dark_blue, fg = M.palette.space1, gui = "bold", },
+      b = { bg = M.palette.space4, fg = M.palette.astral1, },
+      c = { bg = M.palette.space2, fg = M.palette.astral1, },
+      x = { bg = M.palette.space2, fg = M.palette.astral1, },
+      y = { bg = M.palette.space2, fg = M.palette.astral1, },
     },
     visual = {
-      a = { bg = M.palette.dark_yellow, fg = M.palette.space1, gui = "bold" },
-      b = { bg = M.palette.space1, fg = M.palette.astral1 },
-      c = { bg = M.palette.space1, fg = M.palette.astral1 }
+      a = { bg = M.palette.dark_yellow, fg = M.palette.space1, gui = "bold", },
+      b = { bg = M.palette.space4, fg = M.palette.astral1, },
+      c = { bg = M.palette.space2, fg = M.palette.astral1, },
+      x = { bg = M.palette.space2, fg = M.palette.astral1, },
+      y = { bg = M.palette.space2, fg = M.palette.astral1, },
     },
     replace = {
-      a = { bg = M.palette.dark_red, fg = M.palette.space1, gui = "bold" },
-      b = { bg = M.palette.space1, fg = M.palette.astral1 },
-      c = { bg = M.palette.space1, fg = M.palette.astral1 }
+      a = { bg = M.palette.dark_red, fg = M.palette.space1, gui = "bold", },
+      b = { bg = M.palette.space4, fg = M.palette.astral1, },
+      c = { bg = M.palette.space2, fg = M.palette.astral1, },
+      x = { bg = M.palette.space2, fg = M.palette.astral1, },
+      y = { bg = M.palette.space2, fg = M.palette.astral1, },
     },
     command = {
-      a = { bg = M.palette.dark_red, fg = M.palette.space1, gui = "bold" },
-      b = { bg = M.palette.space1, fg = M.palette.astral1 },
-      c = { bg = M.palette.space1, fg = M.palette.astral1 }
+      a = { bg = M.palette.dark_red, fg = M.palette.space1, gui = "bold", },
+      b = { bg = M.palette.space1, fg = M.palette.astral1, },
+      c = { bg = M.palette.space2, fg = M.palette.astral1, },
+      x = { bg = M.palette.space2, fg = M.palette.astral1, },
+      y = { bg = M.palette.space2, fg = M.palette.astral1, },
     },
     inactive = {
       a = { bg = M.palette.space4, fg = M.palette.cyan, gui = "bold" },
-      b = { bg = M.palette.space1, fg = M.palette.astral1 },
-      c = { bg = M.palette.space1, fg = M.palette.astral1 }
-    }
+      b = { bg = M.palette.space1, fg = M.palette.astral1, },
+      c = { bg = M.palette.space1, fg = M.palette.astral1, },
+      x = { bg = M.palette.space2, fg = M.palette.astral1, },
+      y = { bg = M.palette.space2, fg = M.palette.astral1, },
+    },
   },
   components = {
     lualine_a = { "mode" },
@@ -148,10 +160,10 @@ M.lualine = {
       {
         "diagnostics",
         diagnostics_color = {
-          error = { fg = M.palette.cyan, bg = M.palette.dark_red },
-          warn = { fg = M.palette.space0, bg = M.palette.dark_yellow },
-          info = { fg = M.palette.cyan, bg = M.palette.dark_green },
-          hint = { fg = M.palette.cyan, bg = M.palette.dark_blue },
+          error = { fg = M.palette.dark_red, bg = M.palette.space2 },
+          warn = { fg = M.palette.dark_yellow, bg = M.palette.space2 },
+          info = { fg = M.palette.dark_green, bg = M.palette.space2 },
+          hint = { fg = M.palette.dark_blue, bg = M.palette.space2 },
         },
       },
       "navic",
