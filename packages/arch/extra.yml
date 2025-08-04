@@ -23,6 +23,11 @@
   description: >
     An arbitrary precision calculator language
 
+- name: biber
+  repository: extra
+  description: >
+    Important backend for creating bibliographies in latex
+
 - name: bluez-utils
   repository: extra
   description: >
@@ -387,6 +392,11 @@
   repository: extra
   description: >
     A Solution to your Wayland Wallpaper Woes
+
+- name: task
+  repository: extra
+  description: >
+    Taskwarrior: tool to manage tasks on the command line
 
 - name: tcpdump
   repository: extra
