@@ -1,18 +1,3 @@
-local launch_bashserver = function()
-  vim.lsp.start({
-    name = "bash-language-server",
-    cmd = { "bash-language-server", "start", },
-    root_dir = vim.fs.root(0, { ".git" })
-  })
-end
-
-
-vim.api.nvim_create_user_command(
-  'LaunchBashServer',
-  launch_bashserver,
-  { desc = "Start bash lsp" }
-)
-
 local toggle_virt_diag = function()
   if vim.g.diagnostic_activated == nil then
     vim.g.diagnostic_activated = false
