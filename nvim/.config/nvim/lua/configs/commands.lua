@@ -28,6 +28,21 @@ vim.api.nvim_create_user_command(
 )
 
 vim.api.nvim_create_user_command(
+  "LspRestart",
+  function()
+    local current_clients = vim.lsp.get_clients()
+    for _, client in ipairs(current_clients) do
+      vim.notify("restarting client " .. client.name, vim.log.levels.INFO, {
+        title = "LSP",
+      })
+      vim.lsp.enable(client.name, false)
+      vim.lsp.enable(client.name, true)
+    end
+  end,
+  { desc = "Restart all currently active LSP clients", }
+)
+
+vim.api.nvim_create_user_command(
   "ExportThemes",
   function()
     local palettes = {}
