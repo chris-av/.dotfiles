@@ -1,16 +1,14 @@
-local toggle_virt_diag = function()
-  if vim.g.diagnostic_activated == nil then
-    vim.g.diagnostic_activated = false
-  end
-  vim.g.diagnostic_activated = not vim.g.diagnostic_activated
-  vim.diagnostic.config({
-    virtual_lines = vim.g.diagnostic_activated,
-  })
-end
-
 vim.api.nvim_create_user_command(
   "ToggleDiagnosticLines",
-  toggle_virt_diag,
+  function()
+    if vim.g.diagnostic_activated == nil then
+      vim.g.diagnostic_activated = false
+    end
+    vim.g.diagnostic_activated = not vim.g.diagnostic_activated
+    vim.diagnostic.config({
+      virtual_lines = vim.g.diagnostic_activated,
+    })
+  end,
   { desc = "toggle virtual line diagnostics", }
 )
 
