@@ -18,7 +18,11 @@ tmux set-option -g message-style "fg=${message_style_fg},bg=${message_style_bg}"
 tmux set-option -g status-style "fg=${status_style_fg},bg=${status_style_bg}"
 
 # Status left
-tmux set-option -g status-left "#[bg=${status_x_bg},fg=${status_x_fg}]#{?client_prefix,#[bg=${client_prefix_bg}],}#{?client_prefix,#[bold]#[fg=${client_prefix_fg}],} #S "
+statusleft="#[bg=${status_x_bg},fg=${status_x_fg}]"
+statusleft+="#{?client_prefix,#[bg=${client_prefix_bg}],}"
+statusleft+="#{?client_prefix,#[bold]#[fg=${client_prefix_fg}],}"
+statusleft+=" #S "
+tmux set-option -g status-left "$statusleft"
 
 
 # Status right
