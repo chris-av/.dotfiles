@@ -34,10 +34,10 @@ flags="#{?window_flags,#[fg=${flags_fg}]#{window_flags},}"
 current_flags="#{?window_flags,#[fg=${flags_fg}]#{window_flags},}"
 
 currstatfmt=""
-currstatfmt+="#[fg=${window_x_fg},bg=${window_x_bg},]${left_sep}"
-currstatfmt+="#[fg=${window_y_fg},bg=${window_y_bg}] #I "
-currstatfmt+="#[bg=${window_x_bg}] #W${current_flags} "
-currstatfmt+="#[fg=${window_z_fg},bg=${window_z_bg}]${left_sep}"
+currstatfmt+="#[fg=${window_x_fg},bg=${window_x_bg},]${left_sep}"           # beginning separator
+currstatfmt+="#[fg=${window_y_fg},bg=${window_y_bg}] #I "                   # window number
+currstatfmt+="#[fg=${window_x_fg},bg=${window_x_bg}] #W${current_flags} "   # window name
+currstatfmt+="#[fg=${window_z_fg},bg=${window_z_bg}]${left_sep}"            # end separator
 
 tmux set-window-option -g window-status-current-format "$currstatfmt"
 tmux set-window-option -g window-status-format "#[fg=${window_fmt_fg}]#[bg=${window_fmt_bg}] #I #W${flags}"
