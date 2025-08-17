@@ -282,32 +282,32 @@ M.lualine = {
   theme = {
     normal = {
       a = { bg = M.palette.green, fg = M.palette.black, gui = "bold" },
-      b = { bg = M.palette.green, fg = M.palette.black },
+      b = { bg = M.palette.black, fg = M.palette.green },
       c = { bg = M.palette.black, fg = M.palette.green }
     },
     insert = {
       a = { bg = M.palette.green, fg = M.palette.black, gui = "bold" },
-      b = { bg = M.palette.green, fg = M.palette.black },
+      b = { bg = M.palette.black, fg = M.palette.green },
       c = { bg = M.palette.black, fg = M.palette.green }
     },
     visual = {
       a = { bg = M.palette.green, fg = M.palette.black, gui = "bold" },
-      b = { bg = M.palette.green, fg = M.palette.black },
+      b = { bg = M.palette.black, fg = M.palette.green },
       c = { bg = M.palette.black, fg = M.palette.green }
     },
     replace = {
       a = { bg = M.palette.green, fg = M.palette.black, gui = "bold" },
-      b = { bg = M.palette.green, fg = M.palette.black },
+      b = { bg = M.palette.black, fg = M.palette.green },
       c = { bg = M.palette.black, fg = M.palette.green }
     },
     command = {
       a = { bg = M.palette.green, fg = M.palette.black, gui = "bold" },
-      b = { bg = M.palette.green, fg = M.palette.black },
+      b = { bg = M.palette.black, fg = M.palette.green },
       c = { bg = M.palette.black, fg = M.palette.green }
     },
     inactive = {
       a = { bg = M.palette.green, fg = M.palette.black, gui = "bold" },
-      b = { bg = M.palette.green, fg = M.palette.black },
+      b = { bg = M.palette.black, fg = M.palette.green },
       c = { bg = M.palette.black, fg = M.palette.green }
     }
   },
@@ -319,18 +319,18 @@ M.lualine = {
         "diff",
         colored = true,
         diff_color = {
-          added = { fg = M.palette.black, bg = M.palette.green, },
-          modified = { fg = M.palette.black, bg = M.palette.green, },
-          deleted = { fg = M.palette.black, bg = M.palette.green, },
+          added = { fg = M.palette.green, bg = M.palette.black, },
+          modified = { fg = M.palette.green, bg = M.palette.black, },
+          deleted = { fg = M.palette.green, bg = M.palette.black, },
         }
       },
       {
         "diagnostics",
         diagnostics_color = {
-          error = { fg = M.palette.black, bg = M.palette.green },
-          warn = { fg = M.palette.black, bg = M.palette.green },
-          info = { fg = M.palette.black, bg = M.palette.green },
-          hint = { fg = M.palette.black, bg = M.palette.green },
+          error = { fg = M.palette.green, bg = M.palette.black },
+          warn = { fg = M.palette.green, bg = M.palette.black },
+          info = { fg = M.palette.green, bg = M.palette.black },
+          hint = { fg = M.palette.green, bg = M.palette.black },
         },
       },
     },
