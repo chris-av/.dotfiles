@@ -305,7 +305,7 @@ M.lualine = {
     },
     insert = {
       a = { bg = M.palette.grey, fg = M.palette.black, gui = "bold" },
-      b = { bg = M.palette.grey, fg = M.palette.black, },
+      b = { bg = M.palette.black, fg = M.palette.grey, },
       c = { bg = M.palette.black, fg = M.palette.grey, }
     },
     visual = {
@@ -315,17 +315,17 @@ M.lualine = {
     },
     replace = {
       a = { bg = M.palette.grey, fg = M.palette.black, gui = "bold" },
-      b = { bg = M.palette.grey, fg = M.palette.black, },
+      b = { bg = M.palette.black, fg = M.palette.grey, },
       c = { bg = M.palette.black, fg = M.palette.grey, }
     },
     command = {
       a = { bg = M.palette.grey, fg = M.palette.black, gui = "bold" },
-      b = { bg = M.palette.grey, fg = M.palette.black, },
+      b = { bg = M.palette.black, fg = M.palette.grey, },
       c = { bg = M.palette.black, fg = M.palette.grey, }
     },
     inactive = {
       a = { bg = M.palette.grey, fg = M.palette.black, gui = "bold" },
-      b = { bg = M.palette.grey, fg = M.palette.black, },
+      b = { bg = M.palette.black, fg = M.palette.grey, },
       c = { bg = M.palette.black, fg = M.palette.grey, }
     },
   },
@@ -337,9 +337,9 @@ M.lualine = {
         "diff",
         colored = true,
         diff_color = {
-          added = { fg = M.palette.black, bg = M.palette.grey, },
-          modified = { fg = M.palette.black, bg = M.palette.grey, },
-          deleted = { fg = M.palette.black, bg = M.palette.grey, },
+          added = { fg = M.palette.grey, bg = M.palette.black, },
+          modified = { fg = M.palette.grey, bg = M.palette.black, },
+          deleted = { fg = M.palette.grey, bg = M.palette.black, },
         },
       },
       {
