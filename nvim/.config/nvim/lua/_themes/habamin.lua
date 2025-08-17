@@ -232,10 +232,10 @@ M.lualine = {
       {
         "diagnostics",
         diagnostics_color = {
-          error = { fg = M.palette.cyan, bg = M.palette.dark_red },
-          warn = { fg = M.palette.space0, bg = M.palette.dark_yellow },
-          info = { fg = M.palette.cyan, bg = M.palette.dark_green },
-          hint = { fg = M.palette.cyan, bg = M.palette.dark_blue },
+          error = { fg = M.palette.red_bright, bg = M.palette.bg0, },
+          warn = { fg = M.palette.dark_yellow, bg = M.palette.bg0, },
+          info = { fg = M.palette.green, bg = M.palette.bg0, },
+          hint = { fg = M.palette.dark_blue, bg = M.palette.bg0, },
         },
       },
       "navic",
