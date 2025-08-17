@@ -32,6 +32,11 @@ LS_COLORS+=":ln=00;36"
 LS_COLORS+=":pi=01;33"
 LS_COLORS+=":so=01;35"
 LS_COLORS+=":bd=01;40;33"
+LS_COLORS+=":cd=34"
+LS_COLORS+=":su=34"
+LS_COLORS+=":sg=34"
+LS_COLORS+=":tw=34"
+LS_COLORS+=":ow=34"
 export LS_COLORS
 
 eval "$(fzf --zsh)"
