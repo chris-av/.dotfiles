@@ -105,14 +105,12 @@ update_wallpaper() {
   if [[ -v theme_arr["wallpaper"] ]]; then
     echo "this is a wallpaper theme"
     echo "using image $wallpaper"
-    hyprctl hyprpaper reload eDP-1,~/wallpapers/$wallpaper
-    hyprctl hyprpaper reload DP-2,~/wallpapers/$wallpaper
+    swww img -t wipe --transition-step 190 --transition-duration 1.3 ~/wallpapers/$wallpaper
     update_cache $wallpaper $kitty_theme
   else
     echo "this is a flat wallpaper theme"
     echo "using color $background"
-    hyprctl hyprpaper reload eDP-1,~/wallpapers/$wallpaper
-    hyprctl hyprpaper reload DP-2,~/wallpapers/$wallpaper
+    swww clear $background
     update_cache $background $kitty_theme
   fi
 
