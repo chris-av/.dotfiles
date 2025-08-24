@@ -42,7 +42,8 @@ return {
         }
       },
       window = {
-        position = "float",
+        position = "left",
+        width = "fit_content",
         mappings = {
           ["<cr>"] = "open",
           ["<esc>"] = "cancel",
