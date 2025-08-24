@@ -62,7 +62,7 @@ return {
           ["P"] = "toggle_preview",
           ["l"] = "focus_preview",
 
-          -- remove keymappints
+          -- remove keymappings
           ["/"] = "",
           ["f"] = "",
         },
