@@ -46,7 +46,7 @@ return {
         width = "fit_content",
         mappings = {
           ["<cr>"] = "open",
-          ["<esc>"] = "cancel",
+          ["q"] = "cancel",
           -- opening files
           ["<C-x>"] = "open_split",
           ["<C-v>"] = "open_vsplit",
@@ -65,6 +65,9 @@ return {
           -- remove keymappings
           ["/"] = "",
           ["f"] = "",
+
+          ["c"] = "next_git_modified",
+          ["C"] = "prev_git_modified",
         },
       },
     })
