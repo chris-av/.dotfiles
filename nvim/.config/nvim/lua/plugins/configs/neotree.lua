@@ -52,8 +52,12 @@ return {
           ["<cr>"] = "open",
           ["q"] = "cancel",
           -- opening files
-          ["<C-x>"] = "open_split",
-          ["<C-v>"] = "open_vsplit",
+          ["s"] = "split_with_window_picker",
+          ["v"] = "vsplit_with_window_picker",
+
+          ["<C-x>"] = "split_with_window_picker",
+          ["<C-v>"] = "vsplit_with_window_picker",
+
           -- file system management
           ["a"] = "add",               -- add file
           ["x"] = "delete",            -- delete file
