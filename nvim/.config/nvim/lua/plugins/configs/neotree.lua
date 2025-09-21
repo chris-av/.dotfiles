@@ -67,15 +67,30 @@ return {
           -- misc
           ["?"] = "show_help",         -- neotree filter
           ["."] = "show_file_details", -- neotree filter
-          ["P"] = "toggle_preview",
-          ["l"] = "focus_preview",
-
-          -- remove keymappings
-          ["/"] = "",
-          ["f"] = "",
-
           ["c"] = "next_git_modified",
           ["C"] = "prev_git_modified",
+          ["z"] = "close_all_nodes",
+
+          -- remove keymappings
+          ["#"] = "",
+          ["/"] = "",
+          ["f"] = "",
+          ["<C-b>"] = "",
+          ["<C-f>"] = "",
+          ["bs"] = "",
+          ["D"] = "",
+          ["P"] = "",
+          ["i"] = "",
+          ["l"] = "",
+          ["o"] = "",
+          ["oc"] = "",
+          ["od"] = "",
+          ["og"] = "",
+          ["om"] = "",
+          ["on"] = "",
+          ["os"] = "",
+          ["ot"] = "",
+
         },
       },
       event_handlers = {
