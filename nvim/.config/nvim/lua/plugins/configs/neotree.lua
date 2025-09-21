@@ -47,7 +47,7 @@ return {
       },
       window = {
         position = "left",
-        width = "fit_content",
+        -- width = "fit_content",
         mappings = {
           ["<cr>"] = "open",
           ["q"] = "cancel",
