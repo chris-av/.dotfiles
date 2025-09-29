@@ -12,7 +12,10 @@ end
 M.notify_info = function(title, msg)
   -- can be debug, error, info, trace, or warn
   -- trace does not show dialog popup
-  vim.notify(msg or "", vim.log.levels.INFO, {
+  if not msg then
+    return
+  end
+  vim.notify(msg, vim.log.levels.INFO, {
     title = title or ""
   })
 end
@@ -23,7 +26,10 @@ end
 M.notify_err = function(title, msg)
   -- can be debug, error, info, trace, or warn
   -- trace does not show dialog popup
-  vim.notify(msg or "", vim.log.levels.ERROR, {
+  if not msg then
+    return
+  end
+  vim.notify(msg, vim.log.levels.ERROR, {
     title = title or ""
   })
 end
@@ -34,6 +40,9 @@ end
 M.notify_warn = function(title, msg)
   -- can be debug, error, info, trace, or warn
   -- trace does not show dialog popup
+  if not msg then
+    return
+  end
   vim.notify(msg, vim.log.levels.WARN, {
     title = title
   })
@@ -54,6 +63,9 @@ M.notify = function(opts)
   local msg       = opts.msg or ""
   local level     = opts.level or "info"
   local vim_level = type(level) == "string" and vim.log.levels[level:upper()] or level
+  if not msg then
+    return
+  end
   vim.notify(msg, vim_level, {
     title    = opts.title,
   })
