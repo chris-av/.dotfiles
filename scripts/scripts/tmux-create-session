@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+PROJECTS_DIR="${HOME}/Documents/projects"
+
+# Collect directories and strip base path for display
+mapfile -t dirs < <(find "$PROJECTS_DIR" -mindepth 1 -maxdepth 1 -type d | sort)
+if [[ ${#dirs[@]} -eq 0 ]]; then
+  echo "No projects found in $PROJECTS_DIR"
+  exit 1
+fi
+
+# Build a map of display_name -> full_path
+declare -A pathmap
+for d in "${dirs[@]}"; do
+  base="$(basename "$d")"
+  pathmap["$base"]="$d"
+done
+
+# Feed only basenames to fzf
+selection="$(printf '%s\n' "${!pathmap[@]}" | sort | fzf --no-multi --prompt='projects> ' --height=40% --reverse)"
+[[ -n "${selection:-}" ]] || exit 0
+
+dir="${pathmap[$selection]}"
+name="$(basename "$dir" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9_-]/-/g')"
+
+# If session exists, reuse it
+if tmux has-session -t "=${name}" 2>/dev/null; then
+  if [[ -n "${TMUX:-}" ]]; then
+    tmux switch-client -t "$name"
+  else
+    tmux attach -t "$name"
+  fi
+  exit 0
+fi
+
+# Create and attach
+tmux new-session -ds "$name" -n main -c "$dir"
+if [[ -n "${TMUX:-}" ]]; then
+  tmux switch-client -t "$name"
+else
+  tmux attach -t "$name"
+fi
