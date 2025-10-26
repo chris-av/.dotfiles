@@ -9,6 +9,7 @@ M.theme_table = {
   ["catppuccin-mocha"] = { colorscheme = "catppuccin-mocha", lualine_theme = "auto", },
   ["embark"] = { colorscheme = "embark", lualine_theme = themes["embark"].lualine, },
   ["grey"] = { colorscheme = "grey", lualine_theme = themes["grey"].lualine, },
+  ["noir"] = { colorscheme = "noir", lualine_theme = themes["grey"].lualine, },
   ["gruvbox"] = { colorscheme = "snazzy", lualine_theme = themes["snazzy"].lualine, },
   ["matrix"] = { colorscheme = "matrix", lualine_theme = themes["matrix"].lualine, },
   ["dark"] = { colorscheme = "dark", lualine_theme = require("lualine.themes.material"), },
