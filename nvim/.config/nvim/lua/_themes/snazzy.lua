@@ -24,8 +24,7 @@ M.kitty = {
   cursor_text_color = M.palette.black,
   active_border_color = M.palette.green,
   inactive_border_color = M.palette.dark_teal,
-
-  -- black
+-- black
   color0 = M.palette.black,
   color8 = M.palette.grey,
 
@@ -76,8 +75,8 @@ M.theme = {
   active = M.palette.green,
   inactive = M.palette.dark_teal,
 
-  selected_fg = M.palette.black,
-  selected_bg = M.palette.white,
+  -- selected_fg = M.palette.dark_blue,
+  selected_bg = M.palette.grey,
 
   border = M.palette.white,
   popup_fg = M.palette.white,
@@ -97,10 +96,10 @@ M.theme = {
 M.highlight_groups = {
   Normal                  = { fg = M.theme.foreground, },
   NormalFloat             = { fg = M.theme.foreground, bg = M.palette.dark_teal },
-  Visual                  = { fg = M.palette.selection_fg, bg = M.theme.selected_bg, },
+  Visual                  = { fg = M.theme.selected_fg, bg = M.theme.selected_bg, },
   Directory               = { fg = M.theme.foreground, },
-  IncSearch               = { fg = M.palette.background, bg = M.theme.foreground, },
-  Search                  = { fg = M.palette.background, bg = M.theme.foreground, bold = true, },
+  IncSearch               = { fg = M.theme.foreground, bg = M.theme.dark_teal, },
+  Search                  = { fg = M.theme.foreground, bg = M.theme.dark_teal, bold = true, },
   Substitute              = { fg = M.theme.foreground, },
   MatchParen              = { fg = M.theme.foreground, },
   ModeMsg                 = { fg = M.theme.foreground, },
