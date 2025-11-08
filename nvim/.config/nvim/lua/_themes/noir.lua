@@ -1,15 +1,18 @@
 local M = {}
 
 M.palette = {
+  none = "none",
   black = "#000000",
   white = "#ffffff",
   grey_lightest = "#c4c4c4",
   grey = "#a7afa7",
   grey_light = "#a7afa7",
   grey_dark = "#666666",
+  grey_semitransparent = "#212121",
 
   -- misc colors; use sparingly
   red = "#ff5b56",
+  red_nvim = "NvimDarkRed",
   orange = "#ffaf00",
   green = "#5af78d",
   lightblue = "#c1ddff",
@@ -59,7 +62,7 @@ M.highlight_groups = {
   Normal = { fg = M.theme.foreground, },
   NormalFloat = { fg = M.theme.foreground, bg = M.theme.background, },
 
-  Visual = { fg = M.palette.grey_dark, bg = M.palette.grey_lightest, reverse = true, },
+  Visual = { fg = M.palette.grey_lightest, bg = M.palette.grey_semitransparent, },
 
   Directory = { fg = M.theme.foreground, },
 
@@ -134,6 +137,7 @@ M.highlight_groups = {
   Todo = { fg = M.theme.foreground, },
   Type = { fg = M.theme.foreground, },
   Typedef = { fg = M.theme.foreground, },
+  Error = { fg = M.palette.grey, bg = M.palette.red_nvim, },
 
   -- TreeSitter
   TSAnnotation = { fg = M.theme.foreground, },
@@ -265,6 +269,16 @@ M.highlight_groups = {
   Added = { fg = M.theme.foreground, },
   Removed = { fg = M.theme.foreground, },
 
+  -- NeoTree
+  NeoTreeGitAdded = { fg = M.palette.green, bg = M.palette.none, },
+  NeoTreeGitModified = { fg = M.palette.orange, bg = M.palette.none, },
+  NeoTreeGitConflict = { fg = M.palette.red, bg = M.palette.none, },
+  NeoTreeGitDeleted = { fg = M.palette.red, bg = M.palette.none, },
+  NeoTreeGitStaged = { fg = M.palette.green, bg = M.palette.none, },
+  NeoTreeGitUnstaged = { fg = M.palette.red, bg = M.palette.none, },
+  NeoTreeGitUntracked = { fg = M.palette.red, bg = M.palette.none, },
+  NeoTreeGitRenamed = { fg = M.palette.red, bg = M.palette.none, },
+  NeoTreeModified = { fg = M.palette.black, bg = M.palette.none, },
 
 }
 
