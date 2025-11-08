@@ -3,6 +3,6 @@ gui:
     selectedLineBgColor:
       - default
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never --no-gitconfig
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never --no-gitconfig
