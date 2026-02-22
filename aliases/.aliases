@@ -69,3 +69,7 @@ fi
 if [[ "$TERM" == "xterm-kitty" ]]; then
   alias icat="kitten icat"
 fi
+
+if command -v moor 2>&1 >/dev/null; then
+  alias less='moor --style=swapoff'
+fi
