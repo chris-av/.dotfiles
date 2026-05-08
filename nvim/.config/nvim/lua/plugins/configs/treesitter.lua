@@ -1,8 +1,5 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  dependencies = {
-    "nvim-treesitter/playground",
-  },
   config = function()
     local ensure_installed = {
       -- other programming languages
@@ -36,7 +33,7 @@ return {
 
       -- config files
       "dockerfile",
-      "json", "jsdoc", "json5", "jsonc",
+      "json", "jsdoc", "json5",
       "toml", "yaml",
 
       -- query lang
@@ -49,25 +46,10 @@ return {
       "ledger",
     }
 
-    require('nvim-treesitter.configs').setup({
-      auto_install = true,
-      ignore_install = {},
-      ensure_installed = ensure_installed,
-      sync_install = false,
-      highlight = {
-        enable = true,
-        disable = "",
-
-        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-        -- Using this option may slow down your editor, and you may see some duplicate highlights.
-        -- Instead of true it can also be a list of languages
-        additional_vim_regex_highlighting = true,
-      },
-      indent = {
-        enable = true,
-        disable = { 'yaml', 'javascript' }
-      },
+    local ts = require("nvim-treesitter")
+    ts.setup({
+      install_dir = vim.fn.stdpath("data") .. '/site',
     })
+    ts.install(ensure_installed)
   end
 }
