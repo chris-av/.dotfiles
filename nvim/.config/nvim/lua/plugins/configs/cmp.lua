@@ -6,7 +6,6 @@ return {
     "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-emoji",
-    "R-nvim/cmp-r",
     "saadparwaiz1/cmp_luasnip",
     "L3MON4D3/LuaSnip",
     "rafamadriz/friendly-snippets",
@@ -103,7 +102,6 @@ return {
         { name = 'path' },
         { name = 'buffer',  keyword_length = 8 },
         { name = "emoji", },
-        { name = "cmp_r" },
       },
       formatting = {
         format = function(entry, vim_item)
@@ -146,8 +144,5 @@ return {
         end,
       },
     })
-
-
-    require("cmp_r").setup()
   end
 }
