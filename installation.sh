@@ -24,6 +24,6 @@ elif [[ "$unameOut" == "Linux" ]]; then
     kitty ghostty \
     rofi wofi\
     fd ripgrep \
-    scripts
+    scripts quickshell
 
 fi
