@@ -114,6 +114,7 @@ M.highlight_groups = {
   Comment                          = { fg = M.palette.green_dull, bold = false, italic = true },
   Number                           = { fg = M.palette.green, bold = false },
   Function                         = { fg = M.palette.green, },
+  Type                             = { fg = M.palette.green, },
   Folded                           = { bg = M.palette.none, fg = M.palette.green, bold = true, italic = true, },
   PreProc                          = { fg = M.palette.green, },
   DiagnosticError                  = { fg = M.palette.red, bold = true },
