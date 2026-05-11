@@ -388,7 +388,7 @@
   description: >
     A Wayland native snapshot editing tool
 
-- name: swww
+- name: awww
   repository: extra
   description: >
     A Solution to your Wayland Wallpaper Woes

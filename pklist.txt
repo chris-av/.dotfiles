@@ -101,7 +101,7 @@ stow
 strace
 swappy
 swaylock-effects
-swww
+awww
 tcpdump
 texlive
 thunar
