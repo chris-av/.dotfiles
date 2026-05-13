@@ -8,13 +8,13 @@ import Quickshell.Services.Mpris
 ShellRoot {
     id: root
 
-    property string themeFg:     "#ffffff"
-    property string themeBg:     "#66000000"
-    property string themeRawBg:  "#000000"
-    property string themeAccent: "#ffffff"
-    property string themeSecond: "#ffffff"
-    property string themeWarm:   "#ffffff"
-    property string themeFresh:  "#ffffff"
+    property string themeFg:     "#e0def4"
+    property string themeBg:     "#99191724"
+    property string themeRawBg:  "#191724"
+    property string themeAccent: "#9ccfd8"
+    property string themeSecond: "#ebbcba"
+    property string themeWarm:   "#eb6f92"
+    property string themeFresh:  "#31748f"
 
     property int  highestZ:     0
     property var  stickerSizes: ({})
@@ -27,7 +27,6 @@ ShellRoot {
     readonly property var powerIcons:    ["󰌪", "󰗑", "󰓅"]
     property int currentPowerIndex: 1
 
-    function reloadColors()     { colorProc.running = true }
     function runCmd(cmd)        { cmdProc.command = cmd; cmdProc.running = true }
     function addRandomSticker() { stickerPickerProc.running = true }
     function triggerSave()      { if (!isRestoring) saveDebounce.restart() }
@@ -59,7 +58,6 @@ ShellRoot {
     }
 
     Component.onCompleted: {
-        reloadColors()
         loadProc.running = true
         batProc.running  = true
     }
@@ -128,30 +126,6 @@ ShellRoot {
         }
     }
 
-    // ── theme ──
-
-    Process {
-        id: colorProc
-        command: ["sh", "-c", "cat \"$HOME/.cache/wal/colors.json\" 2>/dev/null"]
-        property string buffer: ""
-        stdout: SplitParser { onRead: (data) => colorProc.buffer += data }
-        onExited: (code) => {
-            if (code === 0) {
-                try {
-                    const c = JSON.parse(colorProc.buffer)
-                    root.themeRawBg  = c.special.background
-                    root.themeFg     = c.special.foreground
-                    root.themeWarm   = c.colors.color1
-                    root.themeFresh  = c.colors.color2
-                    root.themeAccent = c.colors.color4
-                    root.themeSecond = c.colors.color6
-                    root.themeBg     = "#99" + c.special.background.slice(1)
-                } catch (e) {}
-            }
-            colorProc.buffer = ""
-        }
-    }
-
     // ── sticker picker ──
 
     Process {
@@ -184,11 +158,6 @@ ShellRoot {
     }
 
     IpcHandler {
-        target: "theme_manager"
-        function update() { reloadColors() }
-    }
-
-    IpcHandler {
         target: "wall_e"
         function show()   { wallPicker.show() }
         function hide()   { wallPicker.hide() }
@@ -212,20 +181,17 @@ ShellRoot {
 
     ListModel {
         id: buttonModel
-        ListElement { icon: "󰚰"; color_role: "second"; action: "cmd";           cmd0: "kitty";           cmd1: "update.sh" }
-        ListElement { icon: "󰏗"; color_role: "accent"; action: "sticker";       cmd0: "";                cmd1: "" }
-        ListElement { icon: "󰂯"; color_role: "second"; action: "cmd";           cmd0: "blueman-manager"; cmd1: "" }
-        ListElement { icon: "󰖩"; color_role: "accent"; action: "cmd";           cmd0: "kitty";           cmd1: "nmtui" }
-        ListElement { icon: "󰊴"; color_role: "second"; action: "cmd";           cmd0: "gamemode.sh";     cmd1: "" }
-        ListElement { icon: "󰏘"; color_role: "accent"; action: "cmd";           cmd0: "hyprctl";         cmd1: "dispatch exec picker.sh" }
+        ListElement { icon: "󰖩"; color_role: "accent"; action: "cmd";           cmd0: "nm-connection-editor"; cmd1: "" }
         ListElement { icon: "󰒲"; color_role: "second"; action: "cmd";           cmd0: "systemctl";       cmd1: "suspend" }
+        ListElement { icon: "󰂯"; color_role: "second"; action: "cmd";           cmd0: "blueman-manager"; cmd1: "" }
         ListElement { icon: "󰍃"; color_role: "accent"; action: "cmd";           cmd0: "hyprctl";         cmd1: "dispatch exit" }
+        ListElement { icon: ""; color_role: "accent"; action: "cmd";           cmd0: "localsend";       cmd1: "" }
         ListElement { icon: "󰜉"; color_role: "second"; action: "cmd";           cmd0: "systemctl";       cmd1: "reboot" }
-        ListElement { icon: "󰐥"; color_role: "accent"; action: "cmd";           cmd0: "systemctl";       cmd1: "poweroff" }
-        ListElement { icon: "󰗑"; color_role: "warm";   action: "power_profile"; cmd0: "";                cmd1: "" }
-        ListElement { icon: "󰄨"; color_role: "second"; action: "cmd";           cmd0: "kitty";           cmd1: "btop" }
         ListElement { icon: "󰕾"; color_role: "accent"; action: "cmd";           cmd0: "pavucontrol";     cmd1: "" }
-        ListElement { icon: "󰌌"; color_role: "fresh"; action: "cmd"; cmd0: "hyprctl"; cmd1: "dispatch exec quickshell ipc call keybinds toggle" }
+        ListElement { icon: "󰐥"; color_role: "accent"; action: "cmd";           cmd0: "systemctl";       cmd1: "poweroff" }
+
+        ListElement { icon: ""; color_role: "accent"; action: "cmd";           cmd0: "seahorse";       cmd1: "" }
+        ListElement { icon: ""; color_role: "accent"; action: "cmd";           cmd0: "";       cmd1: "" }
     }
 
     ListModel { id: stickerModel }
