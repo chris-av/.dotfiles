@@ -47,10 +47,10 @@ Item {
             Text {
                 id: clockT
                 Layout.alignment: Qt.AlignLeft
-                Layout.leftMargin: -6 // ← Compensa lo spazio vuoto a sinistra del font
+                Layout.leftMargin: -6
                 horizontalAlignment: Text.AlignLeft
                 color: themeAccent
-                font { family: "JetBrainsMono Nerd Font"; pixelSize: 72; weight: Font.ExtraLight }
+                font { family: "Iosevka Term"; pixelSize: 72; weight: Font.ExtraLight }
                 Component.onCompleted: text = Qt.formatTime(new Date(), "hh:mm")
                 Timer {
                     interval: 1000; running: true; repeat: true; triggeredOnStart: true
@@ -65,7 +65,7 @@ Item {
                 Text {
                     text: Qt.formatDate(new Date(), "dddd, d MMMM").toUpperCase()
                     color: themeSecond
-                    font { family: "JetBrainsMono Nerd Font"; pixelSize: 11; weight: Font.Medium; letterSpacing: 0.2 }
+                    font { family: "Iosevka Term"; pixelSize: 14; weight: Font.Medium; letterSpacing: 0.2 }
                 }
                 Text {
                     text: batteryIcon + " " + batteryPercent
