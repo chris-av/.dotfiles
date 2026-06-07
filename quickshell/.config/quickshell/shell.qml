@@ -181,7 +181,7 @@ ShellRoot {
 
     ListModel {
         id: buttonModel
-        ListElement { icon: "󰖩"; color_role: "accent"; action: "cmd";           cmd0: "nm-connection-editor"; cmd1: "" }
+        ListElement { icon: "󰖩"; color_role: "accent"; action: "cmd";           cmd0: "airctl"; cmd1: "" }
         ListElement { icon: "󰒲"; color_role: "second"; action: "cmd";           cmd0: "systemctl";       cmd1: "suspend" }
         ListElement { icon: "󰂯"; color_role: "second"; action: "cmd";           cmd0: "blueman-manager"; cmd1: "" }
         ListElement { icon: "󰍃"; color_role: "accent"; action: "cmd";           cmd0: "hyprctl";         cmd1: "dispatch exit" }
