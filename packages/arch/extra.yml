@@ -135,6 +135,11 @@
   description: >
     human-friendly CLI HTTP client for the API era
 
+- name: hyprlock
+  repository: extra
+  description: >
+    utility for lock screen
+
 - name: hyprland
   repository: extra
   description: >
