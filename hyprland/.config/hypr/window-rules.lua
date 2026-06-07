@@ -41,7 +41,6 @@ hl.window_rule({
   },
 })
 
--- move = ((monitor_w * 0.5) - (window_w * 0.5)) ((monitor_h * 0.5) - (window_h * 0.5))
 hl.window_rule({
   name = "nm_connection_editor",
   rounding = 10,

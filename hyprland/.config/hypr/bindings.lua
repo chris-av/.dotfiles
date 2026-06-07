@@ -35,7 +35,7 @@ hl.bind(mainMod .. " + " .. "SPACE", hl.dsp.exec_cmd("wofi"))
 
 -- Show the graphical app launcher
 -- hl.bind(mainMod .. " + " .. "S", hl.dsp.window.swap(nil))
-hl.bind(mainMod .. " + " .. "SHIFT" .. " + "..  "S", hl.dsp.window.move({ workspace = "+1" }))
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + "..  "S", hl.dsp.workspace.move({ monitor = "+1" }))
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "W", hl.dsp.exec_cmd("~/.config/hypr/scripts/select-wallpaper.sh"))
 hl.bind(mainMod .. " + " .. "Print", hl.dsp.exec_cmd("~/.config/hypr/scripts/screenshot.sh"))
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "Print", hl.dsp.exec_cmd("~/.config/hypr/scripts/screen-record.sh"))
