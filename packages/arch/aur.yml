@@ -1,3 +1,8 @@
+- name: airctl-bin
+  repository: aur
+  description: >
+    gui for managing network connections
+
 - name: catppuccin-gtk-theme-frappe
   repository: aur
   description: >
