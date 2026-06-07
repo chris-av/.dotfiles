@@ -52,6 +52,16 @@ hl.window_rule({
   },
 })
 
+hl.window_rule({
+  name = "airctl",
+  rounding = 15,
+  float = true,
+  move = {"((monitor_w * 0.5) - (window_w * 0.5))", "((monitor_h * 0.5) - (window_h * 0.35))"},
+  match = {
+    title = "AIRCTL",
+  },
+})
+
 -- layer rules
 hl.layer_rule({
   name = "quickshell-sidebar",
