@@ -53,5 +53,26 @@ return {
         col = 1
       },
     })
+
+    local opts = {
+      wrap = false,
+      navigation_message = false,
+      foldopen = true,
+      preview = true,
+      target = 'all',
+    }
+
+    local next_hunk = function()
+      gitsigns.nav_hunk("next", opts)
+    end
+
+    local prev_hunk = function()
+      gitsigns.nav_hunk("prev", opts)
+    end
+
+    -- keymaps
+    vim.keymap.set('n', '[c', next_hunk, { desc = "Gitsigns - next hunk" })
+    vim.keymap.set('n', ']c', prev_hunk, { desc = "Gitsigns - previous hunk" })
+
   end
 }
