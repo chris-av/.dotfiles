@@ -126,7 +126,7 @@ M.highlight_groups = {
   Number = { fg = M.theme.foreground, },
   Operator = { fg = M.theme.foreground, },
   PreProc = { fg = M.theme.foreground, },
-  Repeat = { fg = M.theme.foreground, },
+  Repeat = { fg = M.palette.grey, },
   Special = { fg = M.theme.keyword, },
   SpecialChar = { fg = M.theme.keyword, },
   Statement = { fg = M.theme.foreground, },
@@ -135,7 +135,7 @@ M.highlight_groups = {
   Structure = { fg = M.theme.keyword, },
   Tag = { fg = M.theme.foreground, },
   Todo = { fg = M.theme.foreground, },
-  Type = { fg = M.theme.foreground, },
+  Type = { fg = M.palette.grey, },
   Typedef = { fg = M.theme.foreground, },
   Error = { fg = M.palette.grey, bg = M.palette.red_nvim, },
 
