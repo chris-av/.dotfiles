@@ -12,3 +12,8 @@ zle -N file_search_widget
 
 # bind widgets to keys
 bindkey '^S' file_search_widget
+
+# edit current shell command in EDITOR
+autoload edit-command-line
+zle -N edit-command-line
+bindkey '^E' edit-command-line
