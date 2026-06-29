@@ -35,6 +35,7 @@ mod({ "bracketleft" },  hl.dsp.window.cycle_next({ next = false }))
 -- Swap / move
 mod({ "S" },          hl.dsp.window.swap({ next = "+1" }))
 mod({ "SHIFT", "S" }, hl.dsp.workspace.move({ monitor = "+1" }))
+mod({ "J" }, hl.dsp.layout("togglesplit"))
 
 -- Drag / resize with mouse
 mod({ "mouse:272" }, hl.dsp.window.drag(),   { mouse = true })
