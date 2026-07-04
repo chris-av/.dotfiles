@@ -6,7 +6,7 @@ return {
     local markdown = require("render-markdown")
     markdown.setup({
       enabled = false,
-      render_modes = { "n", "c", "t", "v", "V" },
+      render_modes = { "n", "c", "t", "v", "V", "i", },
       anti_conceal = { enabled = false, },
     })
     vim.keymap.set('n', '<leader>me', markdown.toggle, { desc = "list keymappings" })
