@@ -1,7 +1,7 @@
 vim.cmd("hi clear")
 vim.g.colors_name = "evil"
 
-local evil = require("_themes.dark")
+local evil = require("_themes.evil")
 local highlight_groups = evil.highlight_groups
 
 local function set_hl(hl_group, highlights)

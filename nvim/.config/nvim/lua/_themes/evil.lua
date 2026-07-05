@@ -92,7 +92,7 @@ M.highlight_groups = {
   -- Italic = { em = 'italic' },
   -- Underlined = { em = 'underline' },
 
-  Visual = { fg = M.palette.selection_fg, bg = M.palette.selection_bg, },
+  Visual = { fg = M.palette.black, bg = M.palette.red, },
 
   Directory = { fg = M.palette.red, },
 
@@ -259,11 +259,45 @@ M.highlight_groups = {
 
   -- Netrw
   netrwMarkFile = { fg = M.palette.red, },
+
+  ["@variable"] = { link = "Identifier", },
 }
 
 M.lualine = {
-  theme = {},
-  components = {},
+  theme = {
+    command = {
+      a = { bg = M.palette.red, fg = M.palette.black, gui = "bold", },
+      b = { bg = M.palette.red, fg = M.palette.black, }
+    },
+    insert = {
+      a = { bg = M.palette.black, fg = M.palette.red, gui = "bold", },
+      b = { bg = M.palette.black, fg = M.palette.red }
+    },
+    normal = {
+      a = { bg = M.palette.red, fg = M.palette.black, gui = "bold", },
+      b = { bg = M.palette.red, fg = M.palette.black, },
+      c = { bg = M.palette.black, fg = M.palette.red, },
+    },
+    replace = {
+      a = { bg = M.palette.black, fg = M.palette.red, gui = "bold" },
+      b = { bg = M.palette.black, fg = M.palette.red }
+    },
+    visual = {
+      a = { bg = M.palette.black, fg = M.palette.red, gui = "bold" },
+      b = { bg = M.palette.black, fg = M.palette.red }
+    }
+  },
+  components = {
+    lualine_a = { "mode" },
+    lualine_b = {
+      { "branch", icon = " " },
+      "diff",
+    },
+    lualine_c = { "diagnostics", "navic", },
+    lualine_x = { "encoding", "fileformat", "filetype" },
+    lualine_y = { "" },
+    lualine_z = { "location" }
+  },
 }
 
 return M
