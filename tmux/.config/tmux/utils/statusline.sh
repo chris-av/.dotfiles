@@ -44,3 +44,7 @@ tmux set-window-option -g window-status-format "#[fg=${window_fmt_fg}]#[bg=${win
 tmux set-window-option -g window-status-activity-style "bold"
 tmux set-window-option -g window-status-bell-style "bold"
 tmux set -wg mode-style bg="${window_sel_bg}",fg="${window_sel_fg}"
+
+# copy-mode search match highlighting
+tmux set-option -g copy-mode-match-style "bg=${copy_mode_match_bg:-$window_sel_bg},fg=${copy_mode_match_fg:-$window_sel_fg}"
+tmux set-option -g copy-mode-current-match-style "bg=${copy_mode_current_match_bg:-$window_sel_bg},fg=${copy_mode_current_match_fg:-$window_sel_fg}"

@@ -41,3 +41,9 @@ right_sep=""
 
 window_sel_fg="#cbe3e7"
 window_sel_bg="#3e3859"
+
+# copy-mode search match highlighting
+copy_mode_match_fg="#CBE3E7"
+copy_mode_match_bg="#3E3859"
+copy_mode_current_match_fg="#CBE3E7"
+copy_mode_current_match_bg="#3E3859"
