@@ -133,6 +133,13 @@ M.highlight_groups = {
   Folded = { fg = M.palette.red, },
   FoldColumn = { fg = M.palette.red, },
 
+  -- Diagnostics
+  DiagnosticInfo = { fg = M.palette.red },
+  DiagnosticHint = { fg = M.palette.red },
+  DiagnosticError = { fg = M.palette.red },
+  DiagnosticWarn = { fg = M.palette.red },
+  DiagnosticOk = { fg = M.palette.red },
+
   -- Spelling
   -- SpellBad = { em = 'underline' },
   -- SpellLocal = { em = 'underline' },
