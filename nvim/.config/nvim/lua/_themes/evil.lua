@@ -1,7 +1,7 @@
 local M = {}
 
 M.palette = {
-  red = "#FF0000",
+  red = "#D94F4F",
   black = "#000000",
   none = "none",
 }
