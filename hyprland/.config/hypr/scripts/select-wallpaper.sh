@@ -110,7 +110,7 @@ update_wallpaper() {
   else
     echo "this is a flat wallpaper theme"
     echo "using color $background"
-    awww clear $background
+    awww clear $(echo $background | sed 's/^#//')
     update_cache $background $kitty_theme
   fi
 
