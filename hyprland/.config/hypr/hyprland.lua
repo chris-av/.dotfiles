@@ -1,27 +1,3 @@
----@module 'hl'
--- Setup monitors
-hl.monitor({
-  output   = "eDP-1",
-  mode     = "1920x1080",
-  position = "0x0",
-  scale    = 1,
-})
-
-hl.monitor({
-  output   = "DP-5",
-  mode     = "3840x1600",
-  position = "-3840x0",
-  scale    = 1,
-})
-
-hl.workspace_rule({
-  workspace = "eDP-1",
-})
-
-hl.workspace_rule({
-  workspace = "DP-2",
-})
-
 hl.env("HYPRCURSOR_THEME", "rose-pine-hyprcursor")
 hl.env("HYPRCURSOR_SIZE", 32)
 
@@ -135,9 +111,11 @@ hl.gesture({
   action = "workspace",
 })
 
+require("monitors")
 require("devices")
 require("bindings")
 require("window-rules")
+require("workspaces")
 
 -- Autostart
 hl.on("hyprland.start", function()
