@@ -56,7 +56,7 @@ hl.curve("myBezier", {
 hl.curve("mySpring", {
   type = "spring",
   mass = 1,
-  stiffness = 70,
+  stiffness = 180,
   dampening = 20,
 })
 
