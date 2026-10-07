@@ -1,5 +1,15 @@
 ---@module 'hl'
 -- window rules
+-- Ignore client maximize requests so windows always tile
+-- (e.g. kitty remembers a "maximized" state and requests it on every launch)
+hl.window_rule({
+  name = "suppress-maximize-events",
+  suppress_event = "maximize",
+  match = {
+    class = ".*",
+  },
+})
+
 hl.window_rule({
   name = "dolphin-float",
   float = true,
