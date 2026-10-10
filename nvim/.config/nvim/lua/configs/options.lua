@@ -53,9 +53,11 @@ vim.filetype.add({
   },
   filename = {
     [".env"] = "dotenv",
+    [".info"] = "info",
   },
   pattern = {
     ["%.env%.[%w_.-]+"] = {"dotenv", priority = 100},
+    [".info"] = {"info",},
   },
 })
 
