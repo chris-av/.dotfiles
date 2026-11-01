@@ -145,6 +145,21 @@
   description: >
     a highly customizable dynamic tiling Wayland compositor
 
+- name: hyprlock
+  repository: extra
+  description: >
+    Screen locking utility for hyprland
+
+- name: hyprpicker
+  repository: extra
+  description: >
+    a hyprland native color picker
+
+- name: inotify-tools
+  repository: extra
+  description: >
+    recursive file watcher
+
 - name: intel-media-driver
   repository: extra
   description: >
@@ -264,6 +279,11 @@
   repository: extra
   description: >
     Google Noto emoji fonts
+
+- name: okular
+  repository: extra
+  description: >
+    Document/PDF viewer
 
 - name: openbsd-netcat
   repository: extra
