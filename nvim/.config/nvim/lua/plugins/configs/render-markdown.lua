@@ -9,6 +9,5 @@ return {
       render_modes = { "n", "c", "t", "v", "V", "i", },
       anti_conceal = { enabled = false, },
     })
-    vim.keymap.set('n', '<leader>me', markdown.toggle, { desc = "list keymappings" })
   end
 }
