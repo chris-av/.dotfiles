@@ -81,6 +81,12 @@ return {
         end
       end
       if not found_blame then
+        for _, win in ipairs(vim.api.nvim_list_wins()) do
+          local buf  = vim.api.nvim_win_get_buf(win)
+          if vim.bo[buf].filetype == "neo-tree" then
+            pcall(vim.api.nvim_win_close, win, true)
+          end
+        end
         gitsigns.blame()
       end
     end
