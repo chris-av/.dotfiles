@@ -71,7 +71,6 @@ return {
     end
 
     local toggle_blame = function()
-      print("running toggle blame")
       local found_blame = false
       for _, win in ipairs(vim.api.nvim_list_wins()) do
         local buf = vim.api.nvim_win_get_buf(win)
