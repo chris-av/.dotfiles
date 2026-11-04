@@ -116,3 +116,14 @@ hl.layer_rule({
     namespace = "quickshell-keybinds",
   },
 })
+
+-- configure the grouped window rules and colors
+hl.config({
+  group = {
+    auto_group = true,
+    groupbar = {
+      enabled = true,
+      render_titles = false,
+    },
+  },
+})

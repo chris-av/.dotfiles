@@ -109,6 +109,13 @@ mod({ "SHIFT", 8 }, hl.dsp.window.move({ workspace = 8 }))
 mod({ "SHIFT", 9 }, hl.dsp.window.move({ workspace = 9 }))
 mod({ "SHIFT", 0 }, hl.dsp.window.move({ workspace = 10 }))
 
+-- window groups
+mod({ "G" }, hl.dsp.group.toggle({}))
+mod({ "TAB" }, hl.dsp.group.next({}))
+mod({ "SHIFT", "TAB" }, hl.dsp.group.prev({}))
+mod({ "CTRL", "H" }, hl.dsp.window.move({ into_group = "l" }))
+mod({ "CTRL", "J" }, hl.dsp.window.move({ out_of_group = true, }))
+
 -- Numpad
 mod({ "SHIFT", "KP_End" },   hl.dsp.window.move({ workspace = 1 }))
 mod({ "SHIFT", "KP_Down" },  hl.dsp.window.move({ workspace = 2 }))
