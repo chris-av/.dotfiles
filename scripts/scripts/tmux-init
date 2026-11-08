@@ -1,4 +1,5 @@
 #/usr/bin/env bash
+tmux new-session -d -s "ai" -n "main"  -c ~/Documents/projects
 tmux new-session -d -s "personal" -n "notes" -c ~/Documents/notes
 tmux new-window  -d               -n "misc"  -c ~
 tmux new-window  -d               -n "tmp"   -c /tmp
