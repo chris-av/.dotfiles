@@ -25,7 +25,7 @@ fi
 
 # now install all the apps in the Brewfile
 echo "installing everything from Brewfile"
-brew bundle
+brew bundle install --file=./packages/macos/Brewfile
 
 
 
